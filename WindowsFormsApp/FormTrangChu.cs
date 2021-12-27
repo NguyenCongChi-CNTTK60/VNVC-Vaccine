@@ -98,12 +98,6 @@ namespace WindowsFormsApp
        
         
 
-        private void btnDangXuat_Click_1(object sender, EventArgs e)
-        {
-            FormDangNhap dn = new FormDangNhap();
-            dn.Show();
-            this.Hide();
-        }
 
       
       

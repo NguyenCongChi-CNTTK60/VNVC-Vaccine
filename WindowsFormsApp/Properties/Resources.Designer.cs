@@ -83,6 +83,16 @@ namespace WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap â {
+            get {
+                object obj = ResourceManager.GetObject("â", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Capture {
             get {
                 object obj = ResourceManager.GetObject("Capture", resourceCulture);
@@ -96,6 +106,16 @@ namespace WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap Capture1 {
             get {
                 object obj = ResourceManager.GetObject("Capture1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Capture2 {
+            get {
+                object obj = ResourceManager.GetObject("Capture2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

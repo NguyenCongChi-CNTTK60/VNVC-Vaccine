@@ -238,18 +238,6 @@
     <Compile Include="FormChiTietHD.Designer.cs">
       <DependentUpon>FormChiTietHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangKy.Designer.cs">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -468,17 +456,8 @@
     <Compile Include="UC_XacNhanMa.Designer.cs">
       <DependentUpon>UC_XacNhanMa.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_XacNhanSDT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_XacNhanSDT.Designer.cs">
-      <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormChiTietHD.resx">
       <DependentUpon>FormChiTietHD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -627,6 +606,8 @@
     <None Include="Resources\Capture.PNG" />
     <None Include="Resources\8b814fa66a3676d9f1090a4e8df515ba.jpg" />
     <None Include="Resources\Capture1.PNG" />
+    <None Include="Resources\â.PNG" />
+    <None Include="Resources\Capture2.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

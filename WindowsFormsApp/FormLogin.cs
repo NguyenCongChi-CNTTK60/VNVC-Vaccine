@@ -98,22 +98,17 @@ namespace WindowsFormsApp
             lblCanhBao.Text = "";
         }
 
-        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
-        {
-
-            if (chkHienThiMK.Checked == true)
-            {
-                txtMatKhau.PasswordChar = '\0';
-            }
-            else
-                txtMatKhau.PasswordChar = '*';
-        }
-
+       
         private void lblBanQuenMK_Click(object sender, EventArgs e)
         {
             FormSDT f = new FormSDT();
             f.Show();
             this.Hide();
+        }
+
+        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

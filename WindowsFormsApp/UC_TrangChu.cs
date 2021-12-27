@@ -19,15 +19,17 @@ namespace WindowsFormsApp
         public UC_TrangChu(string tennv)
         {
             InitializeComponent();
-            getDataChart();
-            getdataLable();
+         //   getDataChart();
+          //  getdataLable();
             this.tennv = tennv;
-            lblTenNhanVien.Text = tennv;
-            HidesubMenu();
-            TopSP();
-            cmbTonKho.SelectedIndex = 0;
+        ///   lblTenNhanVien.Text = tennv;
+          //  HidesubMenu();
+         //   TopSP();
+         //   cmbTonKho.SelectedIndex = 0;
         }
 
+
+        /*
         private void getdataLable()
         {
             string tkKH = "select count(*) AS [SoLuong] from KhachHang";
@@ -268,7 +270,7 @@ namespace WindowsFormsApp
             labeltop2.Text = "";
             labeltop3.Text = "";
         
-        }
+        } */
 
-    }
+    } 
 }
