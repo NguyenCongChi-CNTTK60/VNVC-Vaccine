@@ -1659,18 +1659,14 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\W
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_HienThiQuyen.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhachHang.resources
-C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhoHang.resources
-C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhuyenMai.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhanVien.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhapHang.resources
-C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_QuanLyGiamGia.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ReportHangTon.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ReportPhieuNhap.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThemLoaiHang.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeHoaDon.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeKhachHang.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKePhieuNhap.resources
-C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_BanHang.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKe.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeHangHoa.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhaCungCap.resources
@@ -1683,3 +1679,7 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\R
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_QuanLyThanhNhan.resources
+C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DangKyTiem.resources
+C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhoVaccine.resources
+C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete

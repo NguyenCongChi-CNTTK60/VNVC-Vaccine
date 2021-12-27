@@ -304,5 +304,21 @@ namespace WindowsFormsApp
                 HienThi();
             }
         }
+
+
+        private void addUC(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+
+        private void btnThanNhan_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyThanhNhan _QuanLyThanhNhan = new UC_QuanLyThanhNhan();
+            addUC(_QuanLyThanhNhan);
+        }
     }
 }

@@ -348,17 +348,11 @@
     <Compile Include="UC_KhachHang.Designer.cs">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_KhoHang.cs">
+    <Compile Include="UC_KhoVaccine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_KhoHang.Designer.cs">
-      <DependentUpon>UC_KhoHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_KhuyenMai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_KhuyenMai.Designer.cs">
-      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    <Compile Include="UC_KhoVaccine.Designer.cs">
+      <DependentUpon>UC_KhoVaccine.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_NhanVien.cs">
       <SubType>UserControl</SubType>
@@ -372,11 +366,11 @@
     <Compile Include="UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_QuanLyGiamGia.cs">
+    <Compile Include="UC_QuanLyThanhNhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_QuanLyGiamGia.Designer.cs">
-      <DependentUpon>UC_QuanLyGiamGia.cs</DependentUpon>
+    <Compile Include="UC_QuanLyThanhNhan.Designer.cs">
+      <DependentUpon>UC_QuanLyThanhNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ReportHangTon.cs">
       <SubType>UserControl</SubType>
@@ -414,11 +408,11 @@
     <Compile Include="UC_ThongKePhieuNhap.Designer.cs">
       <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_BanHang.cs">
+    <Compile Include="UC_DangKyTiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_BanHang.Designer.cs">
-      <DependentUpon>UC_BanHang.cs</DependentUpon>
+    <Compile Include="UC_DangKyTiem.Designer.cs">
+      <DependentUpon>UC_DangKyTiem.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ThongKe.cs">
       <SubType>UserControl</SubType>
@@ -513,11 +507,8 @@
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_KhoHang.resx">
-      <DependentUpon>UC_KhoHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_KhuyenMai.resx">
-      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    <EmbeddedResource Include="UC_KhoVaccine.resx">
+      <DependentUpon>UC_KhoVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
@@ -525,8 +516,8 @@
     <EmbeddedResource Include="UC_NhapHang.resx">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_QuanLyGiamGia.resx">
-      <DependentUpon>UC_QuanLyGiamGia.cs</DependentUpon>
+    <EmbeddedResource Include="UC_QuanLyThanhNhan.resx">
+      <DependentUpon>UC_QuanLyThanhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ReportHangTon.resx">
       <DependentUpon>UC_ReportHangTon.cs</DependentUpon>
@@ -546,8 +537,8 @@
     <EmbeddedResource Include="UC_ThongKePhieuNhap.resx">
       <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_BanHang.resx">
-      <DependentUpon>UC_BanHang.cs</DependentUpon>
+    <EmbeddedResource Include="UC_DangKyTiem.resx">
+      <DependentUpon>UC_DangKyTiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThongKe.resx">
       <DependentUpon>UC_ThongKe.cs</DependentUpon>

@@ -29,15 +29,17 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNhanVien = new System.Windows.Forms.Panel();
+            this.dgvNV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lblTk = new System.Windows.Forms.Label();
             this.btnGiaoca = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
-            this.dgvNV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -62,95 +64,30 @@ namespace WindowsFormsApp
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTk = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlNhanVien
             // 
             this.pnlNhanVien.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlNhanVien.Controls.Add(this.dgvNV);
+            this.pnlNhanVien.Controls.Add(this.lblTk);
             this.pnlNhanVien.Controls.Add(this.btnGiaoca);
             this.pnlNhanVien.Controls.Add(this.btnSua);
             this.pnlNhanVien.Controls.Add(this.btnXoa);
-            this.pnlNhanVien.Controls.Add(this.dgvNV);
             this.pnlNhanVien.Controls.Add(this.panel1);
-            this.pnlNhanVien.Controls.Add(this.panel2);
             this.pnlNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlNhanVien.Location = new System.Drawing.Point(0, 0);
             this.pnlNhanVien.Name = "pnlNhanVien";
-            this.pnlNhanVien.Size = new System.Drawing.Size(1411, 1150);
+            this.pnlNhanVien.Size = new System.Drawing.Size(1806, 1088);
             this.pnlNhanVien.TabIndex = 0;
-            // 
-            // btnGiaoca
-            // 
-            this.btnGiaoca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnGiaoca.FlatAppearance.BorderSize = 2;
-            this.btnGiaoca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGiaoca.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiaoca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnGiaoca.IconChar = FontAwesome.Sharp.IconChar.Child;
-            this.btnGiaoca.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnGiaoca.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGiaoca.IconSize = 30;
-            this.btnGiaoca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiaoca.Location = new System.Drawing.Point(1222, 1091);
-            this.btnGiaoca.Name = "btnGiaoca";
-            this.btnGiaoca.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGiaoca.Size = new System.Drawing.Size(167, 45);
-            this.btnGiaoca.TabIndex = 228;
-            this.btnGiaoca.Text = "         Giao ca";
-            this.btnGiaoca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiaoca.UseVisualStyleBackColor = true;
-            this.btnGiaoca.Click += new System.EventHandler(this.btnGiaoca_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnSua.FlatAppearance.BorderSize = 2;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSua.IconSize = 30;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(817, 1091);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSua.Size = new System.Drawing.Size(167, 45);
-            this.btnSua.TabIndex = 227;
-            this.btnSua.Text = "         Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnXoa.FlatAppearance.BorderSize = 2;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnXoa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnXoa.IconSize = 30;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1020, 1091);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnXoa.Size = new System.Drawing.Size(167, 45);
-            this.btnXoa.TabIndex = 226;
-            this.btnXoa.Text = "         Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dgvNV
             // 
@@ -162,10 +99,10 @@ namespace WindowsFormsApp
             this.dgvNV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvNV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -179,15 +116,15 @@ namespace WindowsFormsApp
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNV.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNV.EnableHeadersVisualStyles = false;
-            this.dgvNV.GridColor = System.Drawing.Color.Gray;
-            this.dgvNV.Location = new System.Drawing.Point(21, 612);
+            this.dgvNV.GridColor = System.Drawing.Color.Black;
+            this.dgvNV.Location = new System.Drawing.Point(21, 586);
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -195,16 +132,16 @@ namespace WindowsFormsApp
             this.dgvNV.RowHeadersWidth = 62;
             this.dgvNV.RowTemplate.Height = 45;
             this.dgvNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNV.Size = new System.Drawing.Size(1368, 462);
-            this.dgvNV.TabIndex = 224;
+            this.dgvNV.Size = new System.Drawing.Size(1767, 426);
+            this.dgvNV.TabIndex = 230;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvNV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvNV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvNV.ThemeStyle.GridColor = System.Drawing.Color.Gray;
-            this.dgvNV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.dgvNV.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.dgvNV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.dgvNV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvNV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvNV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -218,7 +155,82 @@ namespace WindowsFormsApp
             this.dgvNV.ThemeStyle.RowsStyle.Height = 45;
             this.dgvNV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
+            // 
+            // lblTk
+            // 
+            this.lblTk.AutoSize = true;
+            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.Location = new System.Drawing.Point(785, 10);
+            this.lblTk.Name = "lblTk";
+            this.lblTk.Size = new System.Drawing.Size(222, 40);
+            this.lblTk.TabIndex = 229;
+            this.lblTk.Text = "Quản lý nhân viên";
+            // 
+            // btnGiaoca
+            // 
+            this.btnGiaoca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnGiaoca.FlatAppearance.BorderSize = 2;
+            this.btnGiaoca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiaoca.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiaoca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnGiaoca.IconChar = FontAwesome.Sharp.IconChar.Child;
+            this.btnGiaoca.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnGiaoca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGiaoca.IconSize = 30;
+            this.btnGiaoca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiaoca.Location = new System.Drawing.Point(1611, 1028);
+            this.btnGiaoca.Name = "btnGiaoca";
+            this.btnGiaoca.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGiaoca.Size = new System.Drawing.Size(167, 45);
+            this.btnGiaoca.TabIndex = 228;
+            this.btnGiaoca.Text = "         Giao ca";
+            this.btnGiaoca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiaoca.UseVisualStyleBackColor = true;
+            this.btnGiaoca.Click += new System.EventHandler(this.btnGiaoca_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnSua.FlatAppearance.BorderSize = 2;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnSua.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.IconSize = 30;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(1219, 1028);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSua.Size = new System.Drawing.Size(167, 45);
+            this.btnSua.TabIndex = 227;
+            this.btnSua.Text = "         Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnXoa.FlatAppearance.BorderSize = 2;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnXoa.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnXoa.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXoa.IconSize = 30;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(1418, 1028);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnXoa.Size = new System.Drawing.Size(167, 45);
+            this.btnXoa.TabIndex = 226;
+            this.btnXoa.Text = "         Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // panel1
             // 
@@ -245,9 +257,9 @@ namespace WindowsFormsApp
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(21, 83);
+            this.panel1.Location = new System.Drawing.Point(21, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 515);
+            this.panel1.Size = new System.Drawing.Size(1767, 510);
             this.panel1.TabIndex = 220;
             // 
             // label13
@@ -263,12 +275,12 @@ namespace WindowsFormsApp
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.panel4.Controls.Add(this.label1);
             this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(10, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1355, 49);
+            this.panel4.Size = new System.Drawing.Size(1747, 49);
             this.panel4.TabIndex = 234;
             // 
             // label1
@@ -305,7 +317,7 @@ namespace WindowsFormsApp
             this.txtKH.SelectedText = "";
             this.txtKH.SelectionStart = 11;
             this.txtKH.ShadowDecoration.Parent = this.txtKH;
-            this.txtKH.Size = new System.Drawing.Size(1331, 49);
+            this.txtKH.Size = new System.Drawing.Size(1711, 49);
             this.txtKH.TabIndex = 233;
             this.txtKH.Enter += new System.EventHandler(this.txtKH_Enter);
             this.txtKH.Leave += new System.EventHandler(this.txtKH_Leave);
@@ -326,7 +338,7 @@ namespace WindowsFormsApp
             this.txtTimkiem.ForeColor = System.Drawing.Color.Gray;
             this.txtTimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiem.HoverState.Parent = this.txtTimkiem;
-            this.txtTimkiem.Location = new System.Drawing.Point(865, 338);
+            this.txtTimkiem.Location = new System.Drawing.Point(1245, 338);
             this.txtTimkiem.Margin = new System.Windows.Forms.Padding(7);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.PasswordChar = '\0';
@@ -354,10 +366,10 @@ namespace WindowsFormsApp
             this.cmbChucVu.HoverState.Parent = this.cmbChucVu;
             this.cmbChucVu.ItemHeight = 30;
             this.cmbChucVu.ItemsAppearance.Parent = this.cmbChucVu;
-            this.cmbChucVu.Location = new System.Drawing.Point(440, 351);
+            this.cmbChucVu.Location = new System.Drawing.Point(641, 351);
             this.cmbChucVu.Name = "cmbChucVu";
             this.cmbChucVu.ShadowDecoration.Parent = this.cmbChucVu;
-            this.cmbChucVu.Size = new System.Drawing.Size(368, 36);
+            this.cmbChucVu.Size = new System.Drawing.Size(572, 36);
             this.cmbChucVu.TabIndex = 231;
             // 
             // cmbGioiTinh
@@ -377,7 +389,7 @@ namespace WindowsFormsApp
             this.cmbGioiTinh.Location = new System.Drawing.Point(29, 351);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.ShadowDecoration.Parent = this.cmbGioiTinh;
-            this.cmbGioiTinh.Size = new System.Drawing.Size(368, 36);
+            this.cmbGioiTinh.Size = new System.Drawing.Size(560, 36);
             this.cmbGioiTinh.TabIndex = 230;
             // 
             // label12
@@ -385,7 +397,7 @@ namespace WindowsFormsApp
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(522, 296);
+            this.label12.Location = new System.Drawing.Point(723, 296);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(26, 35);
             this.label12.TabIndex = 227;
@@ -395,7 +407,7 @@ namespace WindowsFormsApp
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(434, 296);
+            this.label11.Location = new System.Drawing.Point(635, 296);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 35);
             this.label11.TabIndex = 225;
@@ -415,7 +427,7 @@ namespace WindowsFormsApp
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(859, 296);
+            this.label9.Location = new System.Drawing.Point(1239, 296);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 35);
             this.label9.TabIndex = 220;
@@ -446,7 +458,7 @@ namespace WindowsFormsApp
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.SelectionStart = 12;
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
-            this.txtDiachi.Size = new System.Drawing.Size(1331, 49);
+            this.txtDiachi.Size = new System.Drawing.Size(1711, 49);
             this.txtDiachi.TabIndex = 221;
             this.txtDiachi.Enter += new System.EventHandler(this.txtDiachi_Enter);
             this.txtDiachi.Leave += new System.EventHandler(this.txtDiachi_Leave);
@@ -467,7 +479,7 @@ namespace WindowsFormsApp
             this.txtEmail.ForeColor = System.Drawing.Color.Gray;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(865, 233);
+            this.txtEmail.Location = new System.Drawing.Point(1245, 233);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(7);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -496,7 +508,7 @@ namespace WindowsFormsApp
             this.txtSĐT.ForeColor = System.Drawing.Color.Gray;
             this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.HoverState.Parent = this.txtSĐT;
-            this.txtSĐT.Location = new System.Drawing.Point(440, 233);
+            this.txtSĐT.Location = new System.Drawing.Point(641, 233);
             this.txtSĐT.Margin = new System.Windows.Forms.Padding(7);
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.PasswordChar = '\0';
@@ -504,7 +516,7 @@ namespace WindowsFormsApp
             this.txtSĐT.SelectedText = "";
             this.txtSĐT.SelectionStart = 18;
             this.txtSĐT.ShadowDecoration.Parent = this.txtSĐT;
-            this.txtSĐT.Size = new System.Drawing.Size(368, 49);
+            this.txtSĐT.Size = new System.Drawing.Size(572, 49);
             this.txtSĐT.TabIndex = 221;
             this.txtSĐT.Enter += new System.EventHandler(this.txtSĐT_Enter);
             this.txtSĐT.Leave += new System.EventHandler(this.txtSĐT_Leave);
@@ -534,7 +546,7 @@ namespace WindowsFormsApp
             this.txtMaNV.SelectedText = "";
             this.txtMaNV.SelectionStart = 19;
             this.txtMaNV.ShadowDecoration.Parent = this.txtMaNV;
-            this.txtMaNV.Size = new System.Drawing.Size(368, 49);
+            this.txtMaNV.Size = new System.Drawing.Size(560, 49);
             this.txtMaNV.TabIndex = 220;
             // 
             // label8
@@ -552,7 +564,7 @@ namespace WindowsFormsApp
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(564, 191);
+            this.label7.Location = new System.Drawing.Point(765, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 35);
             this.label7.TabIndex = 26;
@@ -562,7 +574,7 @@ namespace WindowsFormsApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(859, 191);
+            this.label6.Location = new System.Drawing.Point(1239, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 35);
             this.label6.TabIndex = 25;
@@ -572,7 +584,7 @@ namespace WindowsFormsApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(434, 191);
+            this.label5.Location = new System.Drawing.Point(635, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 35);
             this.label5.TabIndex = 24;
@@ -614,28 +626,22 @@ namespace WindowsFormsApp
             this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Location = new System.Drawing.Point(10, 60);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1355, 1);
+            this.panel3.Size = new System.Drawing.Size(1750, 1);
             this.panel3.TabIndex = 16;
             // 
-            // panel2
+            // guna2Elipse1
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblTk);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 68);
-            this.panel2.TabIndex = 219;
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this.panel1;
             // 
-            // lblTk
+            // guna2Elipse2
             // 
-            this.lblTk.AutoSize = true;
-            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTk.Location = new System.Drawing.Point(15, 12);
-            this.lblTk.Name = "lblTk";
-            this.lblTk.Size = new System.Drawing.Size(191, 35);
-            this.lblTk.TabIndex = 14;
-            this.lblTk.Text = "Quản lý nhân viên";
+            this.guna2Elipse2.TargetControl = this.panel4;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 10;
+            this.guna2Elipse3.TargetControl = this.dgvNV;
             // 
             // UC_NhanVien
             // 
@@ -644,15 +650,14 @@ namespace WindowsFormsApp
             this.Controls.Add(this.pnlNhanVien);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_NhanVien";
-            this.Size = new System.Drawing.Size(1411, 1150);
+            this.Size = new System.Drawing.Size(1806, 1088);
             this.pnlNhanVien.ResumeLayout(false);
+            this.pnlNhanVien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -660,8 +665,6 @@ namespace WindowsFormsApp
         #endregion
 
         private System.Windows.Forms.Panel pnlNhanVien;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTk;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -685,10 +688,15 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2TextBox txtKH;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnXoa;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvNV;
         private FontAwesome.Sharp.IconButton btnGiaoca;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTk;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvNV;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
     }
 }

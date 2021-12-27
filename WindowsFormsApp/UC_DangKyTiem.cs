@@ -13,16 +13,23 @@ using DTO;
 
 namespace WindowsFormsApp
 {
-    public partial class UC_BanHang : UserControl
+    public partial class UC_DangKyTiem : UserControl
     {
         private string manv, tennv;
-        public UC_BanHang(string manv, string tennv)  // string manv, string tennv
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public UC_DangKyTiem(string manv, string tennv)  // string manv, string tennv
         {
             InitializeComponent();
 
             //
             // Lấy ngày hiện tại
             //
+            /*
             DateTime today = DateTime.Now;
             dtpNgayban.Value = new DateTime(today.Year, today.Month, today.Day);
 
@@ -59,13 +66,14 @@ namespace WindowsFormsApp
 
             lblMahd.Text = Matudong();
             resetInfoProduct();
-            this.dtpNgayban.Enabled = false;
+            this.dtpNgayban.Enabled = false; */
         }
 
 
         //
         // Tạo mã hóa đơn tự động
         // chí
+        /*
         private string Matudong()
         {
             string query = "select MaHD from HoaDon";
@@ -83,8 +91,8 @@ namespace WindowsFormsApp
                 k = dt.Rows.Count;
                 k++;
                 if (k < 10)
-                {
                     ma = ma + "00";
+                {
                 }
                 else if (k >= 10 && k < 100)
                 {
@@ -244,7 +252,7 @@ namespace WindowsFormsApp
 
                     string tk = lblMahh.Text;
                     // DataTable dt1 = MatHangBUS.Intance.TimKiemGiaBan(tk);
-                    DataTable dt = GiamGiaBUS.Intance.TimKiemGG(tk);
+                   /* DataTable dt = GiamGiaBUS.Intance.TimKiemGG(tk);
                     if (dt.Rows.Count > 0)
                     {
                         DateTime Ngaybd = Convert.ToDateTime(dt.Rows[0]["NgayBD"].ToString());
@@ -259,7 +267,7 @@ namespace WindowsFormsApp
                             lblPhantram.Text = "0";
                     }
                     else
-                        lblPhantram.Text = "0";
+                        lblPhantram.Text = "0"; 
                 }
             }
         }
@@ -572,6 +580,7 @@ namespace WindowsFormsApp
             txtTienkhachdua.Text = "";
             lblTiengiam.Text = "";
         }
+    } */
     }
 }
 

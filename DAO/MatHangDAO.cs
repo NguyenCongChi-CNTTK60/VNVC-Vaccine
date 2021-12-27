@@ -202,7 +202,7 @@ namespace DAO
 
         public DataTable HienThi()
         {
-            string query = "select MaMH as [Mã mặt hàng], TenMH as [Tên mặt hàng], DonVi as [Đơn vị],SoLuong as [Số lượng], GiaBan as [Giá bán], TenLH as [Loại hàng] from MatHang inner join LoaiHang on MatHang.MaLH = LoaiHang.MaLH";
+            string query = "select MaVX as [Mã Vaccine], TenVX as [Tên Vacine],SoLuong as [Số lượng], GiaBan as [Giá bán],PhongBenh as [Phòng bệnh], TenLoai as [Loại Vaccine],NuocSX as [Nước sản xuất] from VacXin inner join LoaiVacXin on VacXin.MaLoai = LoaiVacXin.MaLoai";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

@@ -85,7 +85,7 @@ namespace DAO
 
         public DataTable HienThi()
         {
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng], DiaChi as [Địa chỉ], SDT as [Số điện thoại], Email as [Email] from KhachHang";
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],NgaySinh as [Ngày sinh], DiaChi as [Địa chỉ], KhachHang.SDT as [Số điện thoại], TenTN as [Thân nhân] from KhachHang inner join ThanNhan on KhachHang.MaTN = ThanNhan.MaTN";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

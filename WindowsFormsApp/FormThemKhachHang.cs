@@ -15,8 +15,8 @@ namespace WindowsFormsApp
     {
         string sdt = "";
         string maKH = "";
-        UC_BanHang uc = null;
-        public FormThemKhachHang(string maKH,string sdt, UC_BanHang uc)
+        UC_DangKyTiem uc = null;
+        public FormThemKhachHang(string maKH,string sdt, UC_DangKyTiem uc)
         {
             InitializeComponent();
             this.sdt = sdt;
