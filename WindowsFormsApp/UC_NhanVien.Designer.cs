@@ -68,6 +68,7 @@ namespace WindowsFormsApp
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pnlNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -77,6 +78,7 @@ namespace WindowsFormsApp
             // pnlNhanVien
             // 
             this.pnlNhanVien.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlNhanVien.Controls.Add(this.panel5);
             this.pnlNhanVien.Controls.Add(this.dgvNV);
             this.pnlNhanVien.Controls.Add(this.lblTk);
             this.pnlNhanVien.Controls.Add(this.btnGiaoca);
@@ -643,6 +645,15 @@ namespace WindowsFormsApp
             this.guna2Elipse3.BorderRadius = 10;
             this.guna2Elipse3.TargetControl = this.dgvNV;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1806, 2);
+            this.panel5.TabIndex = 242;
+            // 
             // UC_NhanVien
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -698,5 +709,6 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

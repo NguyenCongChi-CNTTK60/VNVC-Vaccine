@@ -19,7 +19,8 @@ namespace WindowsFormsApp
         public UC_TrangChu(string tennv)
         {
             InitializeComponent();
-         //   getDataChart();
+            getDataChart();
+            getDataChart1();
           //  getdataLable();
             this.tennv = tennv;
         ///   lblTenNhanVien.Text = tennv;
@@ -27,6 +28,88 @@ namespace WindowsFormsApp
          //   TopSP();
          //   cmbTonKho.SelectedIndex = 0;
         }
+
+
+        private void getDataChart()
+        {
+            chart1.Titles.Clear();
+            string query = "select VacXin.MaVX as  [Mã Vaccine],VacXin.TenVX as N'Tên Vaccine',sum(ChitietPN.Soluong) as N'Số lượng nhập',VacXin.SoLuong as N'Số lượng tồn', (sum(ChitietPN.Soluong) - VacXin.SoLuong) as N'Số lượng bán' from VacXin inner join ChiTietPN on VacXin.MaVX = ChiTietPN.MaVX  group by VacXin.MaVX,VacXiN.SoLuong,VacXin.TenVX";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            chart1.DataSource = data;
+            chart1.Series["Số lượng nhập"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng nhập"].YValueMembers = "Số lượng nhập";
+            chart1.Series["Số lượng tồn"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng tồn"].YValueMembers = "Số lượng tồn";
+            chart1.Series["Số lượng bán"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng bán"].YValueMembers = "Số lượng bán";
+            chart1.Titles.Add("THỐNG KÊ VACCINE");
+            chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisX.Minimum = 0;
+            chart1.Series[0].ChartType = SeriesChartType.Column;
+        }
+
+
+
+        private void getDataChartChange()
+        {
+            string tk = txtTimkiem.Text; 
+            chart1.Titles.Clear();
+            string query = "select VacXin.MaVX as  [Mã Vaccine],VacXin.TenVX as N'Tên Vaccine',sum(ChitietPN.Soluong) as N'Số lượng nhập',VacXin.SoLuong as N'Số lượng tồn', (sum(ChitietPN.Soluong) - VacXin.SoLuong) as N'Số lượng bán' from VacXin inner join ChiTietPN on VacXin.MaVX = ChiTietPN.MaVX where VacXin.MaVX like '%" + tk + "%' or VacXin.TenVX like N'%" + tk + "%' group by VacXin.MaVX,VacXiN.SoLuong,VacXin.TenVX";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            chart1.DataSource = data;
+            chart1.Series["Số lượng nhập"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng nhập"].YValueMembers = "Số lượng nhập";
+            chart1.Series["Số lượng tồn"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng tồn"].YValueMembers = "Số lượng tồn";
+            chart1.Series["Số lượng bán"].XValueMember = "Tên Vaccine";
+            chart1.Series["Số lượng bán"].YValueMembers = "Số lượng bán";
+            chart1.Titles.Add("THỐNG KÊ VACCINE");
+            chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
+            chart1.ChartAreas[0].AxisX.Minimum = 0;
+            chart1.Series[0].ChartType = SeriesChartType.Column;
+        }
+
+
+
+
+
+        private void getDataChart1()
+        {
+            chart2.Titles.Clear();
+            DateTime today = DateTime.Now;
+            DateTime bd = new DateTime(today.Year, today.Month, 1);
+            DateTime kt = bd.AddMonths(1).AddDays(-1);
+            string query = "EXEC USP_ThongKeDoanhThuTrongThang @ngaybd , @ngaykt";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { bd, kt });
+            chart2.DataSource = data;
+            chart2.Series["Doanh Thu"].XValueMember = "NGAY";
+            chart2.Series["Doanh Thu"].YValueMembers = "TongTien";
+            chart2.Titles.Add("THỐNG KÊ DOANH THU");
+            chart2.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(0, 35, 149);
+            //chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
+            //chart1.ChartAreas[0].AxisX.Minimum = 0;
+            //chart1.Series[0].ChartType = SeriesChartType.Column;
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                getDataChartChange();
+            }
+            else
+                getDataChart();
+
+
+            
+        }
+
+        private void txtTimkiem_Click(object sender, EventArgs e)
+        {
+            txtTimkiem.Text = "";
+            txtTimkiem.ForeColor = Color.Black;
+        }
+
 
 
         /*
@@ -272,5 +355,5 @@ namespace WindowsFormsApp
         
         } */
 
-    } 
+    }
 }

@@ -57,6 +57,9 @@ namespace WindowsFormsApp
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnGoiTiem = new FontAwesome.Sharp.IconButton();
+            this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAlign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).BeginInit();
@@ -253,7 +256,7 @@ namespace WindowsFormsApp
             this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKhachHang.IconSize = 40;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(365, 86);
+            this.btnKhachHang.Location = new System.Drawing.Point(274, 86);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(190, 50);
             this.btnKhachHang.TabIndex = 6;
@@ -261,7 +264,6 @@ namespace WindowsFormsApp
             this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
-            this.btnKhachHang.MouseHover += new System.EventHandler(this.btnKhachHang_MouseHover);
             // 
             // btnTrangchu
             // 
@@ -275,7 +277,7 @@ namespace WindowsFormsApp
             this.btnTrangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTrangchu.IconSize = 40;
             this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(169, 86);
+            this.btnTrangchu.Location = new System.Drawing.Point(78, 86);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Size = new System.Drawing.Size(190, 50);
             this.btnTrangchu.TabIndex = 27;
@@ -295,7 +297,7 @@ namespace WindowsFormsApp
             this.btnDangKyTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDangKyTiem.IconSize = 40;
             this.btnDangKyTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKyTiem.Location = new System.Drawing.Point(777, 86);
+            this.btnDangKyTiem.Location = new System.Drawing.Point(686, 86);
             this.btnDangKyTiem.Name = "btnDangKyTiem";
             this.btnDangKyTiem.Size = new System.Drawing.Size(190, 50);
             this.btnDangKyTiem.TabIndex = 28;
@@ -315,7 +317,7 @@ namespace WindowsFormsApp
             this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKhoHang.IconSize = 43;
             this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(994, 86);
+            this.btnKhoHang.Location = new System.Drawing.Point(899, 86);
             this.btnKhoHang.Name = "btnKhoHang";
             this.btnKhoHang.Size = new System.Drawing.Size(190, 50);
             this.btnKhoHang.TabIndex = 7;
@@ -335,11 +337,11 @@ namespace WindowsFormsApp
             this.btnNhaCungCap.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhaCungCap.IconSize = 43;
             this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(1204, 86);
+            this.btnNhaCungCap.Location = new System.Drawing.Point(1295, 86);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
             this.btnNhaCungCap.Size = new System.Drawing.Size(190, 50);
             this.btnNhaCungCap.TabIndex = 30;
-            this.btnNhaCungCap.Text = "     Nhà cung cấp";
+            this.btnNhaCungCap.Text = "    Nhà cung cấp";
             this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhaCungCap.UseVisualStyleBackColor = true;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
@@ -355,7 +357,7 @@ namespace WindowsFormsApp
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.IconSize = 43;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(1415, 86);
+            this.btnThongKe.Location = new System.Drawing.Point(1491, 86);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(190, 50);
             this.btnThongKe.TabIndex = 32;
@@ -375,7 +377,7 @@ namespace WindowsFormsApp
             this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhanVien.IconSize = 35;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(570, 86);
+            this.btnNhanVien.Location = new System.Drawing.Point(479, 86);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(190, 50);
             this.btnNhanVien.TabIndex = 29;
@@ -413,12 +415,43 @@ namespace WindowsFormsApp
             this.guna2Elipse7.BorderRadius = 10;
             this.guna2Elipse7.TargetControl = this.btnKhoHang;
             // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.BorderRadius = 10;
+            this.guna2Elipse8.TargetControl = this.btnNhaCungCap;
+            // 
+            // btnGoiTiem
+            // 
+            this.btnGoiTiem.FlatAppearance.BorderSize = 0;
+            this.btnGoiTiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoiTiem.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoiTiem.ForeColor = System.Drawing.Color.Black;
+            this.btnGoiTiem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGoiTiem.IconColor = System.Drawing.Color.Silver;
+            this.btnGoiTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoiTiem.IconSize = 43;
+            this.btnGoiTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGoiTiem.Location = new System.Drawing.Point(1095, 86);
+            this.btnGoiTiem.Name = "btnGoiTiem";
+            this.btnGoiTiem.Size = new System.Drawing.Size(190, 50);
+            this.btnGoiTiem.TabIndex = 8;
+            this.btnGoiTiem.Text = "         Gói tiêm";
+            this.btnGoiTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGoiTiem.UseVisualStyleBackColor = true;
+            this.btnGoiTiem.Click += new System.EventHandler(this.btnGoiTiem_Click);
+            // 
+            // guna2Elipse9
+            // 
+            this.guna2Elipse9.BorderRadius = 10;
+            this.guna2Elipse9.TargetControl = this.btnGoiTiem;
+            // 
             // FormTrangChu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1806, 1245);
+            this.Controls.Add(this.btnGoiTiem);
             this.Controls.Add(this.btnKhachHang);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTrangchu);
@@ -472,5 +505,8 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
+        private FontAwesome.Sharp.IconButton btnGoiTiem;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
     }
 }

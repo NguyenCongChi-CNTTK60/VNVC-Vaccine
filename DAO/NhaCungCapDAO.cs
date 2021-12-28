@@ -39,7 +39,7 @@ namespace DAO
 
         public DataTable HienThi()
         {
-            string query = "select MaNCC as [Mã nhà cung cấp], TenNCC as [Tên nhà cung cấp], SDT  as [Số điện thoại], DiaChi as [Địa chỉ], Email from NhaCungCap";
+            string query = "select MaNCC as [Mã nhà cung cấp], TenNCC as [Tên nhà cung cấp], SDT  as [Số điện thoại],   NuocSX as [Địa chỉ], Email from NhaCungCap";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
 

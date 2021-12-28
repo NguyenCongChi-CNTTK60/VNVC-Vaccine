@@ -256,6 +256,12 @@
     <Compile Include="FormNhapHang.Designer.cs">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReportGoiTIem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportGoiTIem.Designer.cs">
+      <DependentUpon>FormReportGoiTIem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,12 @@
     </Compile>
     <Compile Include="UC_CaLamViecNhanVien.Designer.cs">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ChiTietGoiTiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ChiTietGoiTiem.Designer.cs">
+      <DependentUpon>UC_ChiTietGoiTiem.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
@@ -459,6 +471,9 @@
     <EmbeddedResource Include="FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportGoiTIem.resx">
+      <DependentUpon>FormReportGoiTIem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSDT.resx">
       <DependentUpon>FormSDT.cs</DependentUpon>
     </EmbeddedResource>
@@ -492,11 +507,15 @@
       <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportChiTietHD.rdlc" />
+    <EmbeddedResource Include="Report\ReportGoiTiem.rdlc" />
     <EmbeddedResource Include="Report\ReportHangTon.rdlc" />
     <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ChiTietGoiTiem.resx">
+      <DependentUpon>UC_ChiTietGoiTiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_DoiMatKhau.resx">
       <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
@@ -599,6 +618,7 @@
     <None Include="Resources\Capture1.PNG" />
     <None Include="Resources\â.PNG" />
     <None Include="Resources\Capture2.PNG" />
+    <None Include="Resources\Capture3.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

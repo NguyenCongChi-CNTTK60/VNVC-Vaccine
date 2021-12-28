@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,20 +16,41 @@ namespace WindowsFormsApp
     {
 
         private string SĐT;
-        public UC_XacNhanMa(string SĐT)
+        public UC_XacNhanMa()
         {
             InitializeComponent();
-            this.SĐT = SĐT;
-            txtSDT.Text = SĐT;
+            HienThi();
+           
         }
 
-        private void btnQuaylai_Click(object sender, EventArgs e)
+
+        private void HienThi()
         {
-            FormLogin f = new FormLogin();
-            f.Show();
-            this.Hide();
+            dgvGT.DataSource = GoiTiemBUS.Intance.HienThi();
         }
 
+
+
+        private void dgvGT_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            txtMaGT.Text = dgvGT.Rows[indexx].Cells[0].Value.ToString();
+            txtTenGT.Text = dgvGT.Rows[indexx].Cells[1].Value.ToString();
+            txtMaGT.ForeColor = Color.Black;
+            txtTenGT.ForeColor = Color.Black;
+        }
+
+        private void btnXemChiTiet_Click(object sender, EventArgs e)
+        {
+            FormReportGoiTIem formReportGoiTIem = new FormReportGoiTIem(txtMaGT.Text);
+            formReportGoiTIem.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void addUC(UserControl uc)
         {
@@ -38,26 +60,10 @@ namespace WindowsFormsApp
             uc.BringToFront();
         }
 
-
-        Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
-        private void btnTiepTuc_Click(object sender, EventArgs e)
+        private void btnChiTietGoiTiem_Click(object sender, EventArgs e)
         {
-            SqlConnection con = chuoiketnoi.sqlConnection();
-            con.Open();
-            string tk = txtSDT.Text;
-            string query = "select MatKhau from Nhanvien where SDT = '" + tk + "'";
-            SqlCommand sqlCommand = new SqlCommand(query, con);
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            if (sqlDataReader.Read() == true)
-            {
-                UC_DoiMatKhau f = new UC_DoiMatKhau(txtSDT.Text);
-                addUC(f);
-            }
-            else
-                MessageBox.Show("Mã xác nhận không đúng", "Thông báo");
-               con.Close();
-
-           
+            UC_ChiTietGoiTiem _ChiTietGoiTiem = new UC_ChiTietGoiTiem();
+            addUC(_ChiTietGoiTiem);
         }
     }
 }

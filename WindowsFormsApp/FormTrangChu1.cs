@@ -146,6 +146,11 @@ namespace WindowsFormsApp
             btnThongKe.BackColor = Color.White;
 
 
+
+            // 7. btnThongke
+
+            btnGoiTiem.ForeColor = Color.Black;
+            btnGoiTiem.BackColor = Color.White;
             // 8. btnThongke
 
             btnDangXuat.ForeColor = Color.Black;
@@ -161,12 +166,14 @@ namespace WindowsFormsApp
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 35, 149);
             UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
             addUC(_TrangChu);
           
             ButtonHide();
             btnTrangchu.ForeColor = Color.White;
-            btnTrangchu.IconColor = Color.White;
+            btnTrangchu.BackColor = myRgbColor;
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
@@ -203,12 +210,14 @@ namespace WindowsFormsApp
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 35, 149);
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
-            Phanquyen(_NhaCungCap, _HienThiQuyen);
-           
+            addUC(_NhaCungCap);
+
             ButtonHide();
             btnNhaCungCap.ForeColor = Color.White;
-            btnNhaCungCap.IconColor = Color.White;
+            btnNhaCungCap.BackColor = myRgbColor;
         }
 
         private void btnKhoHang_Click(object sender, EventArgs e)
@@ -256,14 +265,7 @@ namespace WindowsFormsApp
 
        
 
-        private void btnKhachHang_MouseHover(object sender, EventArgs e)
-        {
-            Color myRgbColor = new Color();
-            myRgbColor = Color.FromArgb(0, 35, 149);
-           
-            btnKhachHang.ForeColor = Color.White;
-            btnKhachHang.BackColor = myRgbColor;
-        }
+     
 
        
 
@@ -289,6 +291,17 @@ namespace WindowsFormsApp
             ButtonHide();
             btnKhachHang.ForeColor = Color.White;
             btnKhachHang.BackColor = myRgbColor;
+        }
+
+        private void btnGoiTiem_Click(object sender, EventArgs e)
+        {
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 35, 149);
+            ButtonHide();
+            UC_XacNhanMa _XacNhanMa = new UC_XacNhanMa();
+            addUC(_XacNhanMa);
+            btnGoiTiem.ForeColor = Color.White;
+            btnGoiTiem.BackColor = myRgbColor;
         }
     }
 }

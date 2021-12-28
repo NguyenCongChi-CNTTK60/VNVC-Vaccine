@@ -60,7 +60,7 @@ namespace WindowsFormsApp
             {
                 if (dt.Rows.Count > 0)
                 {
-                    UC_XacNhanMa uC_XacNhanMa = new UC_XacNhanMa(txtSDT.Text);
+                    UC_XacNhanMa uC_XacNhanMa = new UC_XacNhanMa();
                     addUC(uC_XacNhanMa);
                 }
                 else

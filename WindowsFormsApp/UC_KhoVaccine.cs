@@ -207,6 +207,11 @@ namespace WindowsFormsApp
 
         }
 
+
+
+      
+        
+
         private void HienThi()
         {
             DataTable dt = MatHangBUS.Intance.HienThi();
