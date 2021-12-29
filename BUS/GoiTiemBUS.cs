@@ -1,4 +1,5 @@
 ﻿using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -33,5 +34,45 @@ namespace BUS
         }
 
 
+        public List<GoiTiemDTO> getListGoitiem()
+        {
+            return GoiTiemDAO.Intance.getListGoitiem();
+        }
+
+
+        public DataTable TimKiemTG(string maPN)
+        {
+            return GoiTiemDAO.Intance.TimKiemTG(maPN);
+        }
+
+
+        public bool themChiTietGoiTiem(string maGT, string maVX, DateTime ngayPH, int soLieu)
+        {
+            return GoiTiemDAO.Intance.themChiTietGoiTiem(maGT, maVX, ngayPH, soLieu);
+        }
+
+
+        public DataTable TimKiemMaVXMaGT(string maGT, string maVX)
+        {
+            return GoiTiemDAO.Intance.TimKiemMaVXMaGT(maGT, maVX);
+        }
+
+
+        public DataTable TimKiemTT(string tk)
+        {
+            return GoiTiemDAO.Intance.TimKiemTT(tk);
+        }
+
+
+        public bool xoaChiTietGoiTiem(string maGT, string maVX)
+        {
+            return GoiTiemDAO.Intance.xoaChiTietGoiTiem(maGT, maVX);
+        }
+
+
+        public bool suaChiTietGoiTiem(string maGT, string maVX, DateTime thoigian, int sl)
+        {
+            return GoiTiemDAO.Intance.suaChiTietGoiTiem(maGT, maVX, thoigian, sl);
+        }
     }
 }

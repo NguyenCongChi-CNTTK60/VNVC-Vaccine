@@ -144,9 +144,9 @@ namespace WindowsFormsApp
             if (cmbTensp.SelectedIndex >= 0)
             {
                 i = cmbTensp.SelectedIndex;
-                lblmasp.Text = list[i].MaMH;
-                lbltensp.Text = list[i].TenMH;
-                txtGiaban.Text = list[i].GiaBan.ToString();
+              //  lblmasp.Text = list[i].MaMH;
+              //  lbltensp.Text = list[i].TenMH;
+              //  txtGiaban.Text = list[i].GiaBan.ToString();
                 //txtGia.Text = list[i].GiaGoc.ToString();
             }
 

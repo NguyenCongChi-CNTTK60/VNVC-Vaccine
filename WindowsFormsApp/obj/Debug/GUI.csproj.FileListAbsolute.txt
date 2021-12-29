@@ -1684,4 +1684,3 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\W
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhoVaccine.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormReportGoiTIem.resources
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ChiTietGoiTiem.resources
-C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete

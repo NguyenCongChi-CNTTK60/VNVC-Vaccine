@@ -28,7 +28,7 @@ namespace DAO
         public List<MatHangDTO> getListSanPham()
         {
             List<MatHangDTO> list = new List<MatHangDTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from MatHang");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from VacXin");
             foreach (DataRow item in data.Rows)
             {
                 MatHangDTO MatHang = new MatHangDTO(item);
@@ -109,44 +109,8 @@ namespace DAO
             return data;
         }
 
-        /*
-        public MatHangDTO getSP(string maSP)
-        {
-            LoaiHangDTO a = new MatHangDTO();
-            string query = String.Format("select * from MatHang where MaMH = N'{0}'", maSP);
-            if (DataProvider.Instance.ExecuteQuery(query).Rows.Count > 0)
-            {
-                DataRow data = DataProvider.Instance.ExecuteQuery(query).Rows[0];
-                a.TenMH = data["TenMH"].ToString();
-                a.MaMH = maSP;
-                a.GiaBan = int.Parse(data["GiaBan"].ToString());
-            }
-            return a;
-        } */
-
-        public bool temHH(MatHangDTO data, string imgLocation)
-        {
-            byte[] images = null;
-            FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-            BinaryReader brs = new BinaryReader(stream);
-            images = brs.ReadBytes((int)stream.Length);
-
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
-            {
-                string query = String.Format("Insert into MatHang Values('{0}', N'{1}', '{2}', {3}, {4}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong);
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.Add(new SqlParameter("@hinh", images));
-
-                connection.Open();
-                int n = cmd.ExecuteNonQuery();
-                if (n > 0)
-                {
-                    return true;
-                }
-                connection.Close();
-            }
-            return false;
-        }
+   
+      
 
         public void capNhatHinh(string imgLocation, string maHang)
         {

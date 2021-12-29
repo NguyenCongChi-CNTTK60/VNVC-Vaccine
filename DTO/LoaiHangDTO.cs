@@ -9,15 +9,17 @@ namespace DTO
 {
     public class LoaiHangDTO
     {
-        string maLH, tenLH;
+        string maloai, tenloai;
 
         public LoaiHangDTO(DataRow row)
         {
-            this.MaLH = row["MaLH"].ToString();
-            this.TenLH = row["TenLH"].ToString();
+            this.Maloai = row["MaLoai"].ToString();
+            this.Tenloai = row["TenLoai"].ToString();
         }
 
-        public string MaLH { get => maLH; set => maLH = value; }
-        public string TenLH { get => tenLH; set => tenLH = value; }
+      
+        public string Maloai { get => maloai; set => maloai = value; }
+        
+        public string Tenloai { get => tenloai; set => tenloai = value; }
     }
 }

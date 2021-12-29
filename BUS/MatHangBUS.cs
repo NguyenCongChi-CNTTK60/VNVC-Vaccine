@@ -23,11 +23,7 @@ namespace BUS
             set => instance = value;
         }
 
-        public bool temHH(MatHangDTO data, string imgLocation)
-        {
-            return MatHangDAO.Intance.temHH(data, imgLocation);
-        }
-
+       
         public void capNhatHinh(string imgLocation, string maHang)
         {
             MatHangDAO.Intance.capNhatHinh(imgLocation, maHang);

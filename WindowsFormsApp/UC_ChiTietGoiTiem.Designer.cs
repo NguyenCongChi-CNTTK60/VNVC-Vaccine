@@ -36,11 +36,33 @@ namespace WindowsFormsApp
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTk = new System.Windows.Forms.Label();
             this.dgvGT = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbLoaiVX = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbTenVaccine = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbTenGoiTiem = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpNgaytg = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSL = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTimkiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaVX = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTimkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaGT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,22 +72,10 @@ namespace WindowsFormsApp
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dtpNgaykt = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbCalamviec = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblMaLoai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGT)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -99,6 +109,13 @@ namespace WindowsFormsApp
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvGT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGT.ColumnHeadersHeight = 45;
+            this.dgvGT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -147,22 +164,81 @@ namespace WindowsFormsApp
             this.dgvGT.ThemeStyle.RowsStyle.Height = 45;
             this.dgvGT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvGT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGT_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Mã gói tiêm";
+            this.Column1.FillWeight = 67.70961F;
+            this.Column1.HeaderText = "Mã gói tiêm ";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Mã Vaccine";
+            this.Column2.FillWeight = 68.18182F;
+            this.Column2.HeaderText = "Mã Vaccine";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Tên gói tiêm";
+            this.Column3.FillWeight = 175.4284F;
+            this.Column3.HeaderText = "Tên gói tiêm";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Tên Vaccine";
+            this.Column4.FillWeight = 136.3603F;
+            this.Column4.HeaderText = "Tên Vaccine";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Ngày phát hàng";
+            this.Column5.FillWeight = 84.15864F;
+            this.Column5.HeaderText = "Ngày phát hành";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Số liều";
+            this.Column6.FillWeight = 68.16131F;
+            this.Column6.HeaderText = "Số liều";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.guna2ComboBox1);
-            this.panel2.Controls.Add(this.cmbCalamviec);
-            this.panel2.Controls.Add(this.dtpNgaykt);
+            this.panel2.Controls.Add(this.lblMaLoai);
+            this.panel2.Controls.Add(this.cmbLoaiVX);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.cmbTenVaccine);
+            this.panel2.Controls.Add(this.cmbTenGoiTiem);
+            this.panel2.Controls.Add(this.dtpNgaytg);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.guna2TextBox3);
+            this.panel2.Controls.Add(this.txtSL);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtTimkiem);
-            this.panel2.Controls.Add(this.guna2TextBox2);
+            this.panel2.Controls.Add(this.txtMaVX);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
@@ -177,25 +253,169 @@ namespace WindowsFormsApp
             this.panel2.Size = new System.Drawing.Size(1763, 401);
             this.panel2.TabIndex = 248;
             // 
-            // panel4
+            // cmbLoaiVX
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(10, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1747, 49);
-            this.panel4.TabIndex = 232;
+            this.cmbLoaiVX.BackColor = System.Drawing.Color.Transparent;
+            this.cmbLoaiVX.BorderColor = System.Drawing.Color.Black;
+            this.cmbLoaiVX.BorderRadius = 3;
+            this.cmbLoaiVX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLoaiVX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiVX.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLoaiVX.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLoaiVX.FocusedState.Parent = this.cmbLoaiVX;
+            this.cmbLoaiVX.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbLoaiVX.ForeColor = System.Drawing.Color.Black;
+            this.cmbLoaiVX.HoverState.Parent = this.cmbLoaiVX;
+            this.cmbLoaiVX.ItemHeight = 30;
+            this.cmbLoaiVX.Items.AddRange(new object[] {
+            "----- Chọn loại Vaccine  -----"});
+            this.cmbLoaiVX.ItemsAppearance.Parent = this.cmbLoaiVX;
+            this.cmbLoaiVX.Location = new System.Drawing.Point(1264, 123);
+            this.cmbLoaiVX.Name = "cmbLoaiVX";
+            this.cmbLoaiVX.ShadowDecoration.Parent = this.cmbLoaiVX;
+            this.cmbLoaiVX.Size = new System.Drawing.Size(484, 36);
+            this.cmbLoaiVX.TabIndex = 250;
+            this.cmbLoaiVX.SelectedIndexChanged += new System.EventHandler(this.cmbLoaiVX_SelectedIndexChanged);
+            this.cmbLoaiVX.Click += new System.EventHandler(this.cmbLoaiVX_Click);
             // 
-            // label1
+            // label14
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Thông tin chung";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(1382, 71);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 35);
+            this.label14.TabIndex = 249;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1258, 71);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(127, 35);
+            this.label15.TabIndex = 248;
+            this.label15.Text = "Loại Vaccine";
+            // 
+            // cmbTenVaccine
+            // 
+            this.cmbTenVaccine.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTenVaccine.BorderColor = System.Drawing.Color.Black;
+            this.cmbTenVaccine.BorderRadius = 3;
+            this.cmbTenVaccine.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTenVaccine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTenVaccine.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTenVaccine.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTenVaccine.FocusedState.Parent = this.cmbTenVaccine;
+            this.cmbTenVaccine.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbTenVaccine.ForeColor = System.Drawing.Color.Black;
+            this.cmbTenVaccine.HoverState.Parent = this.cmbTenVaccine;
+            this.cmbTenVaccine.ItemHeight = 30;
+            this.cmbTenVaccine.Items.AddRange(new object[] {
+            "----- Chọn tên Vaccine  -----"});
+            this.cmbTenVaccine.ItemsAppearance.Parent = this.cmbTenVaccine;
+            this.cmbTenVaccine.Location = new System.Drawing.Point(667, 123);
+            this.cmbTenVaccine.Name = "cmbTenVaccine";
+            this.cmbTenVaccine.ShadowDecoration.Parent = this.cmbTenVaccine;
+            this.cmbTenVaccine.Size = new System.Drawing.Size(507, 36);
+            this.cmbTenVaccine.TabIndex = 247;
+            this.cmbTenVaccine.SelectedIndexChanged += new System.EventHandler(this.cmbTenVaccine_SelectedIndexChanged);
+            // 
+            // cmbTenGoiTiem
+            // 
+            this.cmbTenGoiTiem.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTenGoiTiem.BorderColor = System.Drawing.Color.Black;
+            this.cmbTenGoiTiem.BorderRadius = 3;
+            this.cmbTenGoiTiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTenGoiTiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTenGoiTiem.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTenGoiTiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTenGoiTiem.FocusedState.Parent = this.cmbTenGoiTiem;
+            this.cmbTenGoiTiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbTenGoiTiem.ForeColor = System.Drawing.Color.Black;
+            this.cmbTenGoiTiem.HoverState.Parent = this.cmbTenGoiTiem;
+            this.cmbTenGoiTiem.ItemHeight = 30;
+            this.cmbTenGoiTiem.Items.AddRange(new object[] {
+            "----- Chọn gói tiêm -----"});
+            this.cmbTenGoiTiem.ItemsAppearance.Parent = this.cmbTenGoiTiem;
+            this.cmbTenGoiTiem.Location = new System.Drawing.Point(29, 123);
+            this.cmbTenGoiTiem.Name = "cmbTenGoiTiem";
+            this.cmbTenGoiTiem.ShadowDecoration.Parent = this.cmbTenGoiTiem;
+            this.cmbTenGoiTiem.Size = new System.Drawing.Size(534, 36);
+            this.cmbTenGoiTiem.TabIndex = 246;
+            this.cmbTenGoiTiem.SelectedIndexChanged += new System.EventHandler(this.cmbTenGoiTiem_SelectedIndexChanged);
+            this.cmbTenGoiTiem.Click += new System.EventHandler(this.cmbTenGoiTiem_Click);
+            // 
+            // dtpNgaytg
+            // 
+            this.dtpNgaytg.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaytg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaytg.Location = new System.Drawing.Point(1426, 231);
+            this.dtpNgaytg.Name = "dtpNgaytg";
+            this.dtpNgaytg.Size = new System.Drawing.Size(322, 33);
+            this.dtpNgaytg.TabIndex = 245;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1420, 189);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(158, 35);
+            this.label13.TabIndex = 244;
+            this.label13.Text = "Ngày phát hành";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(1121, 189);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 35);
+            this.label11.TabIndex = 243;
+            this.label11.Text = "*";
+            // 
+            // txtSL
+            // 
+            this.txtSL.BorderColor = System.Drawing.Color.Silver;
+            this.txtSL.BorderRadius = 5;
+            this.txtSL.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSL.DefaultText = "Nhập số lượng\r\n\r\n";
+            this.txtSL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSL.DisabledState.Parent = this.txtSL;
+            this.txtSL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSL.FocusedState.Parent = this.txtSL;
+            this.txtSL.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSL.ForeColor = System.Drawing.Color.Gray;
+            this.txtSL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSL.HoverState.Parent = this.txtSL;
+            this.txtSL.Location = new System.Drawing.Point(1032, 231);
+            this.txtSL.Margin = new System.Windows.Forms.Padding(7);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.PasswordChar = '\0';
+            this.txtSL.PlaceholderText = "";
+            this.txtSL.SelectedText = "";
+            this.txtSL.SelectionStart = 17;
+            this.txtSL.ShadowDecoration.Parent = this.txtSL;
+            this.txtSL.Size = new System.Drawing.Size(347, 49);
+            this.txtSL.TabIndex = 242;
+            this.txtSL.Click += new System.EventHandler(this.guna2TextBox3_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1026, 189);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 35);
+            this.label12.TabIndex = 241;
+            this.label12.Text = "Số lượng";
             // 
             // label9
             // 
@@ -206,6 +426,28 @@ namespace WindowsFormsApp
             this.label9.Size = new System.Drawing.Size(104, 35);
             this.label9.TabIndex = 220;
             this.label9.Text = "Tìm kiếm";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(145, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(26, 35);
+            this.label10.TabIndex = 240;
+            this.label10.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(632, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(26, 35);
+            this.label8.TabIndex = 239;
+            this.label8.Text = "*";
             // 
             // txtTimkiem
             // 
@@ -233,13 +475,95 @@ namespace WindowsFormsApp
             this.txtTimkiem.ShadowDecoration.Parent = this.txtTimkiem;
             this.txtTimkiem.Size = new System.Drawing.Size(1719, 49);
             this.txtTimkiem.TabIndex = 222;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged);
+            this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
+            // 
+            // txtMaVX
+            // 
+            this.txtMaVX.BorderColor = System.Drawing.Color.Silver;
+            this.txtMaVX.BorderRadius = 5;
+            this.txtMaVX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaVX.DefaultText = "Mã Vaccine\r\n\r\n";
+            this.txtMaVX.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaVX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaVX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVX.DisabledState.Parent = this.txtMaVX;
+            this.txtMaVX.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaVX.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVX.FocusedState.Parent = this.txtMaVX;
+            this.txtMaVX.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaVX.ForeColor = System.Drawing.Color.Gray;
+            this.txtMaVX.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaVX.HoverState.Parent = this.txtMaVX;
+            this.txtMaVX.Location = new System.Drawing.Point(531, 231);
+            this.txtMaVX.Margin = new System.Windows.Forms.Padding(7);
+            this.txtMaVX.Name = "txtMaVX";
+            this.txtMaVX.PasswordChar = '\0';
+            this.txtMaVX.PlaceholderText = "";
+            this.txtMaVX.ReadOnly = true;
+            this.txtMaVX.SelectedText = "";
+            this.txtMaVX.SelectionStart = 14;
+            this.txtMaVX.ShadowDecoration.Parent = this.txtMaVX;
+            this.txtMaVX.Size = new System.Drawing.Size(441, 49);
+            this.txtMaVX.TabIndex = 238;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(525, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 35);
+            this.label7.TabIndex = 237;
+            this.label7.Text = "Mã Vaccine";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(783, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 35);
+            this.label5.TabIndex = 235;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(661, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 35);
+            this.label6.TabIndex = 234;
+            this.label6.Text = "Tên Vaccine";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(10, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1747, 49);
+            this.panel4.TabIndex = 232;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 26);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Thông tin chung";
             // 
             // txtMaGT
             // 
             this.txtMaGT.BorderColor = System.Drawing.Color.Silver;
             this.txtMaGT.BorderRadius = 5;
             this.txtMaGT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaGT.DefaultText = "Nhập mã nhà cung cấp\r\n";
+            this.txtMaGT.DefaultText = "Mã gói tiêm\r\n";
             this.txtMaGT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMaGT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaGT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -258,10 +582,11 @@ namespace WindowsFormsApp
             this.txtMaGT.PlaceholderText = "";
             this.txtMaGT.ReadOnly = true;
             this.txtMaGT.SelectedText = "";
-            this.txtMaGT.SelectionStart = 22;
+            this.txtMaGT.SelectionStart = 13;
             this.txtMaGT.ShadowDecoration.Parent = this.txtMaGT;
-            this.txtMaGT.Size = new System.Drawing.Size(574, 49);
+            this.txtMaGT.Size = new System.Drawing.Size(448, 49);
             this.txtMaGT.TabIndex = 220;
+            this.txtMaGT.TextChanged += new System.EventHandler(this.txtMaGT_TextChanged);
             // 
             // label4
             // 
@@ -331,6 +656,7 @@ namespace WindowsFormsApp
             this.btnSua.Text = "         Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -352,6 +678,7 @@ namespace WindowsFormsApp
             this.btnXoa.Text = "         Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -374,203 +701,7 @@ namespace WindowsFormsApp
             this.btnThem.Text = "        Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(772, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 35);
-            this.label5.TabIndex = 235;
-            this.label5.Text = "*";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(650, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 35);
-            this.label6.TabIndex = 234;
-            this.label6.Text = "Tên Vaccine";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "Nhập mã nhà cung cấp\r\n";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(661, 231);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 22;
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(574, 49);
-            this.guna2TextBox2.TabIndex = 238;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(655, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 35);
-            this.label7.TabIndex = 237;
-            this.label7.Text = "Mã Vaccine";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(762, 189);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 35);
-            this.label8.TabIndex = 239;
-            this.label8.Text = "*";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(145, 189);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 35);
-            this.label10.TabIndex = 240;
-            this.label10.Text = "*";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(1358, 189);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 35);
-            this.label11.TabIndex = 243;
-            this.label11.Text = "*";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox3.BorderRadius = 5;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Nhập mã nhà cung cấp\r\n";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(1269, 231);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.ReadOnly = true;
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.SelectionStart = 22;
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(479, 49);
-            this.guna2TextBox3.TabIndex = 242;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1263, 189);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 35);
-            this.label12.TabIndex = 241;
-            this.label12.Text = "Số lượng";
-            // 
-            // dtpNgaykt
-            // 
-            this.dtpNgaykt.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaykt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaykt.Location = new System.Drawing.Point(1292, 123);
-            this.dtpNgaykt.Name = "dtpNgaykt";
-            this.dtpNgaykt.Size = new System.Drawing.Size(322, 33);
-            this.dtpNgaykt.TabIndex = 245;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1286, 75);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(158, 35);
-            this.label13.TabIndex = 244;
-            this.label13.Text = "Ngày phát hành";
-            // 
-            // cmbCalamviec
-            // 
-            this.cmbCalamviec.BackColor = System.Drawing.Color.Transparent;
-            this.cmbCalamviec.BorderColor = System.Drawing.Color.Black;
-            this.cmbCalamviec.BorderRadius = 3;
-            this.cmbCalamviec.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbCalamviec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCalamviec.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCalamviec.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCalamviec.FocusedState.Parent = this.cmbCalamviec;
-            this.cmbCalamviec.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbCalamviec.ForeColor = System.Drawing.Color.Black;
-            this.cmbCalamviec.HoverState.Parent = this.cmbCalamviec;
-            this.cmbCalamviec.ItemHeight = 30;
-            this.cmbCalamviec.Items.AddRange(new object[] {
-            "----- Chọn ca làm việc -----"});
-            this.cmbCalamviec.ItemsAppearance.Parent = this.cmbCalamviec;
-            this.cmbCalamviec.Location = new System.Drawing.Point(29, 123);
-            this.cmbCalamviec.Name = "cmbCalamviec";
-            this.cmbCalamviec.ShadowDecoration.Parent = this.cmbCalamviec;
-            this.cmbCalamviec.Size = new System.Drawing.Size(484, 36);
-            this.cmbCalamviec.TabIndex = 246;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.BorderRadius = 3;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "----- Chọn ca làm việc -----"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(656, 123);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(484, 36);
-            this.guna2ComboBox1.TabIndex = 247;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // guna2Elipse1
             // 
@@ -586,6 +717,16 @@ namespace WindowsFormsApp
             // 
             this.guna2Elipse3.BorderRadius = 15;
             this.guna2Elipse3.TargetControl = this.dgvGT;
+            // 
+            // lblMaLoai
+            // 
+            this.lblMaLoai.AutoSize = true;
+            this.lblMaLoai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaLoai.Location = new System.Drawing.Point(1462, 71);
+            this.lblMaLoai.Name = "lblMaLoai";
+            this.lblMaLoai.Size = new System.Drawing.Size(116, 35);
+            this.lblMaLoai.TabIndex = 251;
+            this.lblMaLoai.Text = "Mã Vaccine";
             // 
             // UC_ChiTietGoiTiem
             // 
@@ -627,23 +768,33 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtSL;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaVX;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnThem;
-        private System.Windows.Forms.DateTimePicker dtpNgaykt;
+        private System.Windows.Forms.DateTimePicker dtpNgaytg;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbCalamviec;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTenVaccine;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTenGoiTiem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbLoaiVX;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblMaLoai;
     }
 }
