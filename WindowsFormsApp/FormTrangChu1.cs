@@ -24,7 +24,7 @@ namespace WindowsFormsApp
             TTnguoiban();
             UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
             addUC(_TrangChu);
-           
+            //Phanquyen();
            
             
         }
@@ -197,15 +197,15 @@ namespace WindowsFormsApp
 
         UC_HienThiQuyen _HienThiQuyen = new UC_HienThiQuyen();
         private void btnNhanVien_Click(object sender, EventArgs e)
-        {
+        {   
+            
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_NhanVien  _NhanVien = new UC_NhanVien();
-            addUC(_NhanVien);
-          
             ButtonHide();
             btnNhanVien.ForeColor = Color.White;
             btnNhanVien.BackColor = myRgbColor;
+            Phanquyen(_NhanVien, _HienThiQuyen);
         }
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
@@ -213,7 +213,8 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
-            addUC(_NhaCungCap);
+            //addUC(_NhaCungCap);
+            Phanquyen(_NhaCungCap, _HienThiQuyen);
 
             ButtonHide();
             btnNhaCungCap.ForeColor = Color.White;
@@ -225,8 +226,8 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_KhoVaccine _KhoVaccine = new UC_KhoVaccine(lblMaNV.Text,lblTenNhanVien.Text);
-            addUC(_KhoVaccine);
-
+            //addUC(_KhoVaccine);
+            Phanquyen(_KhoVaccine, _HienThiQuyen);
             ButtonHide();
             btnKhoHang.ForeColor = Color.White;
             btnKhoHang.BackColor = myRgbColor;
@@ -299,9 +300,17 @@ namespace WindowsFormsApp
             myRgbColor = Color.FromArgb(0, 35, 149);
             ButtonHide();
             UC_XacNhanMa _XacNhanMa = new UC_XacNhanMa();
-            addUC(_XacNhanMa);
+            // addUC(_XacNhanMa);
+            Phanquyen(_XacNhanMa, _HienThiQuyen);
             btnGoiTiem.ForeColor = Color.White;
             btnGoiTiem.BackColor = myRgbColor;
+        }
+
+        private void iconDangXuat_Click(object sender, EventArgs e)
+        {
+            FormLogin f = new FormLogin();
+            f.Show();
+            this.Hide();
         }
     }
 }

@@ -45,6 +45,7 @@ namespace WindowsFormsApp
             this.chkHienThiMK = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,6 +260,11 @@ namespace WindowsFormsApp
             this.label1.TabIndex = 15;
             this.label1.Text = "Tài khoản";
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -305,5 +311,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.CheckBox chkHienThiMK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

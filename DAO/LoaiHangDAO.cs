@@ -92,5 +92,13 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public DataTable TimKiemTenVaccine1(string tenLH)
+        {
+            string query = "UC_ChitietGT '"+tenLH+"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

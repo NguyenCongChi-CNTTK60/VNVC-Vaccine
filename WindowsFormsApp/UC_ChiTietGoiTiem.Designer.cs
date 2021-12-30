@@ -68,6 +68,7 @@ namespace WindowsFormsApp
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblMaLoai = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
@@ -75,7 +76,6 @@ namespace WindowsFormsApp
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblMaLoai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGT)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -223,7 +223,6 @@ namespace WindowsFormsApp
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblMaLoai);
             this.panel2.Controls.Add(this.cmbLoaiVX);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label15);
@@ -252,6 +251,7 @@ namespace WindowsFormsApp
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1763, 401);
             this.panel2.TabIndex = 248;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // cmbLoaiVX
             // 
@@ -627,6 +627,17 @@ namespace WindowsFormsApp
             this.panel3.Size = new System.Drawing.Size(1355, 1);
             this.panel3.TabIndex = 16;
             // 
+            // lblMaLoai
+            // 
+            this.lblMaLoai.AutoSize = true;
+            this.lblMaLoai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaLoai.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblMaLoai.Location = new System.Drawing.Point(1314, 16);
+            this.lblMaLoai.Name = "lblMaLoai";
+            this.lblMaLoai.Size = new System.Drawing.Size(125, 35);
+            this.lblMaLoai.TabIndex = 251;
+            this.lblMaLoai.Text = "Mã Vaccine";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
@@ -718,21 +729,12 @@ namespace WindowsFormsApp
             this.guna2Elipse3.BorderRadius = 15;
             this.guna2Elipse3.TargetControl = this.dgvGT;
             // 
-            // lblMaLoai
-            // 
-            this.lblMaLoai.AutoSize = true;
-            this.lblMaLoai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaLoai.Location = new System.Drawing.Point(1462, 71);
-            this.lblMaLoai.Name = "lblMaLoai";
-            this.lblMaLoai.Size = new System.Drawing.Size(116, 35);
-            this.lblMaLoai.TabIndex = 251;
-            this.lblMaLoai.Text = "Mã Vaccine";
-            // 
             // UC_ChiTietGoiTiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.lblMaLoai);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);

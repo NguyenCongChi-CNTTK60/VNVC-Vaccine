@@ -47,12 +47,12 @@ namespace WindowsFormsApp
 
         int i;
         private void cmbTenVaccine_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-
-            if (cmbTenVaccine.SelectedIndex > 0)
+        {
+            DataTable dt = GoiTiemBUS.Intance.TimKiemMaVX(cmbTenVaccine.Text);
+            if (dt.Rows.Count > 0)
             {
-                i = cmbTenVaccine.SelectedIndex;
-                txtMaVX.Text = list[i].MaVX;
+                //i = cmbTenVaccine.SelectedIndex;
+                txtMaVX.Text = dt.Rows[0]["MaVX"].ToString();
                 txtMaVX.ForeColor = Color.Black;
             }
         }
@@ -194,13 +194,25 @@ namespace WindowsFormsApp
 
         private void cmbLoaiVX_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string a = Convert.ToString(LoaiHangBUS.Intance.TimKiemMaLoai(cmbLoaiVX.Text));
-            DataTable dt1 = LoaiHangBUS.Intance.TimKiemTenVaccine(a);
-            if(dt1.Rows.Count > 0)
+            string query = "select MaLoai from LoaiVacXin where TenLoai = N'" + cmbLoaiVX.Text + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+
+           
+            if(dt.Rows.Count > 0)
             {
-                cmbTenVaccine.DataSource = dt1;
-            }
+                lblMaLoai.Text = dt.Rows[0]["MaLoai"].ToString();
+                DataTable dt1 = LoaiHangBUS.Intance.TimKiemTenVaccine(lblMaLoai.Text);
+                if(dt1.Rows.Count > 0) {
+                    cmbTenVaccine.DataSource = dt1;
+
+                    } 
+            } 
             
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }

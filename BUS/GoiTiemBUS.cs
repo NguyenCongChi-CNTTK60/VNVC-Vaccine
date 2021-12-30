@@ -74,5 +74,17 @@ namespace BUS
         {
             return GoiTiemDAO.Intance.suaChiTietGoiTiem(maGT, maVX, thoigian, sl);
         }
+
+
+        public DataTable TimKiemMaVX(string maGT)
+        {
+            return GoiTiemDAO.Intance.TimKiemMaVX(maGT);
+        }
+
+
+        public DataTable TimKiemGiaBan(string maGT)
+        {
+            return GoiTiemDAO.Intance.TimKiemGiaBan(maGT);
+        }
     }
 }

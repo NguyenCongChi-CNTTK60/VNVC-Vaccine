@@ -71,7 +71,7 @@ namespace WindowsFormsApp
 
 
 
-
+        
 
         private void getDataChart1()
         {
@@ -89,7 +89,7 @@ namespace WindowsFormsApp
             //chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             //chart1.ChartAreas[0].AxisX.Minimum = 0;
             //chart1.Series[0].ChartType = SeriesChartType.Column;
-        }
+        } 
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
@@ -109,6 +109,8 @@ namespace WindowsFormsApp
             txtTimkiem.Text = "";
             txtTimkiem.ForeColor = Color.Black;
         }
+
+      
 
 
 

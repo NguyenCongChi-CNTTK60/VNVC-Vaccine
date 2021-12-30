@@ -99,5 +99,21 @@ namespace DAO
         }
 
 
+
+        public DataTable TimKiemMaVX(string maGT)
+        {
+            string query = "select MaVX from VacXin where TenVX = N'"+maGT+"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemGiaBan(string maGT)
+        {
+            string query = "select DonGia from ChiTietDKTiem where MaVX= N'" + maGT + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }

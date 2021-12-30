@@ -31,6 +31,7 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.iconDangXuat = new FontAwesome.Sharp.IconPictureBox();
             this.pcbAlign = new FontAwesome.Sharp.IconPictureBox();
             this.lblQuyen = new System.Windows.Forms.Label();
             this.pcbBell = new FontAwesome.Sharp.IconPictureBox();
@@ -61,6 +62,7 @@ namespace WindowsFormsApp
             this.btnGoiTiem = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAlign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -71,6 +73,7 @@ namespace WindowsFormsApp
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panelLeft.Controls.Add(this.iconDangXuat);
             this.panelLeft.Controls.Add(this.pcbAlign);
             this.panelLeft.Controls.Add(this.lblQuyen);
             this.panelLeft.Controls.Add(this.pcbBell);
@@ -87,14 +90,29 @@ namespace WindowsFormsApp
             this.panelLeft.Size = new System.Drawing.Size(1806, 70);
             this.panelLeft.TabIndex = 4;
             // 
+            // iconDangXuat
+            // 
+            this.iconDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.iconDangXuat.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.iconDangXuat.IconColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDangXuat.IconSize = 37;
+            this.iconDangXuat.Location = new System.Drawing.Point(1741, 17);
+            this.iconDangXuat.Name = "iconDangXuat";
+            this.iconDangXuat.Size = new System.Drawing.Size(43, 37);
+            this.iconDangXuat.TabIndex = 40;
+            this.iconDangXuat.TabStop = false;
+            this.iconDangXuat.Click += new System.EventHandler(this.iconDangXuat_Click);
+            // 
             // pcbAlign
             // 
             this.pcbAlign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.pcbAlign.IconChar = FontAwesome.Sharp.IconChar.AlignJustify;
             this.pcbAlign.IconColor = System.Drawing.Color.White;
             this.pcbAlign.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbAlign.IconSize = 37;
-            this.pcbAlign.Location = new System.Drawing.Point(1647, 17);
+            this.pcbAlign.IconSize = 33;
+            this.pcbAlign.Location = new System.Drawing.Point(1638, 20);
             this.pcbAlign.Name = "pcbAlign";
             this.pcbAlign.Size = new System.Drawing.Size(43, 37);
             this.pcbAlign.TabIndex = 25;
@@ -117,8 +135,8 @@ namespace WindowsFormsApp
             this.pcbBell.IconChar = FontAwesome.Sharp.IconChar.Bell;
             this.pcbBell.IconColor = System.Drawing.Color.White;
             this.pcbBell.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbBell.IconSize = 37;
-            this.pcbBell.Location = new System.Drawing.Point(1586, 17);
+            this.pcbBell.IconSize = 35;
+            this.pcbBell.Location = new System.Drawing.Point(1585, 20);
             this.pcbBell.Name = "pcbBell";
             this.pcbBell.Size = new System.Drawing.Size(43, 37);
             this.pcbBell.TabIndex = 24;
@@ -301,7 +319,7 @@ namespace WindowsFormsApp
             this.btnDangKyTiem.Name = "btnDangKyTiem";
             this.btnDangKyTiem.Size = new System.Drawing.Size(190, 50);
             this.btnDangKyTiem.TabIndex = 28;
-            this.btnDangKyTiem.Text = "      Đăng ký tiêm";
+            this.btnDangKyTiem.Text = "    Đăng ký tiêm";
             this.btnDangKyTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKyTiem.UseVisualStyleBackColor = true;
             this.btnDangKyTiem.Click += new System.EventHandler(this.btnBanHang_Click);
@@ -467,6 +485,7 @@ namespace WindowsFormsApp
             this.Text = "FormTrangChu1";
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconDangXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAlign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
@@ -508,5 +527,6 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
         private FontAwesome.Sharp.IconButton btnGoiTiem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
+        private FontAwesome.Sharp.IconPictureBox iconDangXuat;
     }
 }

@@ -29,6 +29,7 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chkHienThiMK = new System.Windows.Forms.CheckBox();
@@ -55,6 +56,7 @@ namespace WindowsFormsApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -468,6 +470,11 @@ namespace WindowsFormsApp
             this.label13.TabIndex = 273;
             this.label13.Text = "Xin chào,";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // FormSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -539,5 +546,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

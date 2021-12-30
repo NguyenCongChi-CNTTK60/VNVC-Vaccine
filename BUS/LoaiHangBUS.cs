@@ -69,5 +69,11 @@ namespace BUS
         {
             return LoaiHangDAO.Intance.TimKiemMaLoai(tenLH);
         }
+
+
+        public DataTable TimKiemTenVaccine1(string tenLH)
+        {
+            return LoaiHangDAO.Intance.TimKiemTenVaccine1(tenLH);
+        }
     }
 }
