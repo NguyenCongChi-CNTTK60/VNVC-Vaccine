@@ -77,8 +77,8 @@ namespace WindowsFormsApp
         {
             chart2.Titles.Clear();
             DateTime today = DateTime.Now;
-            DateTime bd = new DateTime(today.Year, today.Month, 1);
-            DateTime kt = bd.AddMonths(1).AddDays(-1);
+            DateTime bd = new DateTime(2021,1, 1);
+            DateTime kt = bd.AddYears(1).AddMonths(11).AddDays(-1);
             string query = "EXEC USP_ThongKeDoanhThuTrongThang @ngaybd , @ngaykt";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { bd, kt });
             chart2.DataSource = data;

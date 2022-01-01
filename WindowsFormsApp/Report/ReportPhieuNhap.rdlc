@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.96806in</Width>
+              <Width>1.38889in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.52915in</Width>
+              <Width>1.94998in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20277in</Width>
+              <Width>1.6236in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20277in</Width>
+              <Width>1.6236in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20277in</Width>
+              <Width>1.6236in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã hàng hóa </Value>
+                              <Value>Mã Vaccine</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -68,7 +68,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>         Tên hàng hóa </Value>
+                              <Value>         Tên Vaccine</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -202,20 +202,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mamh">
+                    <Textbox Name="mavx">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">  </Value>
-                              <Style>
-                                <FontFamily>Cambria</FontFamily>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>=Fields!mamh.Value</Value>
+                              <Value>=Fields!mavx.Value</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                               </Style>
@@ -224,7 +218,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>mamh</rd:DefaultName>
+                      <rd:DefaultName>mavx</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -241,20 +235,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tenmh">
+                    <Textbox Name="tenvx">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">  </Value>
-                              <Style>
-                                <FontFamily>Cambria</FontFamily>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>=Fields!tenmh.Value</Value>
+                              <Value>=Fields!tenvx.Value</Value>
                               <Style>
                                 <FontFamily>Cambria</FontFamily>
                               </Style>
@@ -263,7 +251,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>tenmh</rd:DefaultName>
+                      <rd:DefaultName>tenvx</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -421,10 +409,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.89507in</Top>
-        <Left>0.07502in</Left>
+        <Top>2.91589in</Top>
+        <Left>2.1974in</Left>
         <Height>0.77084in</Height>
-        <Width>6.10552in</Width>
+        <Width>8.20967in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -459,8 +447,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.14583in</Top>
-        <Left>0.11669in</Left>
+        <Top>1.09721in</Top>
+        <Left>2.1974in</Left>
         <Height>0.25in</Height>
         <Width>2.07083in</Width>
         <ZIndex>1</ZIndex>
@@ -504,8 +492,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.58952in</Top>
-        <Left>0.07502in</Left>
+        <Top>1.5409in</Top>
+        <Left>2.15573in</Left>
         <Height>0.25in</Height>
         <Width>2.1125in</Width>
         <ZIndex>2</ZIndex>
@@ -549,8 +537,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>2.03395in</Top>
-        <Left>0.07502in</Left>
+        <Top>1.98533in</Top>
+        <Left>2.15573in</Left>
         <Height>0.25in</Height>
         <Width>3.39028in</Width>
         <ZIndex>3</ZIndex>
@@ -595,8 +583,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>2.47146in</Top>
-        <Left>0.07502in</Left>
+        <Top>2.42284in</Top>
+        <Left>2.15573in</Left>
         <Height>0.25in</Height>
         <Width>2.75834in</Width>
         <ZIndex>4</ZIndex>
@@ -640,8 +628,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>2.03395in</Top>
-        <Left>3.9764in</Left>
+        <Top>1.98533in</Top>
+        <Left>7.54045in</Left>
         <Height>0.25in</Height>
         <Width>2.1125in</Width>
         <ZIndex>5</ZIndex>
@@ -685,8 +673,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.14583in</Top>
-        <Left>3.9764in</Left>
+        <Top>1.09721in</Top>
+        <Left>7.54045in</Left>
         <Height>0.25in</Height>
         <Width>2.1125in</Width>
         <ZIndex>6</ZIndex>
@@ -730,8 +718,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.58952in</Top>
-        <Left>3.9764in</Left>
+        <Top>1.5409in</Top>
+        <Left>7.54045in</Left>
         <Height>0.25in</Height>
         <Width>2.28508in</Width>
         <ZIndex>7</ZIndex>
@@ -778,73 +766,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>3.73535in</Top>
-        <Left>3.9764in</Left>
+        <Top>3.86034in</Top>
+        <Left>8.20292in</Left>
         <Height>0.25in</Height>
         <Width>2.20416in</Width>
         <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>O</Value>
-                <Style>
-                  <FontFamily>Cambria</FontFamily>
-                  <FontSize>16pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>LimeGreen</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>wen </Value>
-                <Style>
-                  <FontFamily>Cambria</FontFamily>
-                  <FontSize>16pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Blue</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>FashionShop</Value>
-                <Style>
-                  <FontFamily>Cambria</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Blue</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontFamily>Sitka Banner</FontFamily>
-                  <FontSize>13pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Blue</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.1736in</Top>
-        <Left>2.57223in</Left>
-        <Height>0.33333in</Height>
-        <Width>1.53393in</Width>
-        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -862,7 +788,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Thống Kê Chi Tiết Phiếu Nhập Cửa Hàng  </Value>
+                <Value> Chi Tiết Phiếu Nhập  </Value>
                 <Style>
                   <FontFamily>Sitka Banner</FontFamily>
                   <FontSize>13pt</FontSize>
@@ -874,11 +800,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.71528in</Top>
-        <Left>1.56472in</Left>
+        <Top>0.69444in</Top>
+        <Left>5.34264in</Left>
         <Height>0.36111in</Height>
-        <Width>3.17834in</Width>
-        <ZIndex>10</ZIndex>
+        <Width>1.6575in</Width>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -896,9 +822,28 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>449/50 - Phường 12 - Quận 9 - Thành Phố Hồ Chí Minh </Value>
+                <Value>Hệ thống tiêm chủng </Value>
                 <Style>
                   <FontFamily>Cambria</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>VNVC </Value>
+                <Style>
+                  <FontFamily>Cambria</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>(Thuộc công ty cổ phần Việt Nam) </Value>
+                <Style>
+                  <FontFamily>Cambria</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <Color>DarkBlue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -906,11 +851,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.46528in</Top>
-        <Left>1.4675in</Left>
-        <Height>0.25in</Height>
-        <Width>3.41305in</Width>
-        <ZIndex>11</ZIndex>
+        <Top>0.50694in</Top>
+        <Left>3.70101in</Left>
+        <Height>0.29167in</Height>
+        <Width>4.91581in</Width>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -922,10 +867,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>6.22917in</Height>
+    <Height>7.09028in</Height>
     <Style />
   </Body>
-  <Width>6.26148in</Width>
+  <Width>12.22676in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -954,12 +899,12 @@
           <DataField>mapn</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="mamh">
-          <DataField>mamh</DataField>
+        <Field Name="mavx">
+          <DataField>mavx</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="tenmh">
-          <DataField>tenmh</DataField>
+        <Field Name="tenvx">
+          <DataField>tenvx</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="soluong">
@@ -997,7 +942,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\WindowsFormsApp\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

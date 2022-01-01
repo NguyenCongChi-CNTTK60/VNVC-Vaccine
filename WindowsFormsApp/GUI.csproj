@@ -414,6 +414,12 @@
     <Compile Include="UC_ThongKeKhachHang.Designer.cs">
       <DependentUpon>UC_ThongKeKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ThongKeNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongKeNhanVien.Designer.cs">
+      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ThongKePhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -465,6 +471,9 @@
     <EmbeddedResource Include="FormChiTietHD.resx">
       <DependentUpon>FormChiTietHD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInHoaDon.resx">
+      <DependentUpon>FormInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,6 +519,7 @@
     <EmbeddedResource Include="Report\ReportGoiTiem.rdlc" />
     <EmbeddedResource Include="Report\ReportHangTon.rdlc" />
     <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
+    <EmbeddedResource Include="Report\ReportInPhieuThuTien.rdlc" />
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
@@ -552,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThongKeKhachHang.resx">
       <DependentUpon>UC_ThongKeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKeNhanVien.resx">
+      <DependentUpon>UC_ThongKeNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThongKePhieuNhap.resx">
       <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>

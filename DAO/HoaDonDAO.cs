@@ -66,7 +66,7 @@ namespace DAO
 
         public DataTable TKHoaDon(DateTime ngaybd, DateTime ngaykt)
         {
-            string query = "select HoaDon.MaHD as [Mã hóa đơn],KhachHang.TenKH as [Tên khách hàng],NgayTao as [Ngày tạo],TongTien[Tổng tiền],TenHienThi as [Nhân viên tạo] from HoaDon inner join KhachHang on HoaDon.MaKH = KhachHang.MaKH inner join NhanVien on NhanVien.MaNV = HoaDon.MaNV where  NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
+            string query = "select DangKyTiem.MaHD as [Mã hóa đơn],KhachHang.TenKH as [Tên khách hàng],NgayTao as [Ngày tạo],TongTien[Tổng tiền],TenHienThi as [Nhân viên tạo] from DangKyTiem inner join KhachHang on DangKyTiem.MaKH = KhachHang.MaKH inner join NhanVien on NhanVien.MaNV = DangKyTiem.MaNV where  NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -74,7 +74,7 @@ namespace DAO
 
         public DataTable TongTienHoaDon()
         {
-            string query = "select sum(Tongtien) as [Tổng tiền hóa đơn]from Hoadon";
+            string query = "select sum(Tongtien) as [Tổng tiền hóa đơn] from DangKyTiem";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -82,7 +82,7 @@ namespace DAO
 
         public DataTable TongTienTheoNgay(DateTime ngaybd, DateTime ngaykt)
         {
-            string query =  "select sum(Tongtien) as [Tổng tiền hóa đơn]from Hoadon where NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
+            string query =  "select sum(Tongtien) as [Tổng tiền hóa đơn]from DangKyTiem where NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

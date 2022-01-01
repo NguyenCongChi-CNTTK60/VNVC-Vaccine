@@ -510,6 +510,7 @@
             // 
             this.lblTk.AutoSize = true;
             this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.lblTk.Location = new System.Drawing.Point(784, 15);
             this.lblTk.Name = "lblTk";
             this.lblTk.Size = new System.Drawing.Size(259, 40);

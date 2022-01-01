@@ -32,7 +32,7 @@ namespace WindowsFormsApp
             SqlDataAdapter dta = new SqlDataAdapter(query, con);
             DataSet1 dataSet1 = new DataSet1();
             dta.Fill(dataSet1, "DataTable4");
-            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables[3]);
+            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables["DataTable4"]);
             con.Close();
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(dataSource);

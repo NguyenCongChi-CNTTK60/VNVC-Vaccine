@@ -35,6 +35,7 @@ namespace WindowsFormsApp
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNhanVien = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.dgvNV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblTk = new System.Windows.Forms.Label();
             this.btnGiaoca = new FontAwesome.Sharp.IconButton();
@@ -68,7 +69,6 @@ namespace WindowsFormsApp
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
             this.pnlNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -90,6 +90,15 @@ namespace WindowsFormsApp
             this.pnlNhanVien.Name = "pnlNhanVien";
             this.pnlNhanVien.Size = new System.Drawing.Size(1806, 1088);
             this.pnlNhanVien.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1806, 2);
+            this.panel5.TabIndex = 242;
             // 
             // dgvNV
             // 
@@ -162,6 +171,7 @@ namespace WindowsFormsApp
             // 
             this.lblTk.AutoSize = true;
             this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.lblTk.Location = new System.Drawing.Point(785, 10);
             this.lblTk.Name = "lblTk";
             this.lblTk.Size = new System.Drawing.Size(222, 40);
@@ -644,15 +654,6 @@ namespace WindowsFormsApp
             // 
             this.guna2Elipse3.BorderRadius = 10;
             this.guna2Elipse3.TargetControl = this.dgvNV;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1806, 2);
-            this.panel5.TabIndex = 242;
             // 
             // UC_NhanVien
             // 

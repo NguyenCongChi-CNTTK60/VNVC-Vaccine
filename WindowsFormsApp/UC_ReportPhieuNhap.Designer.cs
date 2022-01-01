@@ -31,59 +31,28 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSet1 = new WindowsFormsApp.DataSet1();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTk = new System.Windows.Forms.Label();
             this.btnQuaylai = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.lblTk = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new WindowsFormsApp.DataSet1();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.DataSet1;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lblTk);
             this.panel1.Controls.Add(this.btnQuaylai);
             this.panel1.Controls.Add(this.reportViewer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 1150);
+            this.panel1.Size = new System.Drawing.Size(1806, 1088);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblTk);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 65);
-            this.panel2.TabIndex = 227;
-            // 
-            // lblTk
-            // 
-            this.lblTk.AutoSize = true;
-            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTk.Location = new System.Drawing.Point(14, 12);
-            this.lblTk.Name = "lblTk";
-            this.lblTk.Size = new System.Drawing.Size(248, 35);
-            this.lblTk.TabIndex = 14;
-            this.lblTk.Text = "Xem chi tiết phiếu nhập\r\n";
             // 
             // btnQuaylai
             // 
@@ -91,13 +60,13 @@ namespace WindowsFormsApp
             this.btnQuaylai.FlatAppearance.BorderSize = 0;
             this.btnQuaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuaylai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuaylai.ForeColor = System.Drawing.Color.Gray;
+            this.btnQuaylai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.btnQuaylai.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.btnQuaylai.IconColor = System.Drawing.Color.Gray;
+            this.btnQuaylai.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.btnQuaylai.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuaylai.IconSize = 35;
             this.btnQuaylai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuaylai.Location = new System.Drawing.Point(3, 74);
+            this.btnQuaylai.Location = new System.Drawing.Point(14, 14);
             this.btnQuaylai.Name = "btnQuaylai";
             this.btnQuaylai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuaylai.Size = new System.Drawing.Size(85, 48);
@@ -109,16 +78,43 @@ namespace WindowsFormsApp
             // 
             // reportViewer1
             // 
+            this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp.Report.ReportPhieuNhap.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(245, 74);
+            this.reportViewer1.Location = new System.Drawing.Point(40, 86);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(932, 1076);
+            this.reportViewer1.Size = new System.Drawing.Size(1736, 961);
             this.reportViewer1.TabIndex = 224;
             this.reportViewer1.Load += new System.EventHandler(this.reporPhieuNhap_Load);
+            // 
+            // lblTk
+            // 
+            this.lblTk.AutoSize = true;
+            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.lblTk.Location = new System.Drawing.Point(761, 14);
+            this.lblTk.Name = "lblTk";
+            this.lblTk.Size = new System.Drawing.Size(330, 38);
+            this.lblTk.TabIndex = 242;
+            this.lblTk.Text = "XUẤT CHI TIẾT PHIẾU NHẬP";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.reportViewer1;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // UC_ReportPhieuNhap
             // 
@@ -127,12 +123,11 @@ namespace WindowsFormsApp
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.panel1);
             this.Name = "UC_ReportPhieuNhap";
-            this.Size = new System.Drawing.Size(1411, 1150);
+            this.Size = new System.Drawing.Size(1806, 1088);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,9 +137,9 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private FontAwesome.Sharp.IconButton btnQuaylai;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTk;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private DataSet1 DataSet1;
+        private System.Windows.Forms.Label lblTk;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

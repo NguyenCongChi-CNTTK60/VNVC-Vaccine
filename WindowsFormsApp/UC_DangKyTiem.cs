@@ -112,7 +112,23 @@ namespace WindowsFormsApp
         private void btnThem_Click(object sender, EventArgs e)
         {
 
-            if (cmbTenGoiTiem.Text != "----- Chọn gói tiêm -----" || string.IsNullOrEmpty(cmbTenGoiTiem.Text))
+            ThemGoiTiem();
+            ThemNormal();
+
+
+           
+              
+
+           
+
+        }
+
+
+
+        private void ThemGoiTiem()
+        {
+
+            if (cmbTenGoiTiem.Text != "----- Chọn gói tiêm -----" || string.IsNullOrEmpty(cmbTenGoiTiem.Text) && txtSoLuong.Value == 0)
             {
                 string query = "select MaGT from GoiTiem where TenGT = N'" + cmbTenGoiTiem.Text + "'";
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
@@ -139,8 +155,9 @@ namespace WindowsFormsApp
                             lvSanPhamBan.Items.Add(listViewItem);
                             if (dt2.Rows.Count > 0)
                             {
-                                 temp = Int32.Parse(dt2.Rows[0]["ThanhTien"].ToString());
+                                temp = Int32.Parse(dt2.Rows[0]["ThanhTien"].ToString());
                                 lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", temp) + " đ";
+                                lblTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(temp);
                             }
                             cmbTenGoiTiem.SelectedIndex = -1;
                             txtSoLuong.Value = 0;
@@ -150,11 +167,15 @@ namespace WindowsFormsApp
                     }
 
                 }
-            }
+            } 
+        }
 
 
 
 
+
+        private void ThemNormal()
+        {
             if (txtSoLuong.Value > 0)
             {
                 bool check = false;
@@ -188,20 +209,18 @@ namespace WindowsFormsApp
                 }
                 tongTien += gia;
                 lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", tongTien) + " đ";
+                lblTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
                 txtSoLuong.Value = 0;
                 Tinhtienhoantra();
+
                 //lblGiaban.Text = "0đ";
 
                 //Tinhtienhoantra();
                 // resetInfoProduct();
-
             }
             else
-                MessageBox.Show("Số lượng phải lớn hơn 0", "Thông báo");
-
+                MessageBox.Show("Số lượng phải lớn hơn 0","Thông báo");
         }
-
-
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -278,6 +297,93 @@ namespace WindowsFormsApp
             }else
 
                 Tinhtienhoantra();
+        }
+
+
+        //
+        // Lưu hóa đơn
+        //
+        private bool LuuHD(HoaDonDTO dh)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format("insert into DangKyTiem values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.MaNV, dh.TongTien);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+
+        private bool LuuDH(string mahd, string mahh, int sl, int dg)
+        {
+            string query = String.Format("insert into ChiTietDKTiem values('{0}','{1}','{2}','{3}')", mahd, mahh, sl, dg);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            HoaDonDTO hd = new HoaDonDTO();
+            if (string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                MessageBox.Show("Chưa có thông tin của khách hàng");
+            }
+            else
+            if (lvSanPhamBan.Items.Count > 0)
+            {
+                if (cmbTenGoiTiem.Text == "----- Chọn gói tiêm -----" || !string.IsNullOrEmpty(cmbTenGoiTiem.Text)) {
+                    
+                    hd.MaHD = lblMahd.Text;
+                    hd.MaKH = lblMaKH.Text;
+                    hd.NgayTao = dtpNgayban.Value;
+                    hd.MaNV = lblMaNV.Text;
+                    hd.TongTien = tongTien;
+                }
+                else
+                {
+                    
+                    hd.MaHD = lblMahd.Text;
+                    hd.MaKH = lblMaKH.Text;
+                    hd.NgayTao = dtpNgayban.Value;
+                    hd.MaNV = lblMaNV.Text;
+                    hd.TongTien = temp;
+                }
+            
+
+
+
+
+                if (LuuHD(hd))   // lưu hóa đơn
+                {
+                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
+                    foreach (ListViewItem item in lvSanPhamBan.Items)
+                    {
+                        LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
+                        string query = "update VacXin set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaVX = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                        DataProvider.Instance.ExecuteQuery(query);
+
+                    }
+                   FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, lblTienKhachDua.Text, lblTienHoanTra.Text,lblTienBangChu.Text, lblTienbangso.Text);
+                   formInHoaDon.Show();
+                    lvSanPhamBan.Items.Clear();
+                    lblTienbangso.Text = "0 đ";
+                    lblTienKhachDua.Text = "0đ";
+                    lblTienHoanTra.Text = "0đ";
+                    lblMaKH.Text = "KH00";
+                    lblTenkh.Text = "Chưa xác định";
+                    tongTien = 0;
+                    lblMahd.Text = Matudong();
+                    txtTienkhachdua.Text = "";
+                    txtTimkiem.Text = "";
+                    MessageBox.Show("ThanhToan", "Thông báo");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
+            }
         }
 
 

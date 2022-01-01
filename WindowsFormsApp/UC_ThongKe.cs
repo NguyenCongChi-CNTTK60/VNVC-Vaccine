@@ -16,10 +16,10 @@ namespace WindowsFormsApp
         public UC_ThongKe()
         {
             InitializeComponent();
-            HidesubMenu();
+            
             getDataChart();
             cmbLuaChon.SelectedIndex = 0;
-            DoanhThuTrongNgay();
+            
         }
 
         private void addUC(UserControl userControl)
@@ -32,31 +32,11 @@ namespace WindowsFormsApp
         }
 
 
-        private void HidesubMenu()
-        {
-            if (pnlMenu.Visible == true)
-            {
-                pnlMenu.Visible = false;
-            }
-        }
+        
 
 
-        private void showsubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                HidesubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
-        }
-
-        private void lblTk_Click(object sender, EventArgs e)
-        {
-            showsubMenu(pnlMenu);
-            
-        }
+       
+        
 
         string query = "USP_ThongKeDoanhThuTrongThang @ngaybd , @ngaykt";
 
@@ -64,8 +44,8 @@ namespace WindowsFormsApp
         private void getDataChart()
         {
             chart1.Titles.Clear();
-            dpkNgaybd.Value = new DateTime(today.Year, today.Month, 1);
-            dpkNgaykt.Value = dpkNgaybd.Value.AddMonths(1).AddDays(-1);
+            dpkNgaybd.Value = new DateTime(today.Year -1, today.Month, 1);
+            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(12).AddDays(-1);
             ThucThi();
             //chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             // chart1.ChartAreas[0].AxisX.Minimum = 0;
@@ -81,53 +61,8 @@ namespace WindowsFormsApp
             
         }
 
-        private void btnTKHangHoa_CheckedChanged(object sender, EventArgs e)
-        {
-            UC_ThongKeHangHoa _ThongKeHangHoa = new UC_ThongKeHangHoa();
-            addUC(_ThongKeHangHoa);
-        }
+        
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            UC_ThongKeKhachHang _ThongKeKhachHang = new UC_ThongKeKhachHang();
-            addUC(_ThongKeKhachHang);
-        }
-
-        private void rdoHoadon_CheckedChanged(object sender, EventArgs e)
-        {
-            UC_ThongKeHoaDon _ThongKeHoaDon = new UC_ThongKeHoaDon();
-            addUC(_ThongKeHoaDon);
-        }
-
-        private void rdoTkpn_CheckedChanged(object sender, EventArgs e)
-        {
-            UC_ThongKePhieuNhap _ThongKePhieuNhap = new UC_ThongKePhieuNhap();
-            addUC(_ThongKePhieuNhap);
-        }
-
-
-
-        private void DoanhThuTrongNgay()
-        {
-            DateTime dt = new DateTime(today.Year, today.Month, today.Day);
-            string query = "select sum(TongTien) as [TongTien],count(MaHD) as [LuotMuaSam]  from HoaDon where NgayTao = '" + dt +"'";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            if(data.Rows.Count > 0) 
-            {
-                int TongTien;
-                string Tien = data.Rows[0]["TongTien"].ToString();
-                if (!string.IsNullOrEmpty(Tien))
-                {
-                    TongTien = Int32.Parse(Tien);
-                    lblTongDoanhThu.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", TongTien) + " đ";
-                    lblLuotMuaSam.Text = data.Rows[0]["LuotMuaSam"].ToString();
-
-                    int LoiNhuan = 0;
-                    LoiNhuan = TongTien - (TongTien * 70 / 100);
-                    lblTongloinhuan.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", LoiNhuan) + " đ";
-                }
-            }
-        }
 
 
         private void ThucThi()
@@ -138,7 +73,7 @@ namespace WindowsFormsApp
             chart1.Series["Doanh Thu"].XValueMember = "NGAY";
             chart1.Series["Doanh Thu"].YValueMembers = "TONGTIEN";
             chart1.Titles.Add("THỐNG KÊ DOANH THU");
-            chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(59, 82, 132);
+            chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(0, 35, 149);
         }
 
         private void cmbLuaChon_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,6 +115,39 @@ namespace WindowsFormsApp
                 ThucThi();
                // TongtienHoadontheongay();
             }
+        }
+
+        private void tdoKhachhang_CheckedChanged(object sender, EventArgs e)
+        {
+            UC_ThongKeKhachHang _ThongKeKhachHang = new UC_ThongKeKhachHang();
+            addUC(_ThongKeKhachHang);
+        }
+
+        
+        // btnTKVaccine
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            UC_ThongKeHangHoa _ThongKeHangHoa = new UC_ThongKeHangHoa();
+            addUC(_ThongKeHangHoa);
+        }
+
+        private void rdoTKHoaDon_CheckedChanged(object sender, EventArgs e)
+        {
+            UC_ThongKeHoaDon _ThongKeHoaDon = new UC_ThongKeHoaDon();
+            addUC(_ThongKeHoaDon);
+        }
+
+        // btnTKPhieuNhap
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            UC_ThongKePhieuNhap _ThongKePhieuNhap = new UC_ThongKePhieuNhap();
+            addUC(_ThongKePhieuNhap);
+        }
+
+        private void rdoNhanVien_CheckedChanged(object sender, EventArgs e)
+        {
+            UC_ThongKeNhanVien _ThongKeNhanVien = new UC_ThongKeNhanVien();
+            addUC(_ThongKeNhanVien);
         }
     }
 }

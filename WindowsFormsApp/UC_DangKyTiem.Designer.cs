@@ -41,6 +41,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblTk = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTenNV = new System.Windows.Forms.Label();
+            this.lblTenkh = new System.Windows.Forms.Label();
             this.cmbTenGoiTiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,10 +70,12 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnXacNhan = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pcbSearch = new FontAwesome.Sharp.IconPictureBox();
             this.lblTienHoanTra = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblTienKhachDua = new System.Windows.Forms.Label();
@@ -80,13 +84,10 @@
             this.lblTienbangso = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblTenkh = new System.Windows.Forms.Label();
             this.lblMaKH = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblTenNV = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
-            this.pcbSearch = new FontAwesome.Sharp.IconPictureBox();
             this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblTienBangChu = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -136,6 +137,7 @@
             // 
             this.lblTk.AutoSize = true;
             this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.lblTk.Location = new System.Drawing.Point(787, 14);
             this.lblTk.Name = "lblTk";
             this.lblTk.Size = new System.Drawing.Size(158, 38);
@@ -173,6 +175,30 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1756, 805);
             this.guna2Panel1.TabIndex = 233;
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.ForeColor = System.Drawing.Color.Black;
+            this.lblTenNV.Location = new System.Drawing.Point(1369, 35);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(146, 35);
+            this.lblTenNV.TabIndex = 314;
+            this.lblTenNV.Text = "Chưa xác định";
+            // 
+            // lblTenkh
+            // 
+            this.lblTenkh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTenkh.AutoSize = true;
+            this.lblTenkh.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenkh.ForeColor = System.Drawing.Color.Black;
+            this.lblTenkh.Location = new System.Drawing.Point(1369, 201);
+            this.lblTenkh.Name = "lblTenkh";
+            this.lblTenkh.Size = new System.Drawing.Size(146, 35);
+            this.lblTenkh.TabIndex = 313;
+            this.lblTenkh.Text = "Chưa xác định";
             // 
             // cmbTenGoiTiem
             // 
@@ -509,8 +535,9 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.BorderRadius = 7;
             this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.lblTienBangChu);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Controls.Add(this.guna2Button3);
+            this.guna2Panel2.Controls.Add(this.btnXacNhan);
             this.guna2Panel2.Controls.Add(this.btnXoa);
             this.guna2Panel2.Controls.Add(this.btnThem);
             this.guna2Panel2.Controls.Add(this.txtTimkiem);
@@ -528,27 +555,40 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1756, 170);
             this.guna2Panel2.TabIndex = 289;
             // 
-            // guna2Button3
+            // label5
             // 
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.DisabledState.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2Button3.Font = new System.Drawing.Font("Cambria", 11F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(1119, 102);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(258, 45);
-            this.guna2Button3.TabIndex = 284;
-            this.guna2Button3.Text = "Xác nhận";
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(1253, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 35);
+            this.label5.TabIndex = 285;
+            this.label5.Text = "Nhập sđt:";
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.BorderRadius = 5;
+            this.btnXacNhan.BorderThickness = 1;
+            this.btnXacNhan.CheckedState.Parent = this.btnXacNhan;
+            this.btnXacNhan.CustomImages.Parent = this.btnXacNhan;
+            this.btnXacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXacNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXacNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXacNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXacNhan.DisabledState.Parent = this.btnXacNhan;
+            this.btnXacNhan.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.btnXacNhan.Font = new System.Drawing.Font("Cambria", 11F);
+            this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
+            this.btnXacNhan.HoverState.Parent = this.btnXacNhan;
+            this.btnXacNhan.Location = new System.Drawing.Point(1119, 102);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.ShadowDecoration.Parent = this.btnXacNhan;
+            this.btnXacNhan.Size = new System.Drawing.Size(258, 45);
+            this.btnXacNhan.TabIndex = 284;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnXoa
             // 
@@ -626,6 +666,21 @@
             this.txtTimkiem.TabIndex = 281;
             this.txtTimkiem.TextOffset = new System.Drawing.Point(10, 0);
             this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged_1);
+            // 
+            // pcbSearch
+            // 
+            this.pcbSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pcbSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pcbSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.pcbSearch.IconColor = System.Drawing.SystemColors.ControlText;
+            this.pcbSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pcbSearch.IconSize = 34;
+            this.pcbSearch.Location = new System.Drawing.Point(1698, 20);
+            this.pcbSearch.Name = "pcbSearch";
+            this.pcbSearch.Size = new System.Drawing.Size(36, 34);
+            this.pcbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbSearch.TabIndex = 280;
+            this.pcbSearch.TabStop = false;
             // 
             // lblTienHoanTra
             // 
@@ -737,18 +792,6 @@
             this.panel5.Size = new System.Drawing.Size(1806, 2);
             this.panel5.TabIndex = 290;
             // 
-            // lblTenkh
-            // 
-            this.lblTenkh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTenkh.AutoSize = true;
-            this.lblTenkh.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenkh.ForeColor = System.Drawing.Color.Black;
-            this.lblTenkh.Location = new System.Drawing.Point(1369, 201);
-            this.lblTenkh.Name = "lblTenkh";
-            this.lblTenkh.Size = new System.Drawing.Size(146, 35);
-            this.lblTenkh.TabIndex = 313;
-            this.lblTenkh.Text = "Chưa xác định";
-            // 
             // lblMaKH
             // 
             this.lblMaKH.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -760,30 +803,6 @@
             this.lblMaKH.Size = new System.Drawing.Size(146, 35);
             this.lblMaKH.TabIndex = 314;
             this.lblMaKH.Text = "Chưa xác định";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1253, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 35);
-            this.label5.TabIndex = 285;
-            this.label5.Text = "Nhập sđt:";
-            // 
-            // lblTenNV
-            // 
-            this.lblTenNV.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.ForeColor = System.Drawing.Color.Black;
-            this.lblTenNV.Location = new System.Drawing.Point(1369, 35);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(146, 35);
-            this.lblTenNV.TabIndex = 314;
-            this.lblTenNV.Text = "Chưa xác định";
             // 
             // lblMaNV
             // 
@@ -797,24 +816,21 @@
             this.lblMaNV.TabIndex = 315;
             this.lblMaNV.Text = "Chưa xác định";
             // 
-            // pcbSearch
-            // 
-            this.pcbSearch.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pcbSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pcbSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.pcbSearch.IconColor = System.Drawing.SystemColors.ControlText;
-            this.pcbSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbSearch.IconSize = 34;
-            this.pcbSearch.Location = new System.Drawing.Point(1698, 20);
-            this.pcbSearch.Name = "pcbSearch";
-            this.pcbSearch.Size = new System.Drawing.Size(36, 34);
-            this.pcbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbSearch.TabIndex = 280;
-            this.pcbSearch.TabStop = false;
-            // 
             // hangHoaBindingSource
             // 
             this.hangHoaBindingSource.DataMember = "HangHoa";
+            // 
+            // lblTienBangChu
+            // 
+            this.lblTienBangChu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTienBangChu.AutoSize = true;
+            this.lblTienBangChu.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienBangChu.ForeColor = System.Drawing.Color.Black;
+            this.lblTienBangChu.Location = new System.Drawing.Point(22, 112);
+            this.lblTienBangChu.Name = "lblTienBangChu";
+            this.lblTienBangChu.Size = new System.Drawing.Size(162, 35);
+            this.lblTienBangChu.TabIndex = 315;
+            this.lblTienBangChu.Text = "Tiền khách đưa:";
             // 
             // UC_DangKyTiem
             // 
@@ -868,7 +884,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTienbangso;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnXacNhan;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private System.Windows.Forms.Label label13;
@@ -901,5 +917,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTenNV;
         private System.Windows.Forms.Label lblMaNV;
+        private System.Windows.Forms.Label lblTienBangChu;
     }
 }

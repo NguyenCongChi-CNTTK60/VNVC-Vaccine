@@ -19,8 +19,8 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             DateTime today = DateTime.Now;
-            dpkNgaybd.Value = new DateTime(today.Year - 1, today.Month - 10, 1);
-            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(11).AddDays(-1);
+            dpkNgaybd.Value = new DateTime(today.Year - 1, today.Month, 1);
+            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(12).AddDays(-1);
             ThucThi();
             TongtienHoadon();
             cmbLuaChon.SelectedIndex = 0;

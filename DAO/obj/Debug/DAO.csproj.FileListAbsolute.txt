@@ -72,3 +72,13 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DAO\obj\Debug\DAO.csproj.Ge
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DAO\obj\Debug\DAO.dll
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DAO\obj\Debug\DAO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\bin\Debug\DAO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\bin\Debug\DAO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\bin\Debug\DTO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\bin\Debug\DTO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DAO\obj\Debug\DAO.pdb

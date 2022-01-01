@@ -19,7 +19,7 @@ namespace WindowsFormsApp
         public UC_ReportHangTon()
         {
             InitializeComponent();
-            Load();
+           // Load();
             
             
         }
@@ -31,11 +31,11 @@ namespace WindowsFormsApp
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();
             string query = "select * from MatHang";
-            string query1 = "select MatHang.MaMH,TenMH,DonVi,GiaBan,MatHang.SoLuong, sum(ChitietPN.Soluong) as [SLNhap], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [SLBan] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
+            string query1 = "select VacXin.MaVX,VacXin.TenVX ,sum(ChitietPN.Soluong) as [SLNhap],VacXin.SoLuong as [SoLuong], (sum(ChitietPN.Soluong) - VacXin.SoLuong) as [SLBan],VacXin.GiaBan from VacXin inner join ChiTietPN on VacXin.MaVX = ChiTietPN.MaVX group by VacXin.MaVX,VacXin.TenVX,VacXin.SoLuong,VacXin.GiaBan ";
             SqlDataAdapter dta = new SqlDataAdapter(query1, con);
             DataSet1 dataSet1 = new DataSet1();
             dta.Fill(dataSet1, "DataTable3");
-            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables[2]);
+            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables["DataTable3"]);
             con.Close();
            
             this.reportViewer1.LocalReport.DataSources.Clear();
@@ -60,6 +60,11 @@ namespace WindowsFormsApp
         {
             UC_ThongKeHangHoa f = new UC_ThongKeHangHoa();
             addUC(f);
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+           Load();
         }
     }
 }

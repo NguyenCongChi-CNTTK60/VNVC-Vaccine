@@ -38,13 +38,7 @@ namespace WindowsFormsApp
 
 
         private string temp;
-        private void dgvPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index;
-            index = e.RowIndex;
-            
-            temp = dgvPN.Rows[index].Cells[0].Value.ToString();
-        }
+       
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
@@ -76,6 +70,14 @@ namespace WindowsFormsApp
             else
                 Hienthi();
 
+        }
+
+        private void dgvPN_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index;
+            index = e.RowIndex;
+
+            temp = dgvPN.Rows[index].Cells[0].Value.ToString();
         }
     }
 }

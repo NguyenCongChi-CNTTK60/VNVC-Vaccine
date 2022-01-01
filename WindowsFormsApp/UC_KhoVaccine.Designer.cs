@@ -36,6 +36,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvHH = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTk = new System.Windows.Forms.Label();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnNhaphang = new FontAwesome.Sharp.IconButton();
@@ -69,13 +76,6 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHH)).BeginInit();
             this.panel3.SuspendLayout();
@@ -182,10 +182,74 @@
             this.dgvHH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Mã Vaccine";
+            this.Column1.FillWeight = 79.54546F;
+            this.Column1.HeaderText = "Mã Vaccine";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Tên Vacine";
+            this.Column2.FillWeight = 120.2562F;
+            this.Column2.HeaderText = "Tên Vaccine";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Số lượng";
+            this.Column3.FillWeight = 42.69469F;
+            this.Column3.HeaderText = "Số lượng";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Giá bán";
+            this.Column4.FillWeight = 55.13847F;
+            this.Column4.HeaderText = "Giá bán";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Phòng bệnh";
+            this.Column5.FillWeight = 195.9102F;
+            this.Column5.HeaderText = "Phòng bệnh ";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Loại Vaccine";
+            this.Column6.FillWeight = 129.7538F;
+            this.Column6.HeaderText = "Loai Vaccine";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Nước sản xuất";
+            this.Column7.FillWeight = 76.70123F;
+            this.Column7.HeaderText = "Nước sản xuất";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // lblTk
             // 
             this.lblTk.AutoSize = true;
             this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.lblTk.Location = new System.Drawing.Point(774, 12);
             this.lblTk.Name = "lblTk";
             this.lblTk.Size = new System.Drawing.Size(195, 40);
@@ -706,69 +770,6 @@
             // 
             this.guna2Elipse3.BorderRadius = 10;
             this.guna2Elipse3.TargetControl = this.dgvHH;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Mã Vaccine";
-            this.Column1.FillWeight = 79.54546F;
-            this.Column1.HeaderText = "Mã Vaccine";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Tên Vacine";
-            this.Column2.FillWeight = 120.2562F;
-            this.Column2.HeaderText = "Tên Vaccine";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Số lượng";
-            this.Column3.FillWeight = 42.69469F;
-            this.Column3.HeaderText = "Số lượng";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Giá bán";
-            this.Column4.FillWeight = 55.13847F;
-            this.Column4.HeaderText = "Giá bán";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Phòng bệnh";
-            this.Column5.FillWeight = 195.9102F;
-            this.Column5.HeaderText = "Phòng bệnh ";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Loại Vaccine";
-            this.Column6.FillWeight = 129.7538F;
-            this.Column6.HeaderText = "Loai Vaccine";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Nước sản xuất";
-            this.Column7.FillWeight = 76.70123F;
-            this.Column7.HeaderText = "Nước sản xuất";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // UC_KhoVaccine
             // 

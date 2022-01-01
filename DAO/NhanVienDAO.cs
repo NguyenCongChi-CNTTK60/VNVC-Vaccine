@@ -140,5 +140,13 @@ namespace DAO
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
+
+
+        public DataTable TKNhanVien()
+        {
+            string query = "USP_TKNhanVien";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

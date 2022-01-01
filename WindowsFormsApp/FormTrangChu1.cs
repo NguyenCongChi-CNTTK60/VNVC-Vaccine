@@ -90,12 +90,15 @@ namespace WindowsFormsApp
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            Color myRgbColor = new Color();
+            myRgbColor = Color.FromArgb(0, 35, 149);
             UC_ThongKe _ThongKe = new UC_ThongKe();
-            Phanquyen(_ThongKe, _HienThiQuyen);         
+            Phanquyen(_ThongKe, _HienThiQuyen);
             ButtonHide();
-           
             btnThongKe.ForeColor = Color.White;
-            btnThongKe.IconColor = Color.White;
+            btnThongKe.BackColor = myRgbColor;
+
+
         }
 
 

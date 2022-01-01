@@ -89,3 +89,16 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.Co
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\BUS\obj\Debug\BUS.dll
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\BUS\obj\Debug\BUS.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\BUS.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\BUS.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\DAO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\DTO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\DAO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\bin\Debug\DTO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\BUS\obj\Debug\BUS.pdb
