@@ -1891,3 +1891,4 @@ C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\GUI
 C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
 C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormInHoaDon.resources
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormXemLaiHoaDon.resources

@@ -110,7 +110,7 @@ namespace DAO
 
         public DataTable TimKiemGiaBan(string maGT)
         {
-            string query = "select DonGia from ChiTietDKTiem where MaVX= N'" + maGT + "'";
+            string query = "select GiaBan from VacXin where MaVX= N'" + maGT + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

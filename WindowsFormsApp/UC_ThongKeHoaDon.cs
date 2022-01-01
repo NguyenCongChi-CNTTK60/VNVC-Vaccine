@@ -130,18 +130,22 @@ namespace WindowsFormsApp
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            FormChiTietHD f = new FormChiTietHD(mahd);
+            FormXemLaiHoaDon f = new FormXemLaiHoaDon(mahd);
             f.Show();
         }
 
 
         private string mahd;
-        private void dgvHd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      
+        private void dgvHd_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int indexx;
             indexx = e.RowIndex;
             mahd = dgvHd.Rows[indexx].Cells[0].Value.ToString();
         }
+
+
+
     }
 
 }

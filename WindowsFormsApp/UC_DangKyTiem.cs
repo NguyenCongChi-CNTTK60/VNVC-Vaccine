@@ -78,7 +78,7 @@ namespace WindowsFormsApp
             }
         }
 
-      
+
         List<GoiTiemDTO> list1;
 
         private void cmbTenGoiTiem_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace WindowsFormsApp
         private void cmbTenVaccine_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = GoiTiemBUS.Intance.TimKiemMaVX(cmbTenVaccine.Text);
-           // DataTable dt1 = GoiTiemBUS.Intance.TimKiemGiaBan(cmbTenVaccine.Text);
+            // DataTable dt1 = GoiTiemBUS.Intance.TimKiemGiaBan(cmbTenVaccine.Text);
             if (dt.Rows.Count > 0)
             {
                 //i = cmbTenVaccine.SelectedIndex;
@@ -101,7 +101,7 @@ namespace WindowsFormsApp
                 DataTable dt1 = GoiTiemBUS.Intance.TimKiemGiaBan(lblMaVX.Text);
                 if (dt1.Rows.Count > 0)
                 {
-                    lblGiaban.Text = dt1.Rows[0]["DonGia"].ToString();
+                    lblGiaban.Text = dt1.Rows[0]["GiaBan"].ToString();
                 }
             }
         }
@@ -116,10 +116,10 @@ namespace WindowsFormsApp
             ThemNormal();
 
 
-           
-              
 
-           
+
+
+
 
         }
 
@@ -167,7 +167,7 @@ namespace WindowsFormsApp
                     }
 
                 }
-            } 
+            }
         }
 
 
@@ -219,7 +219,7 @@ namespace WindowsFormsApp
                 // resetInfoProduct();
             }
             else
-                MessageBox.Show("Số lượng phải lớn hơn 0","Thông báo");
+                MessageBox.Show("Số lượng phải lớn hơn 0", "Thông báo");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -232,7 +232,7 @@ namespace WindowsFormsApp
                     tongTien -= Int32.Parse(tien);
                     lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", tongTien) + " đ";
                     lvSanPhamBan.Items[i].Remove();//xóa item đó đi
-                    
+
                     Tinhtienhoantra();
                     i--;
 
@@ -294,7 +294,7 @@ namespace WindowsFormsApp
             if (string.IsNullOrEmpty(cmbTenGoiTiem.Text))
             {
                 TinhtienhoantraGoiTiem();
-            }else
+            } else
 
                 Tinhtienhoantra();
         }
@@ -332,7 +332,7 @@ namespace WindowsFormsApp
             if (lvSanPhamBan.Items.Count > 0)
             {
                 if (cmbTenGoiTiem.Text == "----- Chọn gói tiêm -----" || !string.IsNullOrEmpty(cmbTenGoiTiem.Text)) {
-                    
+
                     hd.MaHD = lblMahd.Text;
                     hd.MaKH = lblMaKH.Text;
                     hd.NgayTao = dtpNgayban.Value;
@@ -341,14 +341,14 @@ namespace WindowsFormsApp
                 }
                 else
                 {
-                    
+
                     hd.MaHD = lblMahd.Text;
                     hd.MaKH = lblMaKH.Text;
                     hd.NgayTao = dtpNgayban.Value;
                     hd.MaNV = lblMaNV.Text;
                     hd.TongTien = temp;
                 }
-            
+
 
 
 
@@ -363,8 +363,8 @@ namespace WindowsFormsApp
                         DataProvider.Instance.ExecuteQuery(query);
 
                     }
-                   FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, lblTienKhachDua.Text, lblTienHoanTra.Text,lblTienBangChu.Text, lblTienbangso.Text);
-                   formInHoaDon.Show();
+                    FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, lblTienKhachDua.Text, lblTienHoanTra.Text, lblTienBangChu.Text, lblTienbangso.Text);
+                    formInHoaDon.Show();
                     lvSanPhamBan.Items.Clear();
                     lblTienbangso.Text = "0 đ";
                     lblTienKhachDua.Text = "0đ";
@@ -375,7 +375,7 @@ namespace WindowsFormsApp
                     lblMahd.Text = Matudong();
                     txtTienkhachdua.Text = "";
                     txtTimkiem.Text = "";
-                    MessageBox.Show("ThanhToan", "Thông báo");
+                    // MessageBox.Show("ThanhToan", "Thông báo");
 
                 }
 
@@ -385,6 +385,144 @@ namespace WindowsFormsApp
                 MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
             }
         }
+
+        private void txtHuyHĐ_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtHuyHĐ.Text))
+            {
+                btnXacNhan.Enabled = false;
+                string query = "USP_HuyHĐ '" + txtHuyHĐ.Text + "'";
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                if (dt.Rows.Count > 0)
+                {
+                    lblMahd.Text = dt.Rows[0]["MaHD"].ToString();
+                    lblMaKH.Text = dt.Rows[0]["MaKH"].ToString();
+                    lblTenkh.Text = dt.Rows[0]["TenKH"].ToString();
+                    dtpNgayban.Value = Convert.ToDateTime(dt.Rows[0]["NgayTao"].ToString());
+                    string query1 = "USP_TinhTienCot4 '" + txtHuyHĐ.Text + "'";
+                    DataTable dt2 = DataProvider.Instance.ExecuteQuery(query1);
+                    string query2 = "USP_TongTienCot4 '" + txtHuyHĐ.Text + "'";
+                    DataTable dt3 = DataProvider.Instance.ExecuteQuery(query2);
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+
+                        string[] arr = new string[6];
+                        arr[0] = dt.Rows[i]["MaVX"].ToString();
+                        arr[1] = dt.Rows[i]["TenVX"].ToString();
+                        arr[2] = dt.Rows[i]["SoLuong"].ToString();
+                        arr[3] = dt.Rows[i]["DonGia"].ToString();
+                        arr[4] = dt2.Rows[i]["ThanhTien"].ToString();
+
+                        ListViewItem listViewItem = new ListViewItem(arr);
+                        lvSanPhamBan.Items.Add(listViewItem);
+                    }
+                    foreach (ListViewItem item in lvSanPhamBan.Items)
+                    {
+                        //LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
+                        string query4 = "update VacXin set SoLuong = SoLuong + " + Int32.Parse(item.SubItems[2].Text) + "where MaVX = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                        DataProvider.Instance.ExecuteQuery(query4);
+
+                    }
+
+
+                    tongTien = Int32.Parse(dt3.Rows[0]["TongTien"].ToString());
+                    lblTienbangso.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##00}", tongTien) + " đ";
+                    lblTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
+                    txtTienkhachdua.Text = Convert.ToString((dt3.Rows[0]["TongTien"].ToString()));
+                }
+            }
+            else
+            {
+                btnXacNhan.Enabled = true;
+                DateTime today = DateTime.Now;
+                dtpNgayban.Value = new DateTime(today.Year, today.Month, today.Day);
+
+                list = MatHangBUS.Intance.getListSanPham();
+                cmbTenVaccine.DataSource = list;
+                cmbTenVaccine.DisplayMember = "TenVX";
+                cmbTenVaccine.ValueMember = "MaVX";
+
+                tongTien = 0;
+                lblTienbangso.Text = "0đ";
+                cmbTenGoiTiem.SelectedIndex = 0;
+                cmbTenVaccine.SelectedIndex = -1;
+                cmbLoaiVX.SelectedIndex = 0;
+                txtSoLuong.Value = 0;
+                lblGiaban.Text = "0đ";
+                lblMahd.Text = Matudong();
+                lblTenkh.Text = "Chưa xác định";
+                lvSanPhamBan.Items.Clear();
+            }
+        }
+
+        private void btnXacNhanHuy_Click(object sender, EventArgs e)
+        {
+
+            string query5 = "delete ChiTietDKTiem where MaHD = '" + lblMahd.Text + "'";  // cập nhật lại số lượng 
+            DataProvider.Instance.ExecuteQuery(query5);
+            string query6 = "delete DangKyTiem where MaHD = '" + lblMahd.Text + "'";  // cập nhật lại số lượng 
+            DataProvider.Instance.ExecuteQuery(query6);
+
+            HoaDonDTO hd = new HoaDonDTO();
+
+
+
+            if (cmbTenGoiTiem.Text == "----- Chọn gói tiêm -----" || !string.IsNullOrEmpty(cmbTenGoiTiem.Text))
+            {
+
+                hd.MaHD = lblMahd.Text;
+                hd.MaKH = lblMaKH.Text;
+                hd.NgayTao = dtpNgayban.Value;
+                hd.MaNV = lblMaNV.Text;
+                hd.TongTien = tongTien;
+            }
+            else
+            {
+
+                hd.MaHD = lblMahd.Text;
+                hd.MaKH = lblMaKH.Text;
+                hd.NgayTao = dtpNgayban.Value;
+                hd.MaNV = lblMaNV.Text;
+                hd.TongTien = temp;
+            }
+
+
+
+
+
+            if (LuuHD(hd))   // lưu hóa đơn
+            {
+                //FormInHD formInHD = new FormInHD(lblMakh.Text);
+                foreach (ListViewItem item in lvSanPhamBan.Items)
+                {
+                    LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
+                    string query = "update VacXin set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaVX = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                    DataProvider.Instance.ExecuteQuery(query);
+
+                }
+                FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, lblTienKhachDua.Text, lblTienHoanTra.Text, lblTienBangChu.Text, lblTienbangso.Text);
+                formInHoaDon.Show();
+                lvSanPhamBan.Items.Clear();
+                lblTienbangso.Text = "0 đ";
+                lblTienKhachDua.Text = "0đ";
+                lblTienHoanTra.Text = "0đ";
+                lblMaKH.Text = "KH00";
+                lblTenkh.Text = "Chưa xác định";
+                tongTien = 0;
+                lblMahd.Text = Matudong();
+                txtTienkhachdua.Text = "";
+                txtTimkiem.Text = "";
+                // MessageBox.Show("ThanhToan", "Thông báo");
+
+            }
+
+        }
+
+    
+
+
+        
 
 
         //
