@@ -28,16 +28,16 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
+        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, DateTime ngaysinh, string matn)
         {
-            string query = String.Format("insert into KhachHang(MaKH, TenKH, DiaChi, SDT, Email,DiemTichLuy) values ('{0}', N'{1}', N'{2}', N'{3}', '{4}', 0)", maKH, tenKH, DiaChi, SDT, email);
+            string query = String.Format("insert into KhachHang(MaKH, TenKH, DiaChi, SDT, NgaySinh, MaTN) values ('{0}', N'{1}', N'{2}', N'{3}', '{4}', '{5}')", maKH, tenKH, DiaChi, SDT, ngaysinh, matn);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
+        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, DateTime ngaysinh, string matn)
         {
-            string query = String.Format("update KhachHang set TenKH = N'" + tenKH + "', DiaChi = N'" + DiaChi + "', SDT = '" + SDT + "', Email = N'" + email + "' where MaKH = '" + maKH + "'");
+            string query = String.Format("update KhachHang set TenKH = N'" + tenKH + "', DiaChi = N'" + DiaChi + "', SDT = '" + SDT + "', NgaySinh = '"+ ngaysinh +"',MaTN = '"+ matn + "' where MaKH = '" + maKH + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -77,7 +77,7 @@ namespace DAO
 
         public DataTable TimKiemKhachHang(string tk)
         {
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(HoaDon.TongTien) AS[Tổng Tiền], Count(HoaDon.MaKH) as [Số lần mua hàng] from KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'" + tk + "' group by HoaDon.MaKH, KhachHang.MaKH,TenKH,SDT";
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(DangKyTiem.TongTien) AS[Tổng Tiền], Count(DangKyTiem.MaKH) as [Số lần mua hàng] from KhachHang inner join DangKyTiem on KhachHang.MaKH = DangKyTiem.MaKH where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'" + tk + "' group by DangKyTiem.MaKH, KhachHang.MaKH,TenKH,SDT";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -85,7 +85,7 @@ namespace DAO
 
         public DataTable HienThi()
         {
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],NgaySinh as [Ngày sinh], DiaChi as [Địa chỉ], KhachHang.SDT as [Số điện thoại], TenTN as [Thân nhân] from KhachHang inner join ThanNhan on KhachHang.MaTN = ThanNhan.MaTN";
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],NgaySinh as [Ngày sinh], DiaChi as [Địa chỉ], KhachHang.SDT as [Số điện thoại], TenTN as [Thân nhân],MoiQuanHe as [Mối quan hệ] from KhachHang inner join ThanNhan on KhachHang.MaTN = ThanNhan.MaTN";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -100,7 +100,7 @@ namespace DAO
 
         public DataTable TimKiem(string tk)
         {
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng], DiaChi as [Địa chỉ], SDT as [Số điện thoại], Email as [Email] from KhachHang  where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'%" + tk + "%'  or SDT like N'%" + tk + "%'";
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],NgaySinh as [Ngày sinh], DiaChi as [Địa chỉ], KhachHang.SDT as [Số điện thoại], TenTN as [Thân nhân],MoiQuanHe as [Mối quan hệ] from KhachHang inner join ThanNhan on KhachHang.MaTN = ThanNhan.MaTN  where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'%" + tk + "%'  or KhachHang.SDT like N'%" + tk + "%'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -112,5 +112,43 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public DataTable HienThiThanNhan()
+        {
+            string query = "select MaTN as [Mã thân nhân], TenTN as [Tên thân nhân], MoiQuanHe as [Mối quan hệ], SDT as [Số điện thoại] from ThanNhan";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
+        public bool themTN(string maTN, string tenTN, string moiQH, string SDT)
+        {
+            string query = String.Format("insert into ThanNhan (MaTN, TenTN, MoiQuanHe, SDT) values ('{0}', N'{1}', N'{2}', N'{3}')", maTN, tenTN, moiQH, SDT);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool suaTN(string maTN, string tenTN, string moiQH, string SDT)
+        {
+            string query = String.Format("update ThanNhan set TenTN = N'" + tenTN + "', MoiQuanHe = N'" + moiQH + "', SDT = '" + SDT + "' where MaKH = '" + maTN + "'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool xoaTN(string maKH)
+        {
+            string query = String.Format("delete from ThanNhan where MaTN = '{0}'", maKH);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+
+        public DataTable TKhanNhan(string tk)
+        {
+            string query = "select MaTN as [Mã thân nhân], TenTN as [Tên thân nhân], MoiQuanHe as [Mối quan hệ], SDT as [Số điện thoại] from ThanNhan where MaTN like '%"+tk+ "%' or TenTN like N'%" + tk + "%' or SDT like '%" + tk + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
     }
 }

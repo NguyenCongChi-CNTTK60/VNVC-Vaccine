@@ -54,3 +54,11 @@ C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DTO\obj\Debug\DTO.csproj.Ge
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DTO\obj\Debug\DTO.dll
 C:\Users\Nguyen Cong Chi\Documents\VaccinNation-VNVC\DTO\obj\Debug\DTO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\bin\Debug\DTO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\bin\Debug\DTO.pdb
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.dll
+C:\Users\Nguyen Cong Chi\Desktop\VaccinNation-VNVC\DTO\obj\Debug\DTO.pdb

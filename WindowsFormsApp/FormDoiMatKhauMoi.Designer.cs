@@ -79,9 +79,9 @@ namespace WindowsFormsApp
             // 
             // txtHoVaTen
             // 
-            this.txtHoVaTen.BackColor = System.Drawing.SystemColors.Window;
+            this.txtHoVaTen.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtHoVaTen.BorderColor = System.Drawing.Color.Silver;
-            this.txtHoVaTen.BorderRadius = 2;
+            this.txtHoVaTen.BorderRadius = 5;
             this.txtHoVaTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHoVaTen.DefaultText = "Nhập mật khẩu hiện tại";
             this.txtHoVaTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -91,7 +91,7 @@ namespace WindowsFormsApp
             this.txtHoVaTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHoVaTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoVaTen.FocusedState.Parent = this.txtHoVaTen;
-            this.txtHoVaTen.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoVaTen.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.txtHoVaTen.ForeColor = System.Drawing.Color.DarkGray;
             this.txtHoVaTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHoVaTen.HoverState.Parent = this.txtHoVaTen;
@@ -132,9 +132,9 @@ namespace WindowsFormsApp
             // 
             // txtSĐT
             // 
-            this.txtSĐT.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSĐT.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtSĐT.BorderColor = System.Drawing.Color.Silver;
-            this.txtSĐT.BorderRadius = 2;
+            this.txtSĐT.BorderRadius = 5;
             this.txtSĐT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSĐT.DefaultText = "Nhập tên nv";
             this.txtSĐT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -144,7 +144,7 @@ namespace WindowsFormsApp
             this.txtSĐT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSĐT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.FocusedState.Parent = this.txtSĐT;
-            this.txtSĐT.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSĐT.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.txtSĐT.ForeColor = System.Drawing.Color.Black;
             this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.HoverState.Parent = this.txtSĐT;
@@ -416,9 +416,9 @@ namespace WindowsFormsApp
             // 
             // txtMKMOI
             // 
-            this.txtMKMOI.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMKMOI.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtMKMOI.BorderColor = System.Drawing.Color.Silver;
-            this.txtMKMOI.BorderRadius = 2;
+            this.txtMKMOI.BorderRadius = 5;
             this.txtMKMOI.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMKMOI.DefaultText = "Mật khẩu mới\r\n";
             this.txtMKMOI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -428,7 +428,7 @@ namespace WindowsFormsApp
             this.txtMKMOI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMKMOI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMKMOI.FocusedState.Parent = this.txtMKMOI;
-            this.txtMKMOI.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMKMOI.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.txtMKMOI.ForeColor = System.Drawing.Color.DarkGray;
             this.txtMKMOI.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMKMOI.HoverState.Parent = this.txtMKMOI;
@@ -493,9 +493,9 @@ namespace WindowsFormsApp
             // 
             // txtXNMKmOI
             // 
-            this.txtXNMKmOI.BackColor = System.Drawing.SystemColors.Window;
+            this.txtXNMKmOI.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtXNMKmOI.BorderColor = System.Drawing.Color.Silver;
-            this.txtXNMKmOI.BorderRadius = 2;
+            this.txtXNMKmOI.BorderRadius = 5;
             this.txtXNMKmOI.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtXNMKmOI.DefaultText = "Xác nhận mật khẩu\r\n";
             this.txtXNMKmOI.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -505,7 +505,7 @@ namespace WindowsFormsApp
             this.txtXNMKmOI.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtXNMKmOI.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtXNMKmOI.FocusedState.Parent = this.txtXNMKmOI;
-            this.txtXNMKmOI.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXNMKmOI.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.txtXNMKmOI.ForeColor = System.Drawing.Color.DarkGray;
             this.txtXNMKmOI.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtXNMKmOI.HoverState.Parent = this.txtXNMKmOI;
@@ -526,7 +526,7 @@ namespace WindowsFormsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1015, 598);
             this.Controls.Add(this.btnXNMKeyeslach);
             this.Controls.Add(this.btnXNMKMeye);

@@ -37,6 +37,7 @@ namespace WindowsFormsApp
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2ToggleSwitch2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btnThanNhan = new FontAwesome.Sharp.IconButton();
             this.dgvKH = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblTk = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@ namespace WindowsFormsApp
             this.txtKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTimkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiachi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenTN = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSĐT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace WindowsFormsApp
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.panel2.SuspendLayout();
@@ -127,6 +127,15 @@ namespace WindowsFormsApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1806, 1088);
             this.panel1.TabIndex = 207;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1806, 2);
+            this.panel5.TabIndex = 241;
             // 
             // btnThanNhan
             // 
@@ -217,6 +226,7 @@ namespace WindowsFormsApp
             this.dgvKH.ThemeStyle.RowsStyle.Height = 45;
             this.dgvKH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvKH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick_1);
             // 
             // lblTk
             // 
@@ -248,6 +258,7 @@ namespace WindowsFormsApp
             this.btnSua.Text = "         Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnXoa
             // 
@@ -269,6 +280,7 @@ namespace WindowsFormsApp
             this.btnXoa.Text = "         Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_2);
             // 
             // btnThem
             // 
@@ -291,6 +303,7 @@ namespace WindowsFormsApp
             this.btnThem.Text = "        Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // panel2
             // 
@@ -304,7 +317,7 @@ namespace WindowsFormsApp
             this.panel2.Controls.Add(this.txtKH);
             this.panel2.Controls.Add(this.txtTimkiem);
             this.panel2.Controls.Add(this.txtDiachi);
-            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.txtTenTN);
             this.panel2.Controls.Add(this.txtSĐT);
             this.panel2.Controls.Add(this.txtMaKH);
             this.panel2.Controls.Add(this.label8);
@@ -394,7 +407,7 @@ namespace WindowsFormsApp
             // txtKH
             // 
             this.txtKH.BorderColor = System.Drawing.Color.Silver;
-            this.txtKH.BorderRadius = 3;
+            this.txtKH.BorderRadius = 7;
             this.txtKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtKH.DefaultText = "Nhập tên khách hàng";
             this.txtKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -418,6 +431,8 @@ namespace WindowsFormsApp
             this.txtKH.ShadowDecoration.Parent = this.txtKH;
             this.txtKH.Size = new System.Drawing.Size(1733, 49);
             this.txtKH.TabIndex = 221;
+            this.txtKH.Click += new System.EventHandler(this.txtKH_Click);
+            this.txtKH.Leave += new System.EventHandler(this.txtKH_Leave_1);
             // 
             // txtTimkiem
             // 
@@ -445,11 +460,14 @@ namespace WindowsFormsApp
             this.txtTimkiem.ShadowDecoration.Parent = this.txtTimkiem;
             this.txtTimkiem.Size = new System.Drawing.Size(545, 49);
             this.txtTimkiem.TabIndex = 222;
+            this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged_1);
+            this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
+            this.txtTimkiem.Leave += new System.EventHandler(this.txtTimkiem_Leave);
             // 
             // txtDiachi
             // 
             this.txtDiachi.BorderColor = System.Drawing.Color.Silver;
-            this.txtDiachi.BorderRadius = 3;
+            this.txtDiachi.BorderRadius = 7;
             this.txtDiachi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiachi.DefaultText = "Nhập địa chỉ";
             this.txtDiachi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -473,39 +491,43 @@ namespace WindowsFormsApp
             this.txtDiachi.ShadowDecoration.Parent = this.txtDiachi;
             this.txtDiachi.Size = new System.Drawing.Size(1155, 49);
             this.txtDiachi.TabIndex = 221;
+            this.txtDiachi.Click += new System.EventHandler(this.txtDiachi_Click);
+            this.txtDiachi.Leave += new System.EventHandler(this.txtDiachi_Leave);
             // 
-            // txtEmail
+            // txtTenTN
             // 
-            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
-            this.txtEmail.BorderRadius = 3;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "Nhập địa chỉ email";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.Parent = this.txtEmail;
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.FocusedState.Parent = this.txtEmail;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.txtEmail.ForeColor = System.Drawing.Color.Gray;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(943, 231);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(7);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.SelectionStart = 18;
-            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
-            this.txtEmail.Size = new System.Drawing.Size(456, 49);
-            this.txtEmail.TabIndex = 221;
+            this.txtTenTN.BorderColor = System.Drawing.Color.Silver;
+            this.txtTenTN.BorderRadius = 7;
+            this.txtTenTN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenTN.DefaultText = "Nhập tên thân nhân";
+            this.txtTenTN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenTN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenTN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenTN.DisabledState.Parent = this.txtTenTN;
+            this.txtTenTN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenTN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenTN.FocusedState.Parent = this.txtTenTN;
+            this.txtTenTN.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.txtTenTN.ForeColor = System.Drawing.Color.Gray;
+            this.txtTenTN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenTN.HoverState.Parent = this.txtTenTN;
+            this.txtTenTN.Location = new System.Drawing.Point(943, 231);
+            this.txtTenTN.Margin = new System.Windows.Forms.Padding(7);
+            this.txtTenTN.Name = "txtTenTN";
+            this.txtTenTN.PasswordChar = '\0';
+            this.txtTenTN.PlaceholderText = "";
+            this.txtTenTN.SelectedText = "";
+            this.txtTenTN.SelectionStart = 18;
+            this.txtTenTN.ShadowDecoration.Parent = this.txtTenTN;
+            this.txtTenTN.Size = new System.Drawing.Size(456, 49);
+            this.txtTenTN.TabIndex = 221;
+            this.txtTenTN.Click += new System.EventHandler(this.txtTenTN_Click);
+            this.txtTenTN.Leave += new System.EventHandler(this.txtTenTN_Leave);
             // 
             // txtSĐT
             // 
             this.txtSĐT.BorderColor = System.Drawing.Color.Silver;
-            this.txtSĐT.BorderRadius = 3;
+            this.txtSĐT.BorderRadius = 7;
             this.txtSĐT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSĐT.DefaultText = "Nhập số điện thoại";
             this.txtSĐT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -529,11 +551,13 @@ namespace WindowsFormsApp
             this.txtSĐT.ShadowDecoration.Parent = this.txtSĐT;
             this.txtSĐT.Size = new System.Drawing.Size(435, 49);
             this.txtSĐT.TabIndex = 221;
+            this.txtSĐT.Click += new System.EventHandler(this.txtSĐT_Click);
+            this.txtSĐT.Leave += new System.EventHandler(this.txtSĐT_Leave_1);
             // 
             // txtMaKH
             // 
             this.txtMaKH.BorderColor = System.Drawing.Color.Silver;
-            this.txtMaKH.BorderRadius = 3;
+            this.txtMaKH.BorderRadius = 7;
             this.txtMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaKH.DefaultText = "Nhập mã khách hàng";
             this.txtMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -657,15 +681,6 @@ namespace WindowsFormsApp
             // 
             this.guna2Elipse4.BorderRadius = 3;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1806, 2);
-            this.panel5.TabIndex = 241;
-            // 
             // UC_KhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -708,7 +723,7 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2TextBox txtKH;
         private Guna.UI2.WinForms.Guna2TextBox txtTimkiem;
         private Guna.UI2.WinForms.Guna2TextBox txtDiachi;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenTN;
         private Guna.UI2.WinForms.Guna2TextBox txtSĐT;
         private Guna.UI2.WinForms.Guna2TextBox txtMaKH;
         private System.Windows.Forms.Label label8;

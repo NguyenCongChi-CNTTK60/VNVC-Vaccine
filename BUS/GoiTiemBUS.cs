@@ -86,5 +86,21 @@ namespace BUS
         {
             return GoiTiemDAO.Intance.TimKiemGiaBan(maGT);
         }
+
+        public bool themGoiTiem(string maGT, string tenGT)
+        {
+            return GoiTiemDAO.Intance.themGoiTiem(maGT, tenGT);
+        }
+
+        public bool suaGoiTiem(string maGT, string tenGT)
+        {
+            return GoiTiemDAO.Intance.suaGoiTiem(maGT, tenGT);
+        }
+
+
+        public bool xoaGoiTiem(string maGT)
+        {
+            return GoiTiemDAO.Intance.xoaGoiTiem(maGT);
+        }
+        }
     }
-}

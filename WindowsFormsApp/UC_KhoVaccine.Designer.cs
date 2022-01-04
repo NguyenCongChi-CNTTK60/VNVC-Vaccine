@@ -48,11 +48,11 @@
             this.btnNhaphang = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNuocSX = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhongBenh = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTimkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -181,6 +181,7 @@
             this.dgvHH.ThemeStyle.RowsStyle.Height = 45;
             this.dgvHH.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHH.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvHH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHH_CellContentClick_1);
             // 
             // Column1
             // 
@@ -325,11 +326,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.guna2TextBox2);
+            this.panel3.Controls.Add(this.txtNuocSX);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.guna2TextBox1);
+            this.panel3.Controls.Add(this.txtPhongBenh);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.txtTimkiem);
             this.panel3.Controls.Add(this.panel4);
@@ -354,33 +355,33 @@
             this.panel3.Size = new System.Drawing.Size(1762, 417);
             this.panel3.TabIndex = 221;
             // 
-            // guna2TextBox2
+            // txtNuocSX
             // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox2.BorderRadius = 3;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "Giá bán\r\n";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(851, 343);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 9;
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(368, 49);
-            this.guna2TextBox2.TabIndex = 241;
+            this.txtNuocSX.BorderColor = System.Drawing.Color.Silver;
+            this.txtNuocSX.BorderRadius = 7;
+            this.txtNuocSX.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuocSX.DefaultText = "Giá bán\r\n";
+            this.txtNuocSX.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNuocSX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNuocSX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNuocSX.DisabledState.Parent = this.txtNuocSX;
+            this.txtNuocSX.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNuocSX.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNuocSX.FocusedState.Parent = this.txtNuocSX;
+            this.txtNuocSX.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuocSX.ForeColor = System.Drawing.Color.Gray;
+            this.txtNuocSX.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNuocSX.HoverState.Parent = this.txtNuocSX;
+            this.txtNuocSX.Location = new System.Drawing.Point(851, 343);
+            this.txtNuocSX.Margin = new System.Windows.Forms.Padding(7);
+            this.txtNuocSX.Name = "txtNuocSX";
+            this.txtNuocSX.PasswordChar = '\0';
+            this.txtNuocSX.PlaceholderText = "";
+            this.txtNuocSX.SelectedText = "";
+            this.txtNuocSX.SelectionStart = 9;
+            this.txtNuocSX.ShadowDecoration.Parent = this.txtNuocSX;
+            this.txtNuocSX.Size = new System.Drawing.Size(373, 49);
+            this.txtNuocSX.TabIndex = 241;
             // 
             // label14
             // 
@@ -414,33 +415,33 @@
             this.label13.TabIndex = 238;
             this.label13.Text = "*";
             // 
-            // guna2TextBox1
+            // txtPhongBenh
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.BorderRadius = 3;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Tên mặt hàng";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(17, 343);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 12;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(779, 49);
-            this.guna2TextBox1.TabIndex = 237;
+            this.txtPhongBenh.BorderColor = System.Drawing.Color.Silver;
+            this.txtPhongBenh.BorderRadius = 7;
+            this.txtPhongBenh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhongBenh.DefaultText = "Phòng bệnh";
+            this.txtPhongBenh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhongBenh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhongBenh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhongBenh.DisabledState.Parent = this.txtPhongBenh;
+            this.txtPhongBenh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhongBenh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhongBenh.FocusedState.Parent = this.txtPhongBenh;
+            this.txtPhongBenh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhongBenh.ForeColor = System.Drawing.Color.Gray;
+            this.txtPhongBenh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhongBenh.HoverState.Parent = this.txtPhongBenh;
+            this.txtPhongBenh.Location = new System.Drawing.Point(17, 343);
+            this.txtPhongBenh.Margin = new System.Windows.Forms.Padding(7);
+            this.txtPhongBenh.Name = "txtPhongBenh";
+            this.txtPhongBenh.PasswordChar = '\0';
+            this.txtPhongBenh.PlaceholderText = "";
+            this.txtPhongBenh.SelectedText = "";
+            this.txtPhongBenh.SelectionStart = 10;
+            this.txtPhongBenh.ShadowDecoration.Parent = this.txtPhongBenh;
+            this.txtPhongBenh.Size = new System.Drawing.Size(791, 49);
+            this.txtPhongBenh.TabIndex = 237;
             // 
             // label8
             // 
@@ -456,9 +457,9 @@
             // txtTimkiem
             // 
             this.txtTimkiem.BorderColor = System.Drawing.Color.Silver;
-            this.txtTimkiem.BorderRadius = 3;
+            this.txtTimkiem.BorderRadius = 7;
             this.txtTimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimkiem.DefaultText = "Tìm kiếm theo mã, tên mặt hàng\r\n\r\n";
+            this.txtTimkiem.DefaultText = "Tìm kiếm theo mã, tên Vaccine\r\n\r\n\r\n";
             this.txtTimkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -476,7 +477,7 @@
             this.txtTimkiem.PasswordChar = '\0';
             this.txtTimkiem.PlaceholderText = "";
             this.txtTimkiem.SelectedText = "";
-            this.txtTimkiem.SelectionStart = 34;
+            this.txtTimkiem.SelectionStart = 35;
             this.txtTimkiem.ShadowDecoration.Parent = this.txtTimkiem;
             this.txtTimkiem.Size = new System.Drawing.Size(495, 49);
             this.txtTimkiem.TabIndex = 235;
@@ -508,9 +509,9 @@
             // txtTenMH
             // 
             this.txtTenMH.BorderColor = System.Drawing.Color.Silver;
-            this.txtTenMH.BorderRadius = 3;
+            this.txtTenMH.BorderRadius = 7;
             this.txtTenMH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenMH.DefaultText = "Tên mặt hàng";
+            this.txtTenMH.DefaultText = "Tên Vaccine";
             this.txtTenMH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenMH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenMH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -528,7 +529,7 @@
             this.txtTenMH.PasswordChar = '\0';
             this.txtTenMH.PlaceholderText = "";
             this.txtTenMH.SelectedText = "";
-            this.txtTenMH.SelectionStart = 12;
+            this.txtTenMH.SelectionStart = 11;
             this.txtTenMH.ShadowDecoration.Parent = this.txtTenMH;
             this.txtTenMH.Size = new System.Drawing.Size(1722, 49);
             this.txtTenMH.TabIndex = 233;
@@ -550,7 +551,7 @@
             this.cmbLoaiHang.HoverState.Parent = this.cmbLoaiHang;
             this.cmbLoaiHang.ItemHeight = 30;
             this.cmbLoaiHang.Items.AddRange(new object[] {
-            "----- Chọn loại hàng -----"});
+            "----- Chọn loại Vaccine -----"});
             this.cmbLoaiHang.ItemsAppearance.Parent = this.cmbLoaiHang;
             this.cmbLoaiHang.Location = new System.Drawing.Point(1383, 230);
             this.cmbLoaiHang.Name = "cmbLoaiHang";
@@ -604,7 +605,7 @@
             // txtSL
             // 
             this.txtSL.BorderColor = System.Drawing.Color.Silver;
-            this.txtSL.BorderRadius = 3;
+            this.txtSL.BorderRadius = 7;
             this.txtSL.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSL.DefaultText = "Số lượng";
             this.txtSL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -633,7 +634,7 @@
             // txtGiaBan
             // 
             this.txtGiaBan.BorderColor = System.Drawing.Color.Silver;
-            this.txtGiaBan.BorderRadius = 3;
+            this.txtGiaBan.BorderRadius = 7;
             this.txtGiaBan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaBan.DefaultText = "Giá bán\r\n";
             this.txtGiaBan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -661,9 +662,9 @@
             // txtMaMH
             // 
             this.txtMaMH.BorderColor = System.Drawing.Color.Silver;
-            this.txtMaMH.BorderRadius = 3;
+            this.txtMaMH.BorderRadius = 7;
             this.txtMaMH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaMH.DefaultText = "Mã mặt hàng\r\n\r\n";
+            this.txtMaMH.DefaultText = "Mã Vaccine";
             this.txtMaMH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMaMH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaMH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -682,7 +683,7 @@
             this.txtMaMH.PlaceholderText = "";
             this.txtMaMH.ReadOnly = true;
             this.txtMaMH.SelectedText = "";
-            this.txtMaMH.SelectionStart = 15;
+            this.txtMaMH.SelectionStart = 10;
             this.txtMaMH.ShadowDecoration.Parent = this.txtMaMH;
             this.txtMaMH.Size = new System.Drawing.Size(368, 49);
             this.txtMaMH.TabIndex = 220;
@@ -816,11 +817,11 @@
         private FontAwesome.Sharp.IconButton btnSua;
         private Guna.UI2.WinForms.Guna2TextBox txtTimkiem;
         private FontAwesome.Sharp.IconButton btnXoa;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtNuocSX;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhongBenh;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblTk;
         private Guna.UI2.WinForms.Guna2DataGridView dgvHH;

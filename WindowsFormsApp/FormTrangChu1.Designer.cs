@@ -31,49 +31,51 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconDangXuat = new FontAwesome.Sharp.IconPictureBox();
+            this.pcbAlign = new FontAwesome.Sharp.IconPictureBox();
             this.lblQuyen = new System.Windows.Forms.Label();
+            this.pcbBell = new FontAwesome.Sharp.IconPictureBox();
             this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnDangKyTiem = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnTrangchu = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnNhaCungCap = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnGoiTiem = new FontAwesome.Sharp.IconButton();
-            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
-            this.btnTrangchu = new FontAwesome.Sharp.IconButton();
-            this.btnDangKyTiem = new FontAwesome.Sharp.IconButton();
-            this.iconDangXuat = new FontAwesome.Sharp.IconPictureBox();
-            this.pcbAlign = new FontAwesome.Sharp.IconPictureBox();
-            this.pcbBell = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDangXuat = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
-            this.btnNhaCungCap = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
-            this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelLeft.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAlign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.panelLeft.Controls.Add(this.label1);
             this.panelLeft.Controls.Add(this.iconDangXuat);
             this.panelLeft.Controls.Add(this.pcbAlign);
             this.panelLeft.Controls.Add(this.lblQuyen);
@@ -91,6 +93,45 @@ namespace WindowsFormsApp
             this.panelLeft.Size = new System.Drawing.Size(1806, 70);
             this.panelLeft.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(206, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(311, 35);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Phần mềm quản lý tiêm chủng";
+            // 
+            // iconDangXuat
+            // 
+            this.iconDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.iconDangXuat.ForeColor = System.Drawing.Color.Red;
+            this.iconDangXuat.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconDangXuat.IconColor = System.Drawing.Color.Red;
+            this.iconDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDangXuat.IconSize = 37;
+            this.iconDangXuat.Location = new System.Drawing.Point(1728, 17);
+            this.iconDangXuat.Name = "iconDangXuat";
+            this.iconDangXuat.Size = new System.Drawing.Size(43, 37);
+            this.iconDangXuat.TabIndex = 40;
+            this.iconDangXuat.TabStop = false;
+            this.iconDangXuat.Click += new System.EventHandler(this.iconDangXuat_Click);
+            // 
+            // pcbAlign
+            // 
+            this.pcbAlign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.pcbAlign.IconChar = FontAwesome.Sharp.IconChar.AlignJustify;
+            this.pcbAlign.IconColor = System.Drawing.Color.White;
+            this.pcbAlign.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pcbAlign.IconSize = 37;
+            this.pcbAlign.Location = new System.Drawing.Point(1638, 20);
+            this.pcbAlign.Name = "pcbAlign";
+            this.pcbAlign.Size = new System.Drawing.Size(43, 37);
+            this.pcbAlign.TabIndex = 25;
+            this.pcbAlign.TabStop = false;
+            // 
             // lblQuyen
             // 
             this.lblQuyen.AutoSize = true;
@@ -102,6 +143,19 @@ namespace WindowsFormsApp
             this.lblQuyen.TabIndex = 39;
             this.lblQuyen.Text = "label4";
             // 
+            // pcbBell
+            // 
+            this.pcbBell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.pcbBell.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.pcbBell.IconColor = System.Drawing.Color.White;
+            this.pcbBell.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pcbBell.IconSize = 37;
+            this.pcbBell.Location = new System.Drawing.Point(1585, 20);
+            this.pcbBell.Name = "pcbBell";
+            this.pcbBell.Size = new System.Drawing.Size(43, 37);
+            this.pcbBell.TabIndex = 24;
+            this.pcbBell.TabStop = false;
+            // 
             // lblTenNhanVien
             // 
             this.lblTenNhanVien.AutoSize = true;
@@ -112,6 +166,7 @@ namespace WindowsFormsApp
             this.lblTenNhanVien.Size = new System.Drawing.Size(155, 29);
             this.lblTenNhanVien.TabIndex = 22;
             this.lblTenNhanVien.Text = "Nguyễn Công Chí";
+            this.lblTenNhanVien.Click += new System.EventHandler(this.lblTenNhanVien_Click);
             // 
             // lblMaNV
             // 
@@ -123,6 +178,19 @@ namespace WindowsFormsApp
             this.lblMaNV.Size = new System.Drawing.Size(51, 19);
             this.lblMaNV.TabIndex = 37;
             this.lblMaNV.Text = "label4";
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCog;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 39;
+            this.iconPictureBox2.Location = new System.Drawing.Point(1355, 17);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(39, 50);
+            this.iconPictureBox2.TabIndex = 23;
+            this.iconPictureBox2.TabStop = false;
             // 
             // lblTenNV
             // 
@@ -144,194 +212,6 @@ namespace WindowsFormsApp
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 70);
             this.panel2.TabIndex = 34;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 157);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1806, 1088);
-            this.panel1.TabIndex = 5;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 10;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 10;
-            this.guna2Elipse3.TargetControl = this.btnKhachHang;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 10;
-            this.guna2Elipse4.TargetControl = this.btnNhanVien;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 10;
-            this.guna2Elipse5.TargetControl = this.btnDangKyTiem;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.BorderRadius = 10;
-            this.guna2Elipse6.TargetControl = this.btnTrangchu;
-            // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.BorderRadius = 10;
-            this.guna2Elipse7.TargetControl = this.btnKhoHang;
-            // 
-            // guna2Elipse8
-            // 
-            this.guna2Elipse8.BorderRadius = 10;
-            this.guna2Elipse8.TargetControl = this.btnNhaCungCap;
-            // 
-            // guna2Elipse9
-            // 
-            this.guna2Elipse9.BorderRadius = 10;
-            this.guna2Elipse9.TargetControl = this.btnGoiTiem;
-            // 
-            // btnGoiTiem
-            // 
-            this.btnGoiTiem.FlatAppearance.BorderSize = 0;
-            this.btnGoiTiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoiTiem.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoiTiem.ForeColor = System.Drawing.Color.Black;
-            this.btnGoiTiem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGoiTiem.IconColor = System.Drawing.Color.Silver;
-            this.btnGoiTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGoiTiem.IconSize = 43;
-            this.btnGoiTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGoiTiem.Location = new System.Drawing.Point(1095, 86);
-            this.btnGoiTiem.Name = "btnGoiTiem";
-            this.btnGoiTiem.Size = new System.Drawing.Size(190, 50);
-            this.btnGoiTiem.TabIndex = 8;
-            this.btnGoiTiem.Text = "         Gói tiêm";
-            this.btnGoiTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGoiTiem.UseVisualStyleBackColor = true;
-            this.btnGoiTiem.Click += new System.EventHandler(this.btnGoiTiem_Click);
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhachHang.IconSize = 40;
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(274, 86);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(190, 50);
-            this.btnKhachHang.TabIndex = 6;
-            this.btnKhachHang.Text = "      Khách hàng";
-            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.UseVisualStyleBackColor = true;
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
-            // 
-            // btnTrangchu
-            // 
-            this.btnTrangchu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.btnTrangchu.FlatAppearance.BorderSize = 0;
-            this.btnTrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangchu.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangchu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangchu.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTrangchu.IconColor = System.Drawing.Color.Black;
-            this.btnTrangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTrangchu.IconSize = 40;
-            this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(78, 86);
-            this.btnTrangchu.Name = "btnTrangchu";
-            this.btnTrangchu.Size = new System.Drawing.Size(190, 50);
-            this.btnTrangchu.TabIndex = 27;
-            this.btnTrangchu.Text = "       Trang chủ\r\n";
-            this.btnTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.UseVisualStyleBackColor = false;
-            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
-            // 
-            // btnDangKyTiem
-            // 
-            this.btnDangKyTiem.FlatAppearance.BorderSize = 0;
-            this.btnDangKyTiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKyTiem.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKyTiem.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKyTiem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnDangKyTiem.IconColor = System.Drawing.Color.Silver;
-            this.btnDangKyTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDangKyTiem.IconSize = 40;
-            this.btnDangKyTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKyTiem.Location = new System.Drawing.Point(686, 86);
-            this.btnDangKyTiem.Name = "btnDangKyTiem";
-            this.btnDangKyTiem.Size = new System.Drawing.Size(190, 50);
-            this.btnDangKyTiem.TabIndex = 28;
-            this.btnDangKyTiem.Text = "    Đăng ký tiêm";
-            this.btnDangKyTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangKyTiem.UseVisualStyleBackColor = true;
-            this.btnDangKyTiem.Click += new System.EventHandler(this.btnBanHang_Click);
-            // 
-            // iconDangXuat
-            // 
-            this.iconDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.iconDangXuat.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.iconDangXuat.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.iconDangXuat.IconColor = System.Drawing.SystemColors.ActiveCaption;
-            this.iconDangXuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconDangXuat.IconSize = 37;
-            this.iconDangXuat.Location = new System.Drawing.Point(1741, 17);
-            this.iconDangXuat.Name = "iconDangXuat";
-            this.iconDangXuat.Size = new System.Drawing.Size(43, 37);
-            this.iconDangXuat.TabIndex = 40;
-            this.iconDangXuat.TabStop = false;
-            this.iconDangXuat.Click += new System.EventHandler(this.iconDangXuat_Click);
-            // 
-            // pcbAlign
-            // 
-            this.pcbAlign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.pcbAlign.IconChar = FontAwesome.Sharp.IconChar.AlignJustify;
-            this.pcbAlign.IconColor = System.Drawing.Color.White;
-            this.pcbAlign.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbAlign.IconSize = 37;
-            this.pcbAlign.Location = new System.Drawing.Point(1638, 20);
-            this.pcbAlign.Name = "pcbAlign";
-            this.pcbAlign.Size = new System.Drawing.Size(43, 37);
-            this.pcbAlign.TabIndex = 25;
-            this.pcbAlign.TabStop = false;
-            // 
-            // pcbBell
-            // 
-            this.pcbBell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.pcbBell.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.pcbBell.IconColor = System.Drawing.Color.White;
-            this.pcbBell.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbBell.IconSize = 37;
-            this.pcbBell.Location = new System.Drawing.Point(1585, 20);
-            this.pcbBell.Name = "pcbBell";
-            this.pcbBell.Size = new System.Drawing.Size(43, 37);
-            this.pcbBell.TabIndex = 24;
-            this.pcbBell.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCog;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 39;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1355, 17);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(39, 50);
-            this.iconPictureBox2.TabIndex = 23;
-            this.iconPictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -384,6 +264,130 @@ namespace WindowsFormsApp
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton5.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1806, 1088);
+            this.panel1.TabIndex = 5;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 10;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 10;
+            this.guna2Elipse3.TargetControl = this.btnKhachHang;
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhachHang.IconSize = 40;
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(274, 86);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(190, 50);
+            this.btnKhachHang.TabIndex = 6;
+            this.btnKhachHang.Text = "      Khách hàng";
+            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 10;
+            this.guna2Elipse4.TargetControl = this.btnNhanVien;
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
+            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnNhanVien.IconColor = System.Drawing.Color.Silver;
+            this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNhanVien.IconSize = 35;
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(479, 86);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(190, 50);
+            this.btnNhanVien.TabIndex = 29;
+            this.btnNhanVien.Text = "       Nhân viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 10;
+            this.guna2Elipse5.TargetControl = this.btnDangKyTiem;
+            // 
+            // btnDangKyTiem
+            // 
+            this.btnDangKyTiem.FlatAppearance.BorderSize = 0;
+            this.btnDangKyTiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKyTiem.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKyTiem.ForeColor = System.Drawing.Color.Black;
+            this.btnDangKyTiem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDangKyTiem.IconColor = System.Drawing.Color.Silver;
+            this.btnDangKyTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDangKyTiem.IconSize = 40;
+            this.btnDangKyTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangKyTiem.Location = new System.Drawing.Point(686, 86);
+            this.btnDangKyTiem.Name = "btnDangKyTiem";
+            this.btnDangKyTiem.Size = new System.Drawing.Size(190, 50);
+            this.btnDangKyTiem.TabIndex = 28;
+            this.btnDangKyTiem.Text = "    Đăng ký tiêm";
+            this.btnDangKyTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangKyTiem.UseVisualStyleBackColor = true;
+            this.btnDangKyTiem.Click += new System.EventHandler(this.btnBanHang_Click);
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.BorderRadius = 10;
+            this.guna2Elipse6.TargetControl = this.btnTrangchu;
+            // 
+            // btnTrangchu
+            // 
+            this.btnTrangchu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnTrangchu.FlatAppearance.BorderSize = 0;
+            this.btnTrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrangchu.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrangchu.ForeColor = System.Drawing.Color.White;
+            this.btnTrangchu.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTrangchu.IconColor = System.Drawing.Color.Black;
+            this.btnTrangchu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTrangchu.IconSize = 40;
+            this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTrangchu.Location = new System.Drawing.Point(78, 86);
+            this.btnTrangchu.Name = "btnTrangchu";
+            this.btnTrangchu.Size = new System.Drawing.Size(190, 50);
+            this.btnTrangchu.TabIndex = 27;
+            this.btnTrangchu.Text = "       Trang chủ\r\n";
+            this.btnTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTrangchu.UseVisualStyleBackColor = false;
+            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.BorderRadius = 10;
+            this.guna2Elipse7.TargetControl = this.btnKhoHang;
+            // 
             // btnKhoHang
             // 
             this.btnKhoHang.FlatAppearance.BorderSize = 0;
@@ -403,6 +407,11 @@ namespace WindowsFormsApp
             this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhoHang.UseVisualStyleBackColor = true;
             this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
+            // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.BorderRadius = 10;
+            this.guna2Elipse8.TargetControl = this.btnNhaCungCap;
             // 
             // btnNhaCungCap
             // 
@@ -424,6 +433,31 @@ namespace WindowsFormsApp
             this.btnNhaCungCap.UseVisualStyleBackColor = true;
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
+            // guna2Elipse9
+            // 
+            this.guna2Elipse9.BorderRadius = 10;
+            this.guna2Elipse9.TargetControl = this.btnGoiTiem;
+            // 
+            // btnGoiTiem
+            // 
+            this.btnGoiTiem.FlatAppearance.BorderSize = 0;
+            this.btnGoiTiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoiTiem.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoiTiem.ForeColor = System.Drawing.Color.Black;
+            this.btnGoiTiem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGoiTiem.IconColor = System.Drawing.Color.Silver;
+            this.btnGoiTiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGoiTiem.IconSize = 43;
+            this.btnGoiTiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGoiTiem.Location = new System.Drawing.Point(1095, 86);
+            this.btnGoiTiem.Name = "btnGoiTiem";
+            this.btnGoiTiem.Size = new System.Drawing.Size(190, 50);
+            this.btnGoiTiem.TabIndex = 8;
+            this.btnGoiTiem.Text = "         Gói tiêm";
+            this.btnGoiTiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGoiTiem.UseVisualStyleBackColor = true;
+            this.btnGoiTiem.Click += new System.EventHandler(this.btnGoiTiem_Click);
+            // 
             // btnThongKe
             // 
             this.btnThongKe.FlatAppearance.BorderSize = 0;
@@ -443,26 +477,6 @@ namespace WindowsFormsApp
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnNhanVien.IconColor = System.Drawing.Color.Silver;
-            this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNhanVien.IconSize = 35;
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(479, 86);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(190, 50);
-            this.btnNhanVien.TabIndex = 29;
-            this.btnNhanVien.Text = "       Nhân viên";
-            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.UseVisualStyleBackColor = true;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // guna2Elipse10
             // 
@@ -491,11 +505,11 @@ namespace WindowsFormsApp
             this.Text = "FormTrangChu1";
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconDangXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAlign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -535,5 +549,6 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
         private FontAwesome.Sharp.IconPictureBox iconDangXuat;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse10;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -46,9 +46,9 @@ namespace BUS
             return MatHangDAO.Intance.get(maSP);
         } */
 
-        public bool suaHH(string MaHang, string TenHH, string loai, string GiaBan, string DonVi)
+        public bool suaHH(string MaHang, string TenHH, string loai, int GiaBan, string phongbenh, string nuocsx)
         {
-            return MatHangDAO.Intance.suaHH(MaHang, TenHH, loai, GiaBan, DonVi);
+            return MatHangDAO.Intance.suaHH(MaHang, TenHH, loai, GiaBan, phongbenh,nuocsx);
         }
 
         public bool kiemtraXoa(string maHang)

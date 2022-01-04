@@ -37,9 +37,9 @@ namespace DAO
             return list;
         }
 
-        public bool suaHH(string MaHang, string TenHH, string loai, string GiaBan, string DonVi)
+        public bool suaHH(string MaHang, string TenHH, string loai, int GiaBan, string phongbenh, string nuocsx)
         {
-            string query = String.Format("update MatHang set  GiaBan = '" + GiaBan + "', TenMH = N'" + TenHH + "',MaLH = N'" + loai + "', DonVi = N'" + DonVi + "'  where MaMH = '" + MaHang + "'");
+            string query = String.Format("update VacXin set  GiaBan = '" + GiaBan + "', TenVX = N'" + TenHH + "',MaLoai = N'" + loai + "', PhongBenh = N'" + phongbenh + "', NuocSX = N'" + nuocsx + "'  where MaVX = '" + MaHang + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -71,7 +71,7 @@ namespace DAO
 
         public bool xoaHang(string maKH)
         {
-            string query = String.Format("delete from MatHang where MaMH = '{0}'", maKH);
+            string query = String.Format("delete from VacXin where MaVX = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -150,7 +150,7 @@ namespace DAO
 
         public DataTable TimKiemMH(string tk)
         {
-            string query = "select MatHang.MaMH as [Mã hàng hóa],MatHang.TenMH as [Tên hàng hóa],DonVi as [Đơn vị tính],sum(ChitietPN.Soluong) as [Số lượng nhập],MatHang.SoLuong as [Số lượng tồn], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [Số lượng bán],MatHang.GiaBan as [Giá bán] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH where MatHang.TenMH like N'%" + tk + "%' or MatHang.MaMH like '%" + tk + "%'  group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
+            string query = "select VacXin.MaVX as [Mã Vaccine],VacXin.TenVX as [Tên Vaccine],sum(ChitietPN.Soluong) as [Số lượng nhập],VacXin.SoLuong as [Số lượng tồn], (sum(ChitietPN.Soluong) - VacXin.SoLuong) as [Số lượng bán],VacXin.GiaBan as [Giá bán] from VacXin inner join ChiTietPN on VacXin.MaVX = ChiTietPN.MaVX where VacXin.MaVX like '"+tk+"' or VacXin.TenVX like N'"+tk+"' group by VacXin.MaVX,VacXin.TenVX,VacXin.SoLuong,VacXin.GiaBan";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -174,7 +174,7 @@ namespace DAO
 
         public DataTable TimKiemLH(string tk)
         {
-            string query = "select MaLH from LoaiHang where TenLH = N'" + tk + "'";
+            string query = "select MaLoai from LoaiVacXin where TenLoai = N'" + tk + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -182,7 +182,7 @@ namespace DAO
 
         public DataTable TimKiemMHTrongKH(string tk)
         {
-            string query = "select MaMH as [Mã mặt hàng], TenMH as [Tên mặt hàng], DonVi as [Đơn vị],SoLuong as [Số lượng], GiaBan as [Giá bán], TenLH as [Loại hàng] from MatHang inner join LoaiHang on MatHang.MaLH = LoaiHang.MaLH where MaMH like N'%"+tk+ "%' or TenMH like N'%" + tk + "%'";
+            string query = "select MaVX as [Mã Vaccine], TenVX as [Tên Vacine],SoLuong as [Số lượng], GiaBan as [Giá bán],PhongBenh as [Phòng bệnh], TenLoai as [Loại Vaccine],NuocSX as [Nước sản xuất] from VacXin inner join LoaiVacXin on VacXin.MaLoai = LoaiVacXin.MaLoai where MaVX like N'%" + tk+ "%' or TenVX like N'%" + tk + "%'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -190,7 +190,7 @@ namespace DAO
 
         public DataTable TimKiemSL(string tk)
         {
-            string query = "select SoLuong from MatHang where MaMH = N'" + tk + "'";
+            string query = "select SoLuong from VacXin where MaVX = N'" + tk + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

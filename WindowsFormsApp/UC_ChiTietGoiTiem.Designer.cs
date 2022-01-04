@@ -142,7 +142,7 @@ namespace WindowsFormsApp
             this.dgvGT.RowHeadersWidth = 62;
             this.dgvGT.RowTemplate.Height = 45;
             this.dgvGT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGT.Size = new System.Drawing.Size(1763, 521);
+            this.dgvGT.Size = new System.Drawing.Size(1763, 526);
             this.dgvGT.TabIndex = 249;
             this.dgvGT.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvGT.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -675,7 +675,7 @@ namespace WindowsFormsApp
             this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSua.IconSize = 30;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(1617, 1021);
+            this.btnSua.Location = new System.Drawing.Point(1618, 1025);
             this.btnSua.Name = "btnSua";
             this.btnSua.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSua.Size = new System.Drawing.Size(167, 45);
@@ -697,7 +697,7 @@ namespace WindowsFormsApp
             this.btnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnXoa.IconSize = 30;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1408, 1021);
+            this.btnXoa.Location = new System.Drawing.Point(1409, 1025);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnXoa.Size = new System.Drawing.Size(167, 45);
@@ -720,7 +720,7 @@ namespace WindowsFormsApp
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.IconSize = 30;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(1196, 1021);
+            this.btnThem.Location = new System.Drawing.Point(1197, 1025);
             this.btnThem.Name = "btnThem";
             this.btnThem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThem.Size = new System.Drawing.Size(167, 45);

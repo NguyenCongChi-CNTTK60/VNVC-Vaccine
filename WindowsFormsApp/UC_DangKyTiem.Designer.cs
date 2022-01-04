@@ -70,6 +70,9 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnXacNhanHuy = new Guna.UI2.WinForms.Guna2Button();
+            this.txtHuyHĐ = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnXacNhan = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -88,9 +91,6 @@
             this.lblMaNV = new System.Windows.Forms.Label();
             this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTienBangChu = new System.Windows.Forms.Label();
-            this.txtHuyHĐ = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnXacNhanHuy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -453,6 +453,7 @@
             this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoLuong.BackColor = System.Drawing.Color.Transparent;
             this.txtSoLuong.BorderColor = System.Drawing.Color.Black;
+            this.txtSoLuong.BorderRadius = 4;
             this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -559,6 +560,70 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1756, 170);
             this.guna2Panel2.TabIndex = 289;
+            // 
+            // btnXacNhanHuy
+            // 
+            this.btnXacNhanHuy.BorderRadius = 5;
+            this.btnXacNhanHuy.BorderThickness = 1;
+            this.btnXacNhanHuy.CheckedState.Parent = this.btnXacNhanHuy;
+            this.btnXacNhanHuy.CustomImages.Parent = this.btnXacNhanHuy;
+            this.btnXacNhanHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXacNhanHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXacNhanHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXacNhanHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXacNhanHuy.DisabledState.Parent = this.btnXacNhanHuy;
+            this.btnXacNhanHuy.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.btnXacNhanHuy.Font = new System.Drawing.Font("Cambria", 11F);
+            this.btnXacNhanHuy.ForeColor = System.Drawing.Color.Black;
+            this.btnXacNhanHuy.HoverState.Parent = this.btnXacNhanHuy;
+            this.btnXacNhanHuy.Location = new System.Drawing.Point(1410, 102);
+            this.btnXacNhanHuy.Name = "btnXacNhanHuy";
+            this.btnXacNhanHuy.ShadowDecoration.Parent = this.btnXacNhanHuy;
+            this.btnXacNhanHuy.Size = new System.Drawing.Size(258, 45);
+            this.btnXacNhanHuy.TabIndex = 288;
+            this.btnXacNhanHuy.Text = "Xác nhận hủy";
+            this.btnXacNhanHuy.Click += new System.EventHandler(this.btnXacNhanHuy_Click);
+            // 
+            // txtHuyHĐ
+            // 
+            this.txtHuyHĐ.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtHuyHĐ.BorderRadius = 5;
+            this.txtHuyHĐ.BorderThickness = 0;
+            this.txtHuyHĐ.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHuyHĐ.DefaultText = "";
+            this.txtHuyHĐ.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHuyHĐ.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHuyHĐ.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHuyHĐ.DisabledState.Parent = this.txtHuyHĐ;
+            this.txtHuyHĐ.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHuyHĐ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHuyHĐ.FocusedState.Parent = this.txtHuyHĐ;
+            this.txtHuyHĐ.Font = new System.Drawing.Font("Cambria", 10F);
+            this.txtHuyHĐ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.txtHuyHĐ.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHuyHĐ.HoverState.Parent = this.txtHuyHĐ;
+            this.txtHuyHĐ.Location = new System.Drawing.Point(180, 107);
+            this.txtHuyHĐ.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHuyHĐ.Name = "txtHuyHĐ";
+            this.txtHuyHĐ.PasswordChar = '\0';
+            this.txtHuyHĐ.PlaceholderText = "";
+            this.txtHuyHĐ.SelectedText = "";
+            this.txtHuyHĐ.ShadowDecoration.Parent = this.txtHuyHĐ;
+            this.txtHuyHĐ.Size = new System.Drawing.Size(128, 40);
+            this.txtHuyHĐ.TabIndex = 287;
+            this.txtHuyHĐ.TextChanged += new System.EventHandler(this.txtHuyHĐ_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(38, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 35);
+            this.label14.TabIndex = 286;
+            this.label14.Text = "Hủy đăng ký:";
             // 
             // label5
             // 
@@ -836,70 +901,6 @@
             this.lblTienBangChu.Size = new System.Drawing.Size(162, 35);
             this.lblTienBangChu.TabIndex = 315;
             this.lblTienBangChu.Text = "Tiền khách đưa:";
-            // 
-            // txtHuyHĐ
-            // 
-            this.txtHuyHĐ.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtHuyHĐ.BorderRadius = 5;
-            this.txtHuyHĐ.BorderThickness = 0;
-            this.txtHuyHĐ.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHuyHĐ.DefaultText = "";
-            this.txtHuyHĐ.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHuyHĐ.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHuyHĐ.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHuyHĐ.DisabledState.Parent = this.txtHuyHĐ;
-            this.txtHuyHĐ.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHuyHĐ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHuyHĐ.FocusedState.Parent = this.txtHuyHĐ;
-            this.txtHuyHĐ.Font = new System.Drawing.Font("Cambria", 10F);
-            this.txtHuyHĐ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
-            this.txtHuyHĐ.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHuyHĐ.HoverState.Parent = this.txtHuyHĐ;
-            this.txtHuyHĐ.Location = new System.Drawing.Point(180, 107);
-            this.txtHuyHĐ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHuyHĐ.Name = "txtHuyHĐ";
-            this.txtHuyHĐ.PasswordChar = '\0';
-            this.txtHuyHĐ.PlaceholderText = "";
-            this.txtHuyHĐ.SelectedText = "";
-            this.txtHuyHĐ.ShadowDecoration.Parent = this.txtHuyHĐ;
-            this.txtHuyHĐ.Size = new System.Drawing.Size(128, 40);
-            this.txtHuyHĐ.TabIndex = 287;
-            this.txtHuyHĐ.TextChanged += new System.EventHandler(this.txtHuyHĐ_TextChanged);
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(38, 107);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 35);
-            this.label14.TabIndex = 286;
-            this.label14.Text = "Hủy đăng ký:";
-            // 
-            // btnXacNhanHuy
-            // 
-            this.btnXacNhanHuy.BorderRadius = 5;
-            this.btnXacNhanHuy.BorderThickness = 1;
-            this.btnXacNhanHuy.CheckedState.Parent = this.btnXacNhanHuy;
-            this.btnXacNhanHuy.CustomImages.Parent = this.btnXacNhanHuy;
-            this.btnXacNhanHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXacNhanHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXacNhanHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXacNhanHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXacNhanHuy.DisabledState.Parent = this.btnXacNhanHuy;
-            this.btnXacNhanHuy.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.btnXacNhanHuy.Font = new System.Drawing.Font("Cambria", 11F);
-            this.btnXacNhanHuy.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhanHuy.HoverState.Parent = this.btnXacNhanHuy;
-            this.btnXacNhanHuy.Location = new System.Drawing.Point(1410, 102);
-            this.btnXacNhanHuy.Name = "btnXacNhanHuy";
-            this.btnXacNhanHuy.ShadowDecoration.Parent = this.btnXacNhanHuy;
-            this.btnXacNhanHuy.Size = new System.Drawing.Size(258, 45);
-            this.btnXacNhanHuy.TabIndex = 288;
-            this.btnXacNhanHuy.Text = "Xác nhận hủy";
-            this.btnXacNhanHuy.Click += new System.EventHandler(this.btnXacNhanHuy_Click);
             // 
             // UC_DangKyTiem
             // 

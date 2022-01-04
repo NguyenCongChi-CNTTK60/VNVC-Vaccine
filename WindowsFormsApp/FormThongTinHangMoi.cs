@@ -18,7 +18,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             cmbLoaiHang.SelectedIndex = 0;
-            cmbĐVT.SelectedIndex = 0;
+            //cmbĐVT.SelectedIndex = 0;
             txtMaMH.Text = Matudong();
         }
         List<LoaiHangDTO> list1;
@@ -38,15 +38,7 @@ namespace WindowsFormsApp
 
         }
 
-        private void btnX_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+     
 
 
 
@@ -54,10 +46,14 @@ namespace WindowsFormsApp
 
         private void Lammoi()
         {
-            txtTenMH.Text = "Nhập tên mặt hàng";
+            txtTenMH.Text = "Nhập tên Vaccine";
             txtTenMH.ForeColor = Color.Silver;
             cmbLoaiHang.SelectedIndex = 0;
-            cmbĐVT.SelectedIndex = -1;
+            txtPhongBenh.Text = "Phòng bệnh";
+            txtPhongBenh.ForeColor = Color.Silver;
+            txtNuocSX.Text = "Xuất xứ";
+            txtNuocSX.ForeColor = Color.Silver;
+            //cmbĐVT.SelectedIndex = -1;
 
         }
 
@@ -65,18 +61,19 @@ namespace WindowsFormsApp
 
         private string Matudong()
         {
-            string query = "select MaMH from MatHang";
+            string query = "select MaVX from VacXin";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string ma = "";
             if (dt.Rows.Count <= 0)
             {
-                ma = "SP001";
+                ma = "VX001";
             }
             else
             {
                 int k;
-                ma = "SP";
-                k = dt.Rows.Count;
+                ma = "VX";
+                // k = dt.Rows.Count;
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
                 k++;
                 if (k < 10)
                 {
@@ -96,40 +93,16 @@ namespace WindowsFormsApp
             return ma;
         }
 
-        private void cmbLoaiHang_Click(object sender, EventArgs e)
-        {
-            list1 = LoaiHangBUS.Intance.getListLoaiHang();
-            cmbLoaiHang.DataSource = list1;
-            cmbLoaiHang.DisplayMember = "TenLH";
-            cmbLoaiHang.ValueMember = "MaLH";
-        }
+       
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMaMH.Text))
-            {
-                MessageBox.Show("Tên mặt hàng không được trống");
-            }
-            else
-            {
-                if (LuuHH(txtMaMH.Text, txtTenMH.Text, cmbĐVT.Text, 0, 1, temp))
-                {
-                    MessageBox.Show("Lưu thông tin hàng thành công");
-                    txtMaMH.Text = Matudong();
-                    Lammoi();
-                }
-                else
-                    MessageBox.Show("Không thể lưu thông tin này");
-            }
-        }
+       
 
 
 
-
-        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg, string maLH)
+        private bool LuuHH(string mh, string tenh, int sl, int dg, string maLH,string phongbenh, string nuocsx)
         {
             // Convert datetime to date SQL Server 
-            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan,MaLH)  values('{0}',N'{1}',N'{2}','{3}','{4}','{5}')", mh, tenh, madv, sl, dg, maLH);
+            string query = String.Format(" insert into VacXin (MaVX,TenVX,SoLuong,GiaBan,MaLoai,PhongBenh,NuocSX)  values('{0}',N'{1}',N'{2}','{3}','{4}',N'{5}',N'{6}')", mh, tenh, sl, dg, maLH, phongbenh,nuocsx);
             DataProvider.Instance.ExecuteQuery(query);
             return true;
         }
@@ -152,6 +125,73 @@ namespace WindowsFormsApp
         {
             txtTenMH.Text = "";
             txtTenMH.ForeColor = Color.Black;
+        }
+
+
+
+        List<LoaiHangDTO> list2;
+        private void cmbLoaiHang_Click(object sender, EventArgs e)
+        {
+            list2 = LoaiHangBUS.Intance.getListLoaiHang();
+            cmbLoaiHang.DataSource = list2;
+            cmbLoaiHang.DisplayMember = "TenLoai";
+            cmbLoaiHang.ValueMember = "MaLoai";
+        }
+
+        private void txtTenMH_Click_1(object sender, EventArgs e)
+        {
+            txtTenMH.Text = "";
+            txtTenMH.ForeColor = Color.Black;
+        }
+
+        private void btnHuy_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLuu_Click_2(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaMH.Text))
+            {
+                MessageBox.Show("Tên mặt hàng không được trống");
+            }
+            else
+            {
+                if (LuuHH(txtMaMH.Text, txtTenMH.Text, 0, 1, lblMaLVX.Text, txtPhongBenh.Text, txtNuocSX.Text))
+                {
+                    MessageBox.Show("Lưu thông tin hàng thành công");
+                    txtMaMH.Text = Matudong();
+                    Lammoi();
+                }
+                else
+                    MessageBox.Show("Không thể lưu thông tin này");
+            }
+        }
+
+        private void txtPhongBenh_Click(object sender, EventArgs e)
+        {
+            txtPhongBenh.Text = "";
+            txtPhongBenh.ForeColor = Color.Black;
+
+        }
+
+        private void txtNuocSX_Click(object sender, EventArgs e)
+        {
+            txtNuocSX.Text = "";
+            txtNuocSX.ForeColor = Color.Black;
+        }
+
+
+        int i;
+        private void cmbLoaiHang_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+            if (cmbLoaiHang.SelectedIndex > 0)
+            {
+                i = cmbLoaiHang.SelectedIndex;
+                lblMaLVX.Text = list2[i].Maloai;
+
+                //txtGiaBan.Text = list[i].GiaBan.ToString();
+            }
         }
     }
 }

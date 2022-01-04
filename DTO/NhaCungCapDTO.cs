@@ -21,7 +21,7 @@ namespace DTO
         {
             this.MaNCC = row["MaNCC"].ToString();
             this.TenNCC = row["TenNCC"].ToString();
-            this.DiaChi = row["DiaChi"].ToString();
+            this.DiaChi = row["NuocSX"].ToString();
             this.SDT = row["SDT"].ToString();
             this.Email = row["Email"].ToString();
         }

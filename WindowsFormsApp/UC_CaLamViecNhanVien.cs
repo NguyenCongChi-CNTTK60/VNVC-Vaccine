@@ -117,16 +117,7 @@ namespace WindowsFormsApp
         }
         
 
-        private void dgvGC_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexx;
-            indexx = e.RowIndex;
-            lblMNV.Text = dgvGC.Rows[indexx].Cells[0].Value.ToString();
-            cmbCalamviec.Text = dgvGC.Rows[indexx].Cells[2].Value.ToString();
-            cmbTennv.Text = dgvGC.Rows[indexx].Cells[1].Value.ToString();
-            dtpNgaybd.Value = Convert.ToDateTime(dgvGC.Rows[indexx].Cells[3].Value.ToString());
-            dtpNgaykt.Value = Convert.ToDateTime(dgvGC.Rows[indexx].Cells[4].Value.ToString());
-        }
+   
 
         private void txtTimkiem_Click(object sender, EventArgs e)
         {
@@ -156,6 +147,17 @@ namespace WindowsFormsApp
         {
             txtTimkiem.Text = "Tìm kiếm theo mã, tên nhân viên";
             txtTimkiem.ForeColor = Color.Silver;
+        }
+
+        private void dgvGC_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            lblMNV.Text = dgvGC.Rows[indexx].Cells[0].Value.ToString();
+            cmbCalamviec.Text = dgvGC.Rows[indexx].Cells[2].Value.ToString();
+            cmbTennv.Text = dgvGC.Rows[indexx].Cells[1].Value.ToString();
+            dtpNgaybd.Value = Convert.ToDateTime(dgvGC.Rows[indexx].Cells[3].Value.ToString());
+            dtpNgaykt.Value = Convert.ToDateTime(dgvGC.Rows[indexx].Cells[4].Value.ToString());
         }
     }
 }

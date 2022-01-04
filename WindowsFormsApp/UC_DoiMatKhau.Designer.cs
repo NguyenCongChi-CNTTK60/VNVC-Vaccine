@@ -41,15 +41,15 @@ namespace WindowsFormsApp
             this.label6 = new System.Windows.Forms.Label();
             this.btnCapNhat = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnEyeMKM = new FontAwesome.Sharp.IconButton();
             this.btneyemkmeye = new FontAwesome.Sharp.IconButton();
             this.txtMKMOI = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEyeSlashMoi = new FontAwesome.Sharp.IconButton();
             this.btnEyeMoi = new FontAwesome.Sharp.IconButton();
             this.txtHoVaTen = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,13 +73,13 @@ namespace WindowsFormsApp
             this.btnQuaylai.FlatAppearance.BorderSize = 0;
             this.btnQuaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuaylai.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuaylai.ForeColor = System.Drawing.Color.Gray;
+            this.btnQuaylai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.btnQuaylai.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.btnQuaylai.IconColor = System.Drawing.Color.Gray;
+            this.btnQuaylai.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.btnQuaylai.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuaylai.IconSize = 35;
             this.btnQuaylai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuaylai.Location = new System.Drawing.Point(-11, 18);
+            this.btnQuaylai.Location = new System.Drawing.Point(0, 3);
             this.btnQuaylai.Name = "btnQuaylai";
             this.btnQuaylai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuaylai.Size = new System.Drawing.Size(62, 48);
@@ -134,8 +134,8 @@ namespace WindowsFormsApp
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
-            this.btnCapNhat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
+            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.btnCapNhat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
             this.btnCapNhat.FlatAppearance.BorderSize = 2;
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,42 +165,6 @@ namespace WindowsFormsApp
             this.label4.Size = new System.Drawing.Size(171, 40);
             this.label4.TabIndex = 288;
             this.label4.Text = "Đổi mật khẩu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label3.Location = new System.Drawing.Point(272, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 35);
-            this.label3.TabIndex = 287;
-            this.label3.Text = "Fashion System";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(220, 1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 81);
-            this.label2.TabIndex = 286;
-            this.label2.Text = "w e n";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(167, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 55);
-            this.label1.TabIndex = 285;
-            this.label1.Text = "O";
             // 
             // btnEyeMKM
             // 
@@ -356,11 +320,42 @@ namespace WindowsFormsApp
             this.txtHoVaTen.Click += new System.EventHandler(this.txtHoVaTen_Click);
             this.txtHoVaTen.Leave += new System.EventHandler(this.txtHoVaTen_Leave);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.label3.Location = new System.Drawing.Point(241, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 35);
+            this.label3.TabIndex = 302;
+            this.label3.Text = "Vaccination System";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(149)))));
+            this.label2.Location = new System.Drawing.Point(178, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 63);
+            this.label2.TabIndex = 301;
+            this.label2.Text = " V N V C";
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 12;
+            this.guna2Elipse3.TargetControl = this.btnCapNhat;
+            // 
             // UC_DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEyeMKM);
             this.Controls.Add(this.btneyemkmeye);
             this.Controls.Add(this.txtMKMOI);
@@ -374,9 +369,6 @@ namespace WindowsFormsApp
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_DoiMatKhau";
             this.Size = new System.Drawing.Size(627, 952);
@@ -400,14 +392,14 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnCapNhat;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnEyeMKM;
         private FontAwesome.Sharp.IconButton btneyemkmeye;
         private Guna.UI2.WinForms.Guna2TextBox txtMKMOI;
         private FontAwesome.Sharp.IconButton btnEyeSlashMoi;
         private FontAwesome.Sharp.IconButton btnEyeMoi;
         private Guna.UI2.WinForms.Guna2TextBox txtHoVaTen;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
     }
 }

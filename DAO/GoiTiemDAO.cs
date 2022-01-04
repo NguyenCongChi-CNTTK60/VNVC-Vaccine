@@ -110,10 +110,35 @@ namespace DAO
 
         public DataTable TimKiemGiaBan(string maGT)
         {
-            string query = "select GiaBan from VacXin where MaVX= N'" + maGT + "'";
+            string query = "select GiaBan,SoLuong from VacXin where MaVX = N'" + maGT + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public bool themGoiTiem(string maGT, string tenGT)
+        {
+            string query = String.Format("insert into GoiTiem(MaGT, TenGT) values ('{0}', N'{1}')", maGT, tenGT);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+
+        public bool suaGoiTiem(string maGT, string tenGT)
+        {
+            string query = String.Format("update GoiTiem set TenGT = N'" + tenGT + "' where MaGT = N'" + maGT + "'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+
+        public bool xoaGoiTiem(string maGT)
+        {
+            string query = String.Format("delete GoiTiem where MaGT = '" + maGT + "'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
 
     }
 }

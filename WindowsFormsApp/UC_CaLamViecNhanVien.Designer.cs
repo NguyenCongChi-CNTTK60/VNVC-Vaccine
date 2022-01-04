@@ -105,7 +105,7 @@ namespace WindowsFormsApp
             // txtTimkiem
             // 
             this.txtTimkiem.BorderColor = System.Drawing.Color.Silver;
-            this.txtTimkiem.BorderRadius = 3;
+            this.txtTimkiem.BorderRadius = 7;
             this.txtTimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTimkiem.DefaultText = "Tìm kiếm theo mã, tên nhân viên";
             this.txtTimkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -119,7 +119,7 @@ namespace WindowsFormsApp
             this.txtTimkiem.ForeColor = System.Drawing.Color.Gray;
             this.txtTimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiem.HoverState.Parent = this.txtTimkiem;
-            this.txtTimkiem.Location = new System.Drawing.Point(1011, 222);
+            this.txtTimkiem.Location = new System.Drawing.Point(1010, 230);
             this.txtTimkiem.Margin = new System.Windows.Forms.Padding(7);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.PasswordChar = '\0';
@@ -127,7 +127,7 @@ namespace WindowsFormsApp
             this.txtTimkiem.SelectedText = "";
             this.txtTimkiem.SelectionStart = 31;
             this.txtTimkiem.ShadowDecoration.Parent = this.txtTimkiem;
-            this.txtTimkiem.Size = new System.Drawing.Size(396, 41);
+            this.txtTimkiem.Size = new System.Drawing.Size(420, 41);
             this.txtTimkiem.TabIndex = 239;
             this.txtTimkiem.TextChanged += new System.EventHandler(this.txtTimkiem_TextChanged);
             this.txtTimkiem.Click += new System.EventHandler(this.txtTimkiem_Click);
@@ -137,7 +137,7 @@ namespace WindowsFormsApp
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1014, 180);
+            this.label9.Location = new System.Drawing.Point(1004, 180);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 35);
             this.label9.TabIndex = 238;
@@ -148,7 +148,7 @@ namespace WindowsFormsApp
             this.lblMNV.AutoSize = true;
             this.lblMNV.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMNV.ForeColor = System.Drawing.Color.White;
-            this.lblMNV.Location = new System.Drawing.Point(881, 180);
+            this.lblMNV.Location = new System.Drawing.Point(1408, 122);
             this.lblMNV.Name = "lblMNV";
             this.lblMNV.Size = new System.Drawing.Size(143, 35);
             this.lblMNV.TabIndex = 237;
@@ -239,12 +239,13 @@ namespace WindowsFormsApp
             // 
             this.cmbCalamviec.BackColor = System.Drawing.Color.Transparent;
             this.cmbCalamviec.BorderColor = System.Drawing.Color.Black;
+            this.cmbCalamviec.BorderRadius = 5;
             this.cmbCalamviec.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbCalamviec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCalamviec.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbCalamviec.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbCalamviec.FocusedState.Parent = this.cmbCalamviec;
-            this.cmbCalamviec.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCalamviec.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbCalamviec.ForeColor = System.Drawing.Color.Black;
             this.cmbCalamviec.HoverState.Parent = this.cmbCalamviec;
             this.cmbCalamviec.ItemHeight = 30;
@@ -262,12 +263,13 @@ namespace WindowsFormsApp
             // 
             this.cmbTennv.BackColor = System.Drawing.Color.Transparent;
             this.cmbTennv.BorderColor = System.Drawing.Color.Black;
+            this.cmbTennv.BorderRadius = 5;
             this.cmbTennv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbTennv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTennv.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbTennv.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbTennv.FocusedState.Parent = this.cmbTennv;
-            this.cmbTennv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTennv.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbTennv.ForeColor = System.Drawing.Color.Black;
             this.cmbTennv.HoverState.Parent = this.cmbTennv;
             this.cmbTennv.ItemHeight = 30;
@@ -462,6 +464,7 @@ namespace WindowsFormsApp
             this.dgvGC.ThemeStyle.RowsStyle.Height = 45;
             this.dgvGC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvGC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGC_CellContentClick_1);
             // 
             // guna2Elipse1
             // 

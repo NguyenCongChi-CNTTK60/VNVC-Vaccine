@@ -21,6 +21,7 @@ namespace WindowsFormsApp
            
             this.tk = tk;
             tempTK = tk;
+            //lblTenNhanVien.Text = tk;
             TTnguoiban();
             UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
             addUC(_TrangChu);
@@ -43,6 +44,7 @@ namespace WindowsFormsApp
             {
                 lblMaNV.Text = dt.Rows[0]["MaNV"].ToString();
                 lblTenNV.Text = dt.Rows[0]["TenHienThi"].ToString();
+                lblTenNhanVien.Text = dt.Rows[0]["TenHienThi"].ToString();
             }
 
             
@@ -50,7 +52,7 @@ namespace WindowsFormsApp
 
 
 
-        private void Phanquyen(UserControl us1, UserControl us2)
+        private void Phanquyen(UserControl us1, UserControl us2, UserControl us3, UserControl us4)
         {
             string Name = tempTK;
             string query = "select Quyen as [Quyen] from NhanVien where TenDangNhap = N'" + Name + "'";
@@ -63,11 +65,17 @@ namespace WindowsFormsApp
                 {
                     addUC(us1);
                 }
-                else if (lblQuyen.Text == "Nhân viên")
+                else if (lblQuyen.Text == "Bán hàng")
                 {
 
                     addUC(us2);
 
+                }else if (lblQuyen.Text == "Thủ kho")
+                {
+                    addUC(us3);
+                }else if(lblQuyen.Text == "Kế toán")
+                {
+                    addUC(us4);
                 }
             }
         }
@@ -93,7 +101,7 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_ThongKe _ThongKe = new UC_ThongKe();
-            Phanquyen(_ThongKe, _HienThiQuyen);
+            Phanquyen(_ThongKe, _HienThiQuyen,_HienThiQuyen,_ThongKe);
             ButtonHide();
             btnThongKe.ForeColor = Color.White;
             btnThongKe.BackColor = myRgbColor;
@@ -184,7 +192,7 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_DangKyTiem _DangKyTiem = new UC_DangKyTiem(lblMaNV.Text,lblTenNhanVien.Text);
-            addUC(_DangKyTiem);
+            Phanquyen(_DangKyTiem, _DangKyTiem, _HienThiQuyen, _HienThiQuyen);
 
             ButtonHide();
             btnDangKyTiem.ForeColor = Color.White;
@@ -208,7 +216,7 @@ namespace WindowsFormsApp
             ButtonHide();
             btnNhanVien.ForeColor = Color.White;
             btnNhanVien.BackColor = myRgbColor;
-            Phanquyen(_NhanVien, _HienThiQuyen);
+            Phanquyen(_NhanVien, _HienThiQuyen,_HienThiQuyen,_HienThiQuyen);
         }
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
@@ -217,8 +225,7 @@ namespace WindowsFormsApp
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
             //addUC(_NhaCungCap);
-            Phanquyen(_NhaCungCap, _HienThiQuyen);
-
+            Phanquyen(_NhaCungCap, _HienThiQuyen,_NhaCungCap,_HienThiQuyen);
             ButtonHide();
             btnNhaCungCap.ForeColor = Color.White;
             btnNhaCungCap.BackColor = myRgbColor;
@@ -230,7 +237,7 @@ namespace WindowsFormsApp
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_KhoVaccine _KhoVaccine = new UC_KhoVaccine(lblMaNV.Text,lblTenNhanVien.Text);
             //addUC(_KhoVaccine);
-            Phanquyen(_KhoVaccine, _HienThiQuyen);
+            Phanquyen(_KhoVaccine, _HienThiQuyen,_KhoVaccine,_HienThiQuyen);
             ButtonHide();
             btnKhoHang.ForeColor = Color.White;
             btnKhoHang.BackColor = myRgbColor;
@@ -290,7 +297,7 @@ namespace WindowsFormsApp
             Color myRgbColor = new Color();
             myRgbColor = Color.FromArgb(0, 35, 149);
             UC_KhachHang _KhachHang = new UC_KhachHang();
-            addUC(_KhachHang);
+            Phanquyen(_KhachHang, _KhachHang, _HienThiQuyen, _HienThiQuyen);
 
             ButtonHide();
             btnKhachHang.ForeColor = Color.White;
@@ -304,7 +311,7 @@ namespace WindowsFormsApp
             ButtonHide();
             UC_XacNhanMa _XacNhanMa = new UC_XacNhanMa();
             // addUC(_XacNhanMa);
-            Phanquyen(_XacNhanMa, _HienThiQuyen);
+            Phanquyen(_XacNhanMa, _HienThiQuyen,_HienThiQuyen,_HienThiQuyen);
             btnGoiTiem.ForeColor = Color.White;
             btnGoiTiem.BackColor = myRgbColor;
         }
@@ -314,6 +321,13 @@ namespace WindowsFormsApp
             FormLogin f = new FormLogin();
             f.Show();
             this.Hide();
+        }
+
+        private void lblTenNhanVien_Click(object sender, EventArgs e)
+        {
+            UC_ThongTinhTaiKhoan _ThongTinhTaiKhoan = new UC_ThongTinhTaiKhoan(lblTenNhanVien.Text);
+            addUC(_ThongTinhTaiKhoan);
+            ButtonHide();
         }
     }
 }

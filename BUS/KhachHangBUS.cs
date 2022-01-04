@@ -27,14 +27,14 @@ namespace BUS
             return KhachHangDAO.Intance.getListKH();
         }
 
-        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
+        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, DateTime ngaysinh, string matn)
         {
-            return KhachHangDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, email);
+            return KhachHangDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, ngaysinh, matn);
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
+        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, DateTime ngaysinh, string matn)
         {
-            return KhachHangDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, email);
+            return KhachHangDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, ngaysinh, matn);
         }
 
         public bool xoaKH(string maKH)
@@ -88,5 +88,33 @@ namespace BUS
         {
             return KhachHangDAO.Intance.TimKiemDiemTL(tk);
         }
+
+
+        public DataTable HienThiThanNhan()
+        {
+            return KhachHangDAO.Intance.HienThiThanNhan();
         }
+
+
+        public bool themTN(string maTN, string tenTN, string moiQH, string SDT)
+        {
+            return KhachHangDAO.Intance.themTN(maTN, tenTN, moiQH, SDT);
+        }
+
+        public bool suaTN(string maTN, string tenTN, string moiQH, string SDT)
+        {
+            return KhachHangDAO.Intance.suaTN(maTN, tenTN, moiQH, SDT);
+        }
+
+
+        public bool xoaTN(string maKH)
+        {
+            return KhachHangDAO.Intance.xoaTN(maKH);
+        }
+
+        public DataTable TKhanNhan(string tk)
+        {
+            return KhachHangDAO.Intance.TKhanNhan(tk);
+        }
+    }
 }
