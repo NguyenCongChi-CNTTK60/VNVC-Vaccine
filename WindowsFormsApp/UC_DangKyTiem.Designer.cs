@@ -91,6 +91,7 @@
             this.lblMaNV = new System.Windows.Forms.Label();
             this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTienBangChu = new System.Windows.Forms.Label();
+            this.checkTatca = new System.Windows.Forms.CheckBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -152,6 +153,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderRadius = 7;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.checkTatca);
             this.guna2Panel1.Controls.Add(this.lblTenNV);
             this.guna2Panel1.Controls.Add(this.lblTenkh);
             this.guna2Panel1.Controls.Add(this.cmbTenGoiTiem);
@@ -277,7 +279,7 @@
             this.lvSanPhamBan.HideSelection = false;
             this.lvSanPhamBan.Location = new System.Drawing.Point(20, 297);
             this.lvSanPhamBan.Name = "lvSanPhamBan";
-            this.lvSanPhamBan.Size = new System.Drawing.Size(1714, 486);
+            this.lvSanPhamBan.Size = new System.Drawing.Size(1714, 493);
             this.lvSanPhamBan.TabIndex = 307;
             this.lvSanPhamBan.UseCompatibleStateImageBehavior = false;
             this.lvSanPhamBan.View = System.Windows.Forms.View.Details;
@@ -902,6 +904,18 @@
             this.lblTienBangChu.TabIndex = 315;
             this.lblTienBangChu.Text = "Tiền khách đưa:";
             // 
+            // checkTatca
+            // 
+            this.checkTatca.AutoSize = true;
+            this.checkTatca.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkTatca.Location = new System.Drawing.Point(63, 252);
+            this.checkTatca.Name = "checkTatca";
+            this.checkTatca.Size = new System.Drawing.Size(94, 39);
+            this.checkTatca.TabIndex = 315;
+            this.checkTatca.Text = "Tất cả";
+            this.checkTatca.UseVisualStyleBackColor = true;
+            this.checkTatca.CheckedChanged += new System.EventHandler(this.checkTatca_CheckedChanged);
+            // 
             // UC_DangKyTiem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -992,5 +1006,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtHuyHĐ;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2Button btnXacNhanHuy;
+        private System.Windows.Forms.CheckBox checkTatca;
     }
 }

@@ -574,10 +574,30 @@ namespace WindowsFormsApp
             
         }
 
-    
+        private void checkTatca_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkTatca.Checked == true)
+            {
+                for (int i = 0; i < lvSanPhamBan.Items.Count; i++) //duyệt tất cả các item trong list
+                {
+                    lvSanPhamBan.Items[i].Checked = true;
+
+                }
+            }
+            else
+            {
+                for (int i = 0; i < lvSanPhamBan.Items.Count; i++) //duyệt tất cả các item trong list
+                {
+                    lvSanPhamBan.Items[i].Checked = false;
+
+                }
+            }
+        }
 
 
-        
+
+
+
 
 
         //
